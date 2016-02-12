@@ -74,22 +74,27 @@ bundle exec jekyll serve
 </ol>
 </p>
   <h2 id="mobile">Installing the mobile version</h2>
-  <p>Starting with AVChat 3.6 the mobile version of AVChat only works on Red5 versions 1.0.5 and up.</p>
-  <p>This is because the new mobile HTML 5 client introduced in AVChat 3.6 uses WebSockets technology and Red5 is the only media server supporting this technology. The server side setup required for the mobile client has changed also:</p>
-  <p>On the media server/Red5</p>
+  <h3>AVChat 3.6 and newer</h3>
+  <p>Starting with AVChat 3.6 the mobile version of AVChat only works on Red5 1.0.5 and up. The new mobile HTML 5 client introduced in AVChat 3.6 uses WebSockets to communicate and Red5 is the only media server supporting this technology.</p>
+  <p>Here's how to set it up:</p>
+  <p>On the media server/Red5:</p>
   <ol>
-    <li>In the Red5 installation directory go to the <code>conf</code> folder.</li>
-    <li>Open <code>red5.properties</code></li>
+    <li>Download Json-smart library from here and put in the <code>Red5/libs</code> folder</li>
+    <li>Open <code>Red5/conf/red5.properties</code></li>
     <li>Search for the <code># WebSocket section</code>.</li>
     <li>Change the <code>ws.host</code> variable and replace the default value <code>0.0.0.0</code> with your media server's IP address</li>
     <li>Save and restart Red5</li>
   </ol>
+  <p>On the webserver:</p>
+  <ol>
+    <li>Download the mobile archive from your private client area at https://nusofthq.com</li>
+    <li>Unzip and copy the <code>ws</code> folder to your AVChat installation directory.</li>
+  </ol>
+  <h3>AVChat 3.5 and older</h3>
 
   <h2 id="multiple-installation">Multiple Installations</h2>
   <h3>Multiple apps</h3>
   <p>Adapt the <code>_config.yml</code> file to your project.</p>
-
-
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
