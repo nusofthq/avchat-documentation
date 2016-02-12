@@ -37,17 +37,8 @@ isHome: true
 
 <section class="bs-docs-section">
   <h1 id="installation" class="page-header">Installation Instructions</h1>
-
   <h2 id="install-avchat">Standalone Installation</h2>
-  <p>Follow the <a href="https://help.github.com/articles/using-jekyll-with-pages">GitHub guide</a> to install Jekyll on your computer. The big steps are:</p>
-
-{% highlight text %}
-apt-get install ruby ruby-dev
-gem install bundler
-git clone git://github.com/mistic100/jekyll-bootstrap-doc
-bundle install
-bundle exec jekyll serve
-{% endhighlight %}
+  {% include standalone.md %}
 
   <h2 id="switch-to-aspx">Switch to ASPX/.NET</h2>
   <p>Adapt the <code>_config.yml</code> file to your project.</p>
@@ -91,6 +82,8 @@ bundle exec jekyll serve
     <li>Unzip and copy the <code>ws</code> folder to your AVChat installation directory.</li>
   </ol>
   <h3>AVChat 3.5 and older</h3>
+
+ {% include content.md %}
 
   <h2 id="multiple-installation">Multiple Installations</h2>
   <h3>Multiple apps</h3>
