@@ -38,7 +38,7 @@ isHome: true
 <section class="bs-docs-section">
   <h1 id="installation" class="page-header">Installation Instructions</h1>
 
-  <h2 id="install-jekyll">Standalone Installation</h2>
+  <h2 id="install-avchat">Standalone Installation</h2>
   <p>Follow the <a href="https://help.github.com/articles/using-jekyll-with-pages">GitHub guide</a> to install Jekyll on your computer. The big steps are:</p>
 
 {% highlight text %}
@@ -49,7 +49,7 @@ bundle install
 bundle exec jekyll serve
 {% endhighlight %}
 
-  <h2 id="configuration">Switch to ASPX/.NET</h2>
+  <h2 id="switch-to-aspx">Switch to ASPX/.NET</h2>
   <p>Adapt the <code>_config.yml</code> file to your project.</p>
 
 {% highlight text %}
@@ -60,11 +60,11 @@ bundle install
 bundle exec jekyll serve
 {% endhighlight %}
 
-  <h2 id="configuration">Changing the license key</h2>
+  <h2 id="change-license-key">Changing the license key</h2>
   <p>Adapt the <code>_config.yml</code> file to your project.</p>
-  <h2 id="configuration">Resetting the license key</h2>
+  <h2 id="reset-license-key">Resetting the license key</h2>
   <p>Adapt the <code>_config.yml</code> file to your project.</p>
-  <h2 id="configuration">Switching from trial to non trial</h2>
+  <h2 id="switch-trial-to-purchased">Switching from trial to non trial</h2>
   <p>If you have a trial version of AVChat installed and purchased a licensed version, switching to production is very easy:</p>
 
 <ol>
@@ -73,8 +73,19 @@ bundle exec jekyll serve
 <li>Copy and replace <code>index.swf</code> and <code>admin.swf</code> from the extracted archive to your trial AVChat installation folder.</li>
 </ol>
 </p>
-  <h2 id="configuration">Installing the mobile version</h2>
-  <h2 id="configuration">Multiple Installations</h2>
+  <h2 id="mobile">Installing the mobile version</h2>
+  <p>Starting with AVChat 3.6 the mobile version of AVChat only works on Red5 versions 1.0.5 and up.</p>
+  <p>This is because the new mobile HTML 5 client introduced in AVChat 3.6 uses WebSockets technology and Red5 is the only media server supporting this technology. The server side setup required for the mobile client has changed also:</p>
+  <p>On the media server/Red5</p>
+  <ol>
+    <li>In the Red5 installation directory go to the <code>conf</code> folder.</li>
+    <li>Open <code>red5.properties</code></li>
+    <li>Search for the <code># WebSocket section</code>.</li>
+    <li>Change the <code>ws.host</code> variable and replace the default value <code>0.0.0.0</code> with your media server's IP address</li>
+    <li>Save and restart Red5</li>
+  </ol>
+
+  <h2 id="multiple-installation">Multiple Installations</h2>
   <h3>Multiple apps</h3>
   <p>Adapt the <code>_config.yml</code> file to your project.</p>
 
