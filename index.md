@@ -8,9 +8,14 @@ isHome: true
 <section class="bs-docs-section">
   <h1 id="overview" class="page-header">Quick Overview</h1>
 
-  >All the AVChat Standalone documentation is on this page.
+  <blockquote>
+    All the AVChat Standalone documentation is on this page.
+  </blockquote>
+[I'm an inline-style link](https://www.google.com)
 
 
+Inline-style:
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 </section>
 
 
