@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Home
+title: AVChat Standalone
 description: Simple documentation template for Github pages
-isHome: true
+isHome: false
 ---
 
 > All the AVChat Standalone documentation is on this page.
