@@ -7,7 +7,7 @@
 
 <h2 id="changing-size">Changing the size of the AVChat flash video chat software</h2>
 
-<h2 id="changing-window-looks"Looks of the windows inside the video chat</h2>
+<h2 id="changing-window-looks">Looks of windows inside the video chat</h2>
 
 <h2 id="changing-fonts">Fonts used inside the video chat</h2>
 

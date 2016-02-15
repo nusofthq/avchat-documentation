@@ -121,7 +121,7 @@ AVChat ships in an archive that looks like this:
 5. Once connected to the media server the user can join rooms, send text messages, view other user's streams and start publishing their own audio video stream.
 6. All data (audio, video, text) is sent from the user to the media server and from there it's directed as needed to all other users.
 
-![alt text](http://docs.avchat.net/assets/images/fcs.jpg "Logo Title Text 1")
+![alt text](http://docs.avchat.net/assets/images/fcs.jpg)
 
 <h2 id="requirements">Requirements</h2>
 
