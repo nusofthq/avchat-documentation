@@ -1,10 +1,10 @@
 <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="red5">Red5</a></li>
-  <li role="presentation"><a href="ams">Adobe Media Server</a></li>
-  <li role="presentation"><a href="wowza">Wowza</a></li>
+  <li role="presentation" class="active"><a href="#red5">Red5</a></li>
+  <li role="presentation"><a href="#ams">Adobe Media Server</a></li>
+  <li role="presentation"><a href="#wowza">Wowza</a></li>
 </ul>
 
-<div class="tab-content">
+<div class="tab-content" markdown="1">
 	  <div class="tab-pane active" id="red5">
 
 
