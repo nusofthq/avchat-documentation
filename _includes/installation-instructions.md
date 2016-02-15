@@ -1,4 +1,11 @@
 
+<h2 id="file-groups">AVChat 3 groups of files</h2>
+
+AVChat 3 has two groups of files:
+
+* client side files, that go on your web server (html, js, xml, swf files, etc.) and are loaded by your web site users in their browsers
+* media server files that go on your media server (Red5,FMIS,Wowza) these handle all the logic of sending messages between users, banning IPs, accepting connections, etc...
+
 <h2 id="standalone-installation-instructions">AVChat 3 Standalone installation instructions</h2>
 
 <h2 id="using-different-medias-server-apps">Using different media server apps for 2 or more AVChat 3 installations</h2>
