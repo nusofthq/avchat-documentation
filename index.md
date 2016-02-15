@@ -6,32 +6,12 @@ isHome: true
 ---
 
 <section class="bs-docs-section">
-  <h1 id="overview" class="page-header">Overview</h1>
+  <h1 id="overview" class="page-header">Quick Overview</h1>
 
   <blockquote>
     All the AVChat Standalone documentation is on this page.
   </blockquote>
 
-  <h3 id="features">Features</h3>
-
-  <ul>
-    <li>Responsive Bootstrap theme</li>
-    <li>Automatic syntax highlight</li>
-    <li>Multi-page</li>
-    <li>Automatic menu</li>
-    <li>Configurable additional links</li>
-    <li>Github counters</li>
-    <li>Twitter &amp; Facebook buttons</li>
-  </ul>
-
-  <h3 id="examples">Examples</h3>
-
-  <ul>
-    <li><a href="http://mistic100.github.io/jQuery-highlightTextarea/">jQuery highlightTextarea</a></li>
-    <li><a href="http://mistic100.github.io/angular-smilies">AngularJS Smilies</a></li>
-    <li><a href="http://mistic100.github.io/jQuery-QueryBuilder">jQuery QueryBuilder</a></li>
-    <li><a href="http://mistic100.github.io/Bootstrap-Confirmation/">Bootstrap Confirmation</a></li>
-  </ul>
 </section>
 
 
