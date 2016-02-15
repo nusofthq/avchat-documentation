@@ -134,11 +134,11 @@ Your chat users need a modern Internet browser with Flash Player 11.1 or above i
 
 The need for Flash Player 11.1 starts with AVChat build 2330 of AVChat which adds H.264 encoding support.
 
-<h3 id="web-hosting"> Web hosting for your chat/website</h3>
+**Web hosting for your chat/website**
 
 A web hosting account with PHP or ASP.NET support is needed. This is where the chat files will be placed and most probably where your web site is already located.
 
-<h3 id="media-server"> A media server</h3>
+**A media server**
 
 AVChat (and all Flash based video chat apps including the peer to peer ones) needs a media server to transport data (audio, video and text chat) between your chat users.
 
@@ -166,7 +166,7 @@ Other compatibility notes:
 * Adobe Media Server Standard is not supported
 * Flash Media Streaming Server is not supported
 
-<h3 id="setting-up-own-media-server">Setting up your own media server</h3>
+**Setting up your own media server**
 
 You can can install the above media server software on any VPS or dedicated/cloud server.
 
