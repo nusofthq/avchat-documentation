@@ -1,3 +1,4 @@
+
 <h2 id="changing-bg-color">Changing the background color of AVChat</h2>
 
 <h2 id="changing-bg-image">Changing the background image of AVChat</h2>
