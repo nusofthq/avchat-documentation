@@ -1,5 +1,5 @@
 # name of the software
-name: Documentation for AVChat and it's integration kits
+name: docs.avchat.net
 # current version of the software
 version: 3.7.2
 # url of the download button
@@ -10,7 +10,11 @@ licenseUrl: http://opensource.org/licenses/MIT
 
 # list of additional links on the right of the top menu
 headerLinks:
-  
+  - title: Client Area
+    url: https://nusofthq.com/c/
+  - title: Discuss AVChat
+    url: http://discuss.avchat.net
+
 # list if additional links on the footer
 footerLinks:
   - title: GitHub
@@ -23,7 +27,7 @@ footerLinks:
 header:
   color1: "#080331"
   color2: "#673051"
-  trianglify: true
+  trianglify: false
 
 # google analytics
 analytics:
