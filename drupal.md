@@ -62,15 +62,12 @@ Two new menu items will show up in your Drupal menu:
 Click on either of them, you will be taken to a new web page where AVChat will load in the browser and will ask for a username. Type one and click `[Connect]`. AVChat will now connect to the media server and ask you for the license key.
 
 Enter the key (It's in your [private client/trial area](https://nusofthq.com/c/)) and press `[Submit]`.
-
-
-
 </section>
 
 
 <section class="bs-docs-section" markdown="1">
-  <h1 id="installation-instructions" class="page-header">Module Features</h1>
-  <h2 id="accessing-the-avchat-admin-area">Access the AVChat admin area</h2>
+<h1 id="installation-instructions" class="page-header">Module Features</h1>
+<h2 id="accessing-the-avchat-admin-area">Access the AVChat admin area</h2>
 The AVChat admin interface allows you to kick and ban users, view private discussions, log in as hidden, close, open and delete rooms, change the license key, etc. .
 
 By default, Drupal 5 and 6 come with two user roles:
@@ -100,13 +97,13 @@ Feature not available.
 1. Go to `Administer -> Site configuration -> AVChat 3.0 Drupal 6.x Module Settings`
 2. Set `Chat will open` to `in popup` and save
 
-  <h2 id="permissions">Limiting features to certain user roles</h2>
-  By default Drupal 5 and 6 come with two user roles:
+<h2 id="permissions">Limiting features to certain user roles</h2>
+By default Drupal 5 and 6 come with two user roles:
 
-  * **anonymous users** or visitors
-  * **authenticated users** or logged in users
+* **anonymous users** or visitors
+* **authenticated users** or logged in users
 
-  and a **super administrator** account which does not belong to any user role.
+and a **super administrator** account which does not belong to any user role.
 
 On top of that you can add your own custom user roles from `Administer -> User Management -> Roles`.
 <h3>Limiting AVChat features</h3>
@@ -115,19 +112,27 @@ To control what AVChat features (creating rooms, sending PM's, viewing webcams, 
 
 All user roles will be shown horizontally while all the AVChat features you can turn on and off will be shown vertically.
 
-  <h2 id="location-of-avchat-files">Location of AVChat files</h2>
-  All the AVChat  files including:
+<h2 id="location-of-avchat-files">Allowing visitors to enter AVChat</h2>
+1. Go to `Administer -> User management -> Permissions -> avchat3 module`
+2. Scroll down to the `access avchat3 user interface` column
+3. Check the `anonymous user` and save
 
-  * all the module files
-  * index.swf and admin.swf
-  * language files
-  * audio/video quality profile files
-  * avc_settings.xml
+<h2 id="location-of-avchat-files">Location of AVChat files</h2>
+All the AVChat  files including:
+
+* all the module files
+* index.swf and admin.swf
+* language files
+* audio/video quality profile files
+* avc_settings.xml
 
 
-  are located in
+are located in `sites/all/modules/avchat3`.
 
-  `sites/all/modules/avchat3`
+<h2 id="location-of-avchat-files">GPL License</h2>
+The AVChat Module for Drupal is licensed under the GNU General Public License, version 2.
 
+Once you purchase the module you can modify it and distribute it as long as you keep it under the GPL.
 
+We are not affiliated with or endorsed by the Drupal Project or its trademark owners.
 </section>
