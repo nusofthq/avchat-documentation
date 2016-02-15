@@ -12,8 +12,10 @@ licenseUrl: http://opensource.org/licenses/MIT
 headerLinks:
   - title: Client Area
     url: https://nusofthq.com/c/
+    target: _blank
   - title: Discuss AVChat
     url: http://discuss.avchat.net
+    target: _blank
 
 # list if additional links on the footer
 footerLinks:
