@@ -7,7 +7,7 @@ isHome: true
 
 <section class="bs-docs-section" markdown="1">
   <h1 id="overview" class="page-header">AVChat Standalone</h1>
-  * Overview
+  * [Overview](standalone.html#overview)
   * Installation Instructions
   * Changing the colors and design
   * Audio and Video Qualiy
