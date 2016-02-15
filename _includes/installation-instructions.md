@@ -17,7 +17,6 @@ There are 2 sets of files in the AVChat archive, the avchat30 app which goes on 
 4. CHMOD the tokens folder to 777.
 5. Go to http://yoursite.com/your_new_video_chat_folder/, log in and enter your license key in the dialog box that shows up after the connection is established.
 ![alt text](http://docs.avchat.net/assets/images/license_key.jpg)
-
 6. To access the admin interface go to http://yoursite.com/your_new_video_chat_folder/admin.html. We strongly suggest you rename `admin.html` and `admin.swf` files for security reasons.
 
 If you're on a ASP.NET server and it doesn't run PHP you need to configure AVChat to use the .aspx server side files.
