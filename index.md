@@ -5,15 +5,15 @@ description: Simple documentation template for Github pages
 isHome: true
 ---
 
-<section class="bs-docs-section">
+
   <h1 id="overview" class="page-header">Quick Overview</h1>
 
-  <blockquote>
-    All the **AVChat** *Standalone* documentation is on this page.
-  </blockquote>
+
+  > All the **AVChat** *Standalone* documentation is on this page.
 
 
-  1. First ordered list item
+
+1. First ordered list item
 2. Another item
 ⋅⋅* Unordered sub-list.
 1. Actual numbers don't matter, just that it's a number
@@ -30,7 +30,7 @@ isHome: true
 - Or minuses
 + Or pluses
 
-</section>
+
 
 <section class="bs-docs-section">
   <h1 id="installation" class="page-header">1. Quick Overview</h1>
