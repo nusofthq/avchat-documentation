@@ -53,6 +53,30 @@
           </li>
           {% endif %}
         {% endfor %}
+        <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Integration Kits <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Community Lite</a></li> <li><a href="#">Community PRO</a></li> <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Joomla! 1.0</a></li>
+            <li><a href="#">Joomla! 1.5</a></li>
+            <li><a href="#">Joomla! 1.6 -> 3.4</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">SocialEngine PHP</a></li>
+            <li><a href="#">phpFox</a></li>
+            <li><a href="#">Drupal 5,6,7</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">IP.Board</a></li>
+            <li><a href="#">xenForo</a></li>
+            <li><a href="#">vBulletin</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">osDate</a></li>
+            <li><a href="#">eMeeting</a></li>
+            <li><a href="#">vldPersonals</a></li>
+          </ul>
+        </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
         {% for p in site.headerLinks %}
@@ -67,35 +91,25 @@
 
 
   <!-- Header
-  ===========================================
+  ===========================================-->
   {% if page.isHome %}
-  <div class="bs-docs-masthead" id="content">
+  <div class="bs-docs-header" id="content">
     <div class="container">
-      <h1 class="home-title">{{site.name}}</h1>
-      <p class="lead">{{page.description}}</p>
-      <p class="lead">
-        <a href="{{site.downloadUrl}}" class="btn btn-outline-inverse btn-lg">Download</a>
-      </p>
-      <p class="version">Currently v{{site.version}}</p>
+      <img src="/assets/images/avchat_works_across_platforms.png" class="pull-left"/>
+      <h1>{{page.title}}</h1>
+      <p>{{page.description}}</p>
     </div>
   </div>
-
   {% else %}
   <div class="bs-docs-header" id="content">
     <div class="container">
+      <img src="/assets/images/avchat_works_across_platforms.png" class="pull-left" />
       <h1>{{page.title}}</h1>
       <p>{{page.description}}</p>
     </div>
   </div>
   {% endif %}
 
-
-<div class="bs-docs-header" id="content">
-  <div class="container">
-    <h1>{{page.title}}</h1>
-    <p>{{page.description}}</p>
-  </div>
-</div>-->
 
   <div class="container bs-docs-container">
     <div class="row">
