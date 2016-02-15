@@ -7,7 +7,9 @@ There are 2 sets of files in the AVChat archive, the avchat30 app which goes on 
 
 **Setting up the avchat30 application on the media server**
 
+
 {% include media-server-app.md %}
+
 
 **Installing AVChat Standalone in a folder on your web site**
 
