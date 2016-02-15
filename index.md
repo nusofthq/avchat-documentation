@@ -9,19 +9,7 @@ isHome: true
 
 <section class="bs-docs-section" markdown="1">
   <h1 id="overview" class="page-header">Quick Overview</h1>
-
-  <h3 id="file-groups">AVChat 3 groups of files</h3>
-
     {% include overview.md %}
-
-
-    <h3 id="config-files">Configuration files</h3>
-
-    <h3 id="file-structure">File Structure</h3>
-
-    <h3 id="how-avchat-works">How AVChat works</h3>
-
-    <h3 id="requirements">Requirements</h3>
 
 </section>
 
