@@ -1,5 +1,5 @@
 # name of the software
-name: AVChat Standalone
+name: Documentation for AVChat and it's integration kits
 # current version of the software
 version: 3.7.2
 # url of the download button
@@ -11,15 +11,19 @@ licenseUrl: http://opensource.org/licenses/MIT
 # list of additional links on the right of the top menu
 headerLinks:
   - title: GitHub
-    url: https://github.com/mistic100/jekyll-bootstrap-doc
-
+    url: https://github.com/nusofthq/avchat-documentation
+  - title: Client Area
+    url: https://nusofthq.com/c/
+  - title: Discuss AVChat
+    url: http://discuss.avchat.net
 # list if additional links on the footer
 footerLinks:
   - title: GitHub
-    url: https://github.com/mistic100/jekyll-bootstrap-doc
-  - title: Issues
-    url: https://github.com/mistic100/jekyll-bootstrap-doc/issues?state=open
-
+    url: https://github.com/nusofthq/avchat-documentation
+  - title: Client Area
+    url: https://nusofthq.com/c/
+  - title: Discuss AVChat
+    url: http://discuss.avchat.net
 # header
 header:
   color1: "#080331"
@@ -33,20 +37,20 @@ analytics:
 
 # github buttons
 githubButton:
-  user: mistic100
-  repo: jekyll-bootstrap-doc
+  user: nusofthq
+  repo: avchat-documentation
 
 # twitter buttons
 twitter:
   enabled: true
   via:
   hash:
-  account:
+  account: nusofthq
 
 # facebook buttons
 facebook:
   enabled: true
-  profileUrl:
+  profileUrl: https://www.facebook.com/nusoftcompany/
 
 
 exclude: ['README.md', 'LICENSE', 'bower.json', 'Gemfile.lock', 'Gemfile']
