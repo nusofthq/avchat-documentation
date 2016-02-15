@@ -18,11 +18,6 @@ isHome: true
 </section>
 
 <section class="bs-docs-section" markdown="1">
-  <h1 id="installation-instructions" class="page-header">Installation Instructions</h1>
-    {% include installation-instructions.md %}
-</section>
-
-<section class="bs-docs-section" markdown="1">
   <h1 id="Design" class="page-header">Design</h1>
     {% include design.md %}
 </section>
