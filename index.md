@@ -1,6 +1,6 @@
 ---
 layout: index
-title: Home
+title: AVChat Documentation
 description: Simple documentation template for Github pages
 isHome: true
 ---
