@@ -10,6 +10,8 @@
   <div class="tab-pane" id="wowza">Wowza</div>
 </div>
 
+<script>
 jQuery(function () {
     jQuery('#serversTab a:last').tab('show')
 })
+</script>
