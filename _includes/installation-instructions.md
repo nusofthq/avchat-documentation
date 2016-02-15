@@ -6,9 +6,9 @@ First you need to download the AVChat archive from the client/trial area on nuso
 There are 2 sets of files in the AVChat archive, the avchat30 app which goes on your media server and the chat files which go on your web server.
 
 **Setting up the avchat30 application on the media server**
-
+<div markdown="1">
 {% include media-server-app.md %}
-
+</div>
 **Installing AVChat Standalone in a folder on your web site**
 
 1. Create a new folder in your web site and upload the contents of **Files to upload to your web site** (from the AVChat archive received) to it.
