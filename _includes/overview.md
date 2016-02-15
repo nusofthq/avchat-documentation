@@ -111,6 +111,7 @@ AVChat ships in an archive that looks like this:
 * Files to upload to your media server (Wowza)
 
 
+
 <h2 id="how-avchat-works">How AVChat works</h2>
 
 1. User goes to your web site and visits the page with the video chat embedded.
@@ -123,3 +124,58 @@ AVChat ships in an archive that looks like this:
 ![alt text](http://docs.avchat.net/assets/images/fcs.jpg "Logo Title Text 1")
 
 <h2 id="requirements">Requirements</h2>
+
+To run AVChat 3 on your website you will need:
+
+1. Web hosting for your chat/website
+2. A media server
+
+Your chat users need a modern Internet browser with Flash Player 11.1 or above installed.
+
+The need for Flash Player 11.1 starts with AVChat build 2330 of AVChat which adds H.264 encoding support.
+
+<h3 id="web-hosting"> Web hosting for your chat/website</h3>
+
+A web hosting account with PHP or ASP.NET support is needed. This is where the chat files will be placed and most probably where your web site is already located.
+
+<h3 id="media-server"> A media server</h3>
+
+AVChat (and all Flash based video chat apps including the peer to peer ones) needs a media server to transport data (audio, video and text chat) between your chat users.
+
+There are 3 media servers:
+
+* [Red5](https://github.com/Red5/red5-server "Red5 Media Server") (free open source)
+* [Wowza](http://www.wowza.com "Wowza Media Server") (commercial, free trial)
+* [Adobe Media Server](http://www.adobe.com/products/adobe-media-server-family.html "Adobe Media Server") (commercial, free edition)
+
+AVChat (desktop) is compatible with:
+
+* Red5 1.0.5+
+* Wowza 1.7.x -> Wowza Streaming Engine 4
+* Adobe Media Server 5 Starter, Professional and Extended
+* Flash Media Server 2, 3, 3.5, 4 and 4.5
+
+AVChat (mobile version) is compatible with:
+
+* Red5 1.0.5+
+
+Other compatibility notes:
+
+* AVChat versions up to and including 3.5.2 are compatible with Red5 0.8 and 1.0RC1.
+* Red5 1.0.5 specifically needs at least Java JDK version 1.8
+* Adobe Media Server Standard is not supported
+* Flash Media Streaming Server is not supported
+
+<h3 id="setting-up-own-media-server">Setting up your own media server</h3>
+
+You can can install the above media server software on any VPS or dedicated/cloud server.
+
+Any VPS, dedicated server or cloud server will work. If you don't have one yet we recommend getting one from these companies:
+
+* [OVH - VPS servers starting at €3/month (datacenters in France)](http://www.ovh.com/fr/vps/vps-classic.xml)
+* [Leaseweb - VPS servers starting at €5/month](https://www.leaseweb.com/cloud/public/virtual-server)
+* [DigitalOcean - VPS servers starting at $5/month](https://www.digitalocean.com/?refcode=cd50d47eef55)
+
+Each media server has it's own installation instructions but we can install a media server for you through our [Media Server Installation Service ($99)](http://avchat.net/services#installms).
+
+We're also offering [VPS servers with Red5 pre-installed](http://avchat.net/hosting) and configured for AVChat starting with $14.99/month. We use servers in San Francisco, New York, Amsterdam, Singapore and more.
