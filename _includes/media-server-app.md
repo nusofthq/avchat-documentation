@@ -4,7 +4,7 @@
   <li><a data-target="#wowza" data-toggle="tab">Wowza</a></li>
 </ul>
 
-<div class="tab-content" markdown ="1">
+<div class="tab-content">
 
   <div class="tab-pane active" id="red5">
 
