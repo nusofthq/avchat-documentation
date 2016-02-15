@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Home
+title: AVChat Standalone
 description: Simple documentation template for Github pages
-isHome: true
+isHome: false
 ---
 
 > All the AVChat Standalone documentation is on this page.
@@ -18,6 +18,36 @@ isHome: true
 </section>
 
 <section class="bs-docs-section" markdown="1">
-  <h1 id="Design" class="page-header">Design</h1>
+  <h1 id="design" class="page-header">Design</h1>
     {% include design.md %}
+</section>
+
+<section class="bs-docs-section" markdown="1">
+  <h1 id="audio-video-quality" class="page-header">Audio Video Quality</h1>
+    {% include audio-video-quality.md %}
+</section>
+
+<section class="bs-docs-section" markdown="1">
+  <h1 id="security" class="page-header">Security</h1>
+    {% include security.md %}
+</section>
+
+<section class="bs-docs-section" markdown="1">
+  <h1 id="features" class="page-header">Features</h1>
+    {% include features.md %}
+</section>
+
+<section class="bs-docs-section" markdown="1">
+  <h1 id="localization" class="page-header">Localization</h1>
+    {% include localization.md %}
+</section>
+
+<section class="bs-docs-section" markdown="1">
+  <h1 id="integration" class="page-header">Integration</h1>
+    {% include integration.md %}
+</section>
+
+<section class="bs-docs-section" markdown="1">
+  <h1 id="troubleshooting" class="page-header">Troubleshooting</h1>
+    {% include troubleshooting.md %}
 </section>
