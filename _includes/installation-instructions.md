@@ -80,13 +80,15 @@ All the app files for AVChat are placed inside the Red5/webapps/avchat30 folder.
 ```xml
 <context-param>
 <param-name>webAppRootKey</param-name>
-<param-value>/avchat30</param-value>```
+<param-value>/avchat30</param-value>
+```
 to
 ```xml
 <context-param>
 <param-name>webAppRootKey</param-name>
 <param-value>/avchat30_siteX</param-value>
-</context-param>```
+</context-param>
+```
 5. rename this file:
 webapps/avchat30_siteX/WEB-INF/classes/`logback_avchat30.xml`
 to
@@ -95,16 +97,20 @@ webapps/avchat30_siteX/WEB-INF/classes/`logback_avchat30_siteX.xml`
 webapps/avchat30_siteX/WEB-INFclasses/`logback_avchat30_siteX.xml`
 and change:
 ```xml
-<jmxConfigurator contextName="avchat30" />```
+<jmxConfigurator contextName="avchat30" />
+```
 to
 ```xml
-<jmxConfigurator contextName="avchat30_siteX" />```
+<jmxConfigurator contextName="avchat30_siteX" />
+```
 and
 ```xml
-<fileNamePattern>log/avchat30.%d{yyyy-MM-dd}.log</fileNamePattern>```
+<fileNamePattern>log/avchat30.%d{yyyy-MM-dd}.log</fileNamePattern>
+```
 to
 ```xml
-<fileNamePattern>log/avchat30_siteX.%d{yyyy-MM-dd}.log</fileNamePattern>```
+<fileNamePattern>log/avchat30_siteX.%d{yyyy-MM-dd}.log</fileNamePattern>
+```
 
 Steps 5 and 6 will ensure we will get separate logs for each app.
 
