@@ -67,7 +67,7 @@ That's all!
 To connect AVChat to the new AMS app use:
 rtmp://my-media-server.com/**avchat30_siteX**/\_definst\_ in `avc_settings.xml`.
 
-<div class="alert alert-info" role="alert">With this kind of setup 2 different versions of AVChat can be run at the same time by FMS/AMS. Just be careful to connect the correct client to the correct server side application.</div>
+With this kind of setup 2 different versions of AVChat can be run at the same time by FMS/AMS. Just be careful to connect the correct client to the correct server side application.
 
 **Long version: Red5**
 
@@ -119,7 +119,7 @@ That's all!
 To connect AVChat to the new Red5 app use:
 rtmp://my-media-server.com/avchat30_siteX/\_definst\_ in `avc_settings.xml` .
 
-<div class="alert alert-info" role="alert">With this kind of setup 2 different versions of AVChat can be run at the same time by Red5. Just be carefull to connect the correct client to the correct server side application.</div>
+With this kind of setup 2 different versions of AVChat can be run at the same time by Red5. Just be carefull to connect the correct client to the correct server side application.
 
 **Long version: Wowza**
 
@@ -135,7 +135,7 @@ rtmp://my-media-server.com/avchat30/\_definst\_ in `avc_settings.xml` .
 To connect AVChat to the second app/folder use:
 rtmp://my-media-server.com/avchat30_siteX/\_definst\_ in `avc_settings.xml` .
 
-<div class="alert alert-info" role="alert">Wowza does NOT support running of 2 different versions of AVChat at the same time. The steps provided above only allow the setup of multiple apps of the SAME version.</div>
+Wowza does NOT support running of 2 different versions of AVChat at the same time. The steps provided above only allow the setup of multiple apps of the SAME version.
 
 <h2 id="using-different-app-instances">Using different app instances for 2 or more AVChat 3 installations</h2>
 
@@ -154,7 +154,7 @@ So the final result will be:
 
 Now each installation will connect to it's own instance of the media server side AVChat application.
 
-<div class="alert alert-info" role="alert">By using this kind of setup both AVChat installations will use the same media server settings files (settings.asc/avchat3.properties). Also it is possible that at least one of the installations won't correctly update the external users list.</div>
+By using this kind of setup both AVChat installations will use the same media server settings files (settings.asc/avchat3.properties). Also it is possible that at least one of the installations won't correctly update the external users list.
 
 
 <h2 id="switching-between-config-files">Switching between the PHP and ASPX configuration files in AVChat</h2>
