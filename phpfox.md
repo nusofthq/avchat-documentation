@@ -47,22 +47,35 @@ Connect using an FTP client to your website and:
 
 <h2 id="completing-the-installation">Complete installation</h2>
 <h3>Activate the module</h3>
-Now open your PHPFox's admin area in a web browser, and go to `Extensions->Product->Import Products`. You will be prompted to install `AVChat3 Module for PHPFox`. Click <kbd>Install</kbd>.
+Now open your PHPFox's `AdminCP` area in a web browser, and go to `Extensions->Import Products`.
 
+<img src="{{site.github.url}}/assets/images/phpfox/extensions-import-products.png" class="img-responsive" />
+
+You will be prompted to install `AVChat3 Module for phpFox 3`. Click the Install link. The module will install and you'll receive a confirmation message:
+
+>Product successfully installed.
 
 <h3>Connect AVChat to the media server app</h3>
-Go to `Settings->Manage Settings->Avchat3` and insert your connection string for the media server app.
+Now go to `Settings->Manage Settings` and click on the `General AVChat 3 Settings` link. The AVChat 3 settings page will load.
 
-It should look like this:
+<img src="{{site.github.url}}/assets/images/phpfox/connection-string.png" class="img-responsive" />
 
-* `rtmp://media-server-ip/avchat30/_definst_`
+In the `RTMP Connectionstring` section insert your connection string for the media server app ( it should look like this `rtmp://media-server-ip/avchat30/_definst_` ). Scroll to the bottom and click <kbd>Submit</kbd>.
 
-You will now find a link to the AVChat 3 Module for PHPFox in the main menu.
+Your AVChat copy is now configured to connect to the media server.
 
-<h3>Enter the chat and insert the license key</h3>
-Click on the chat link. The pre-filled AVChat login screen will show up, click `[Connect]`. AVChat will now connect to the media server and ask you for the license key.
+<h3>Enter the chat, connect and insert the license key</h3>
+There's a new `Video Chat` link in the PHPFox menu, click on it.
+<img src="{{site.github.url}}/assets/images/phpfox/avchat-link-in-menu.png" class="img-responsive" />
+The page with AVChat on it will load and AVChat's login screen will show up.
+
+**Your username will be automatically filled and the gender will be pre-selected:**
+
+<img src="{{site.github.url}}/assets/images/phpfox/avchat-connect.png" class="img-responsive" />
+Click `[Connect]`. AVChat will now connect to the media server and ask you for the license key.
 
 Enter the key (It's in your [private client/trial area](https://nusofthq.com/c/)) and press `[Submit]`.
+</section>
 
 <section class="bs-docs-section" markdown="1">
 <h1 id="avchat-phpfox38-module-features" class="page-header">Module Features</h1>
@@ -79,6 +92,7 @@ You might want AVChat to open in a pop up window to make it easier for your user
 
 1. From Admin CP click on `Settings -> Manage Settings`
 2. Click on `General AVChat 3 Settings`
+<img src="{{site.github.url}}/assets/images/phpfox/admin-manage-settings.png" class="img-responsive" />
 3. Under `Open Method` select `popup`
 4. Click on <kbd>Submit</kbd> at the bottom of the page
 
@@ -95,6 +109,7 @@ PHPFox ships with 4 default user groups that can not be removed
 <h3>Limiting AVChat features</h3>
 
 To control what AVChat features (creating rooms, sending PM's, viewing webcams, etc.) are available to each user group do the following from the AdminCP:
+
 1. go to `Users -> Manage User Groups`.
 2. click the arrow in front of the user group you want to change AVChat permissions for and select `Manage User Settings`.
 3. select `Avchat3` in the list to the left. The permissions for AVChat 3 will load up.
