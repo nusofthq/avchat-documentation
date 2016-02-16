@@ -11,15 +11,15 @@ hide: true
 
   The plugin will handle the following:
 
-  * user name integration
-  * profile url integration
-  * profile image integration
-  * placement of video chat within the web site (user and admin interface)
+  * User name integration
+  * Profile url integration
+  * Profile image integration
+  * Placement of video chat within the web site (user and admin interface)
   enable/disable/limit more than 47 features for each user role
   * MultiSite support
   * BuddyPress support: BuddyPress avatars will be used and BuddyPress users profiles can be accessed directly from AVChat
 
-  All the documentation regarding the Community PRO plugin is on this page so if you're looking for something specific just hit Ctrl+F on your keyboard. The main AVChat documentation is here.
+  All the documentation regarding the Community PRO plugin is on this page so if you're looking for something specific use the menu on the right or search within this page by pressint <kbd>Ctrl+F</kbd> on your keyboard. The main AVChat documentation is [here](/standalone).
 </section>
 
 <section class="bs-docs-section" markdown="1">
@@ -27,28 +27,37 @@ hide: true
 
   First, you will need the two archives downloaded from your client area:
 
-  * AVChat 3.0 Build xxxx.zip (contains media server files for Red5/FMIS/Wowza and AVChat Standalone)
-  * avchat3_wordpress_plugins_pro.zip (contains 1 plugin for WordPress 4.x)
+  * **AVChat 3.0 Build xxxx.zip** (contains media server files for Red5/FMIS/Wowza and AVChat Standalone)
+  * **avchat3_wordpress_plugins_pro.zip** (contains 1 plugin for WordPress 4.x)
 
   <img src="/assets/images/wordpress_images/downloaded_archives.png" class="img-responsive"/>
 
-  Extract the 2 archives somewhere on your computer and follow Steps 1.1 and 1.2 mentioned below.
+  Save and extract the archives somewhere on your computer.
 
   <h2 id="media-server-app">Setting up the media server application</h2>
   {% include media-server-app.md %}
   <h2 id="plugin">Plugin installation</h2>
   To install the plugin, you will need to be logged in as admin on your website. Once logged in:
 
-  1. Go to the plugins page, section <kbd>Add New</kbd> in your WordPress backend:
+
+
+  1. Go to the **Plugins** page, section **Add New** in your WordPress backend:
   <img src="/assets/images/wordpress_images/plugins_section.png" class="img-responsive"/>
+
+
   2. Press the <kbd>Upload Plugin</kbd> button:
   <img src="/assets/images/wordpress_images/upload_plugin.png" class="img-responsive"/>
+
+
   3. Press <kbd>Choose File</kbd> and select the avchat3_wordpress_plugins_pro.zip file:
   <img src="/assets/images/wordpress_images/select_archive.png" class="img-responsive"/>
+
+
   4. Press <kbd>Install Now</kbd> and wait for the setup to finish:
   <img src="/assets/images/wordpress_images/install_now.png" class="img-responsive"/>
 
-  Before activating the plugin, you will have to upload the AVChat files on your server. To do so, you will need FTP (or SFTP) access to your server.
+
+  Before activating the plugin, you will have to upload the AVChat client files on your server. To do so, you will need FTP (or SFTP) access to your server.
 
   <div class="alert alert-info">
     If you are not sure how to access your server using FTP, it's better to contact your Hosting Company.
@@ -69,7 +78,7 @@ hide: true
   <img src="/assets/images/wordpress_images/chmod.png" class="img-responsive"/>
 
   <h2 id="plugin-configure">Plugin Configuration</h2>
-  You can now activate the plugin. Once activated, a new page has been added in your WordPress Dashboard.
+  You can now activate the plugin. Once activated, a new page has been added in your WordPress Dashboard: **Video Chat PRO**.
   <img src="/assets/images/wordpress_images/activate.png" class="img-responsive"/>
 
   You need to insert the connection string. The connection string has the following form:
@@ -151,13 +160,13 @@ hide: true
   <h2 id="facebook-login">Facebook Login</h2>
   To enable Facebook Login you will need to create a Facebook Application from where you will receive an App ID. You can follow the next steps to accomplish this.
 
-  1. Go and Register as a Developer at: http://developers.facebook.com
+  1. Go and Register as a Developer at: [http://developers.facebook.com](http://developers.facebook.com)
   <img src="/assets/images/wordpress_images/fb_register_dev.png" class="img-responsive"/>
-  2. Click <kbd>+ Create New App</kbd>
+  2. Click <kbd>Create New App</kbd>
   <img src="/assets/images/wordpress_images/fb_create_new_app_btn.png" class="img-responsive"/>
-  3. Insert your application name (App Name), select the category and press <kbd>Continue</kbd>
+  3. Insert your application name (App Name), select the category and press <kbd>Create App</kbd>
   <img src="/assets/images/wordpress_images/facebook_create_new_app.png" class="img-responsive"/>
-  4. After pressing the <kbd>Continue</kbd> button you will be redirected to the application page where you will find the App ID. Don't forget to enter your website URL in Website with Facebook Login
+  4. After pressing the <kbd>Create App</kbd> button you will be redirected to the application page where you will find the App ID. Don't forget to enter your website URL in Website with Facebook Login
   <img src="/assets/images/wordpress_images/fb_app_id_1.png" class="img-responsive"/>
   <img src="/assets/images/wordpress_images/fb_app_id_2.png" class="img-responsive"/>
   <img src="/assets/images/wordpress_images/fb_app_id_3.png" class="img-responsive"/>
@@ -171,7 +180,7 @@ hide: true
   <h2 id="twitter-login">Twitter Login</h2>
   To enable Twitter Login for your video chat you will need to create a Twitter Application that will provide you with a Consumer Key and an Consumer Secret. You can follow the next steps to accomplish this.
 
-  1. Go to https://dev.twitter.com/apps and click on the Create a new application button
+  1. Go to [https://dev.twitter.com/apps](https://dev.twitter.com/apps) and click on the <kbd>Create a new application</kbd> button.
   <img src="/assets/images/wordpress_images/twitter_new_application.png" class="img-responsive"/>
   2. Complete the form:
   * **Name** - enter the name of your application
@@ -180,7 +189,7 @@ hide: true
   * Press <kbd>Create your Twitter application!</kbd>
 
   <img src="/assets/images/wordpress_images/twitter_new_app_form.png" class="img-responsive"/>
-  3. After you completed the form you will be redirected to the application page, there you will find your Consumer key and Consumer secret.
+  3. After you completed the form you will be redirected to the application page, where you will find your `Consumer key` and `Consumer secret`.
   <img src="/assets/images/wordpress_images/twitter_app_page.png" class="img-responsive"/>
   4. Now that you have your Consumer key and Consumer Secret, in your website, go to your **WordPress Admin** > **Video Chat PRO** > **Facebook & Twitter Login** tab
   <img src="/assets/images/wordpress_images/fb_conf.png" class="img-responsive"/>
@@ -191,14 +200,14 @@ hide: true
   <h2 id="plugin-update">Updating the plugin</h2>
   First you should download the new archive from your client area on nusofthq.com
 
-  Then we need to remove the old version. While logged in as and admin in the WP backend go to **Plugins** and click <kbd>Deactivate</kbd> followed by <kbd>Delete</kbd> for the AVChat PRO plugin. This will remove the **wp-content/plugins/avchat-3-pro** folder and all its contents.
-
-  You will now have to re-install the plugin and upload the AVChat 3 client side files again to the **wp-content/plugins/avchat-3-pro** folder, for more details check out the client side installation instructions.
+  Then we need to remove the old version. While logged in as and admin in the WP backend go to **Plugins** and click <kbd>Deactivate</kbd> followed by <kbd>Delete</kbd> for the AVChat Community PRO plugin. This will remove the **wp-content/plugins/avchat-3-pro** folder and all its contents.
+  <div class="alert alert-danger"><strong>Warning!</strong> This will also delete the chat client so make sure you make a backup before updating</div>
+  You will now have to re-[install](/wordpress-community-pro#installation) the plugin and upload the AVChat 3 client side files again to the **wp-content/plugins/avchat-3-pro** folder.
 
   Any existing settings or permissions will be kept. Any new settings or permissions added by the new version will most probably be empty, make sure you configure them as you wish for each user role from **Video Chat PRO** > **User Roles & Permissions** tab.
 
   <h2 id="plugin-remove">Removing the plugin</h2>
-  While logged in as and admin in the WP backend go to Plugins and click <kbd>Deactivate</kbd> followed by Delete for the AVChat PRO plugin.
+  While logged in as and admin in the WordPress backend go to **Plugins** and click <kbd>Deactivate</kbd> followed by <kbd>Delete</kbd> for the AVChat Community PRO plugin.
 
   This will remove the **wp-content/plugins/avchat-3-pro** folder and all it's contents.
 
@@ -207,9 +216,9 @@ hide: true
   You might also want to remove the page holding the `[chat]` tag that was replaced by the plugin with the AVChat 3 software
 
   <h2 id="multisite">Multisite support</h2>
-  WP has a special mode called Multisite. This mode has been introduced in 2010 in WP 3.0.
+  WordPress has a special mode called **Multisite**. This mode has been introduced in 2010 in WordPress 3.0.
 
-  Starting with build 2359 the plugin adds support for installations of WordPress with multisite on.
+  Starting with build 2359, the plugin adds support for installations of WordPress with multisite on.
 
   A new WP user role is present in multisite setups:
 
@@ -218,24 +227,24 @@ hide: true
 
   After installation, the super admin can network activate it for all the websites or he can activate it individually for each of his websites.
 
-  If **My Sites** > **Network Admin** > **Dashboard** > **Settings** > **Network Settings** > **Enable administration menus** > **[ ]Plugins** is checked then other network users can independently activate it for their websites too.
+  If **My Sites** > **Network Admin** > **Dashboard** > **Settings** > **Network Settings** > **Enable administration menus** > **[  ]Plugins** is checked then other network users can independently activate it for their websites too.
 
   <h4>Network Activation</h4>
 
-  When network activated it can not be individually deactivated
+  When the plugin is network activated, it can not be individually deactivated.
 
-  When network activated you must visit the **Settings** > **Video Chat PRO** page for each of the websites in the network for the permissions tables for AVChat3 to be created. Otherwise in the front end you will find the following error:
+  When the plugin is network activated you must visit the **Settings** > **Video Chat PRO** page for each of the websites in the network for the permissions tables for AVChat3 to be created. Otherwise in the front end you will find the following error:
 
   `Warning: Invalid argument supplied for foreach() in /home/observer/public_html/wp-content/plugins/avchat-3-pro/avchat3.php on line 86`
 
-  When using a standard WP installation (non multisite) or when individually activating the plugin for each sub site in the network the tables are created at activation.
+  When using a standard WordPress installation (non multisite) or when individually activating the plugin for each sub site in the network the tables are created at activation.
   <h4>Network Users</h4>
 
-  When used in a multiste setup, the plugin will show a new column (role) in the Settings > Community PRO PRO area called Network users. These are users who belong to the network but they do not belong to any other website on the network other than their own. They have no role in other websites than their own.
+  When used in a multisite setup, the plugin will show a new column (role) in the **Settings** > **Community PRO** area called **Network** users. These are users who belong to the network but they do not belong to any other website on the network other than their own. They have no role in other websites than their own.
 
   <h4>Permissions and Settings</h4>
 
-  Each site on the nework can control the permissions and settings individually. This also means that each site on the network has to have their own connectionstring. It is possible for 2 or more websites to use the same connectionstring, in this case they will share the rooms and users list,etc. .
+  Each site on the network can control the permissions and settings individually. This also means that each site on the network has to have their own connection string. It is possible for 2 or more websites to use the same connection string, in this case they will share the rooms and users list,etc. .
 
   <h2 id="shortcode-opts">Extended short code functionality</h2>
   To display AVChat 3 in your WordPress page or posts, you will use the short code [chat].
