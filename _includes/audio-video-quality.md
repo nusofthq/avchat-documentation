@@ -45,47 +45,47 @@ Each of the quality profile files has the exact same XML structure:
 
 Each node/value pair explained:
 
-* Video settings
-  * `<bytes>` This is the maximum amount of bytes that the video (not audio) can consume per second. If it is set to 0, the video stream from the user to the media server will consume as much bandwidth as possible to maintain the picture quality. Multiply by 8 to get the value in bits.
-  * `<q>` This is the picture quality. If set to 0 it will use as much quality as possible, without exceeding the <bytes> value. Maximum is 100 but that will consume EXCESSIVE bandwidth. A value between 85-95 will produce really good picture quality!
-  * `<fps>` This defines the video frame rate. 10, 15, 30 fps, etc... . Some old web cams can only capture up to 15fps.
-  * `<kfps>` Key frames. This tells AVChat that every <kfps> frames a full frame will be sent to the media server . The rest of the frames contain just the changes from the previous frame.
-  * `<w>` The desired width of the captured video in pixels
-  * `<h>` The desired height of the captured video in pixels
+**Video settings**
+* `<bytes>` This is the maximum amount of bytes that the video (not audio) can consume per second. If it is set to 0, the video stream from the user to the media server will consume as much bandwidth as possible to maintain the picture quality. Multiply by 8 to get the value in bits.
+* `<q>` This is the picture quality. If set to 0 it will use as much quality as possible, without exceeding the <bytes> value. Maximum is 100 but that will consume EXCESSIVE bandwidth. A value between 85-95 will produce really good picture quality!
+* `<fps>` This defines the video frame rate. 10, 15, 30 fps, etc... . Some old web cams can only capture up to 15fps.
+* `<kfps>` Key frames. This tells AVChat that every <kfps> frames a full frame will be sent to the media server . The rest of the frames contain just the changes from the previous frame.
+* `<w>` The desired width of the captured video in pixels
+* `<h>` The desired height of the captured video in pixels
 * `<displayWidth>` The desired width of the video display
 * `<displayHeight>` The desired height of the video display
 * `<othersDisplayScale>` controls the scale of the video that is represented by an incoming stream ( the stream you are watching). By default it size of the video window will be that of the native resolution the broadcaster is transmiting in. If that size creates a window too large for example ( 1280 x 720 ), this can be scaled down by using a lower value for othersDisplayScale i.e. 0.25
 * `<vcodec>` The video codec used to encode the live stream, with possible values being `sorenson` or `h264`. Use the h264 value to encode video with H.264 codec (Main Profile with Level 3_1 are used, for more details click [here](http://en.wikipedia.org/wiki/H.264/MPEG-4_AVC#Profiles)) (This setting has been added in [build 2330](http://nusofthq.com/blog/avchat-build-2330-introduces-h-264-support/))
 
-* Audio settings:
-  * `<snd>` The sound rate. The higher the better but it also consume more bandwidth.
+**Audio settings**
+* `<snd>` The sound rate. The higher the better but it also consume more bandwidth.
 
-    The snd tag controls the quality/bandwidth of audio.Flash Player supports encoding sound in 2 codecs: `NellyMoser` and `Speex`.
+  The snd tag controls the quality/bandwidth of audio.Flash Player supports encoding sound in 2 codecs: `NellyMoser` and `Speex`.
 
-    Speex is newer,better and open source, that's why its used by default.
+  Speex is newer,better and open source, that's why its used by default.
 
-    Possible values:
-    *  44 : NellyMoser, highest quality
-    *  22 : NellyMoser, medium high quality
-    *  11 : NellyMoser, medium low quality
-    *  8 : NellyMoser, low quality
-    *  5 : NellyMoser, lowest quality
-    *  speex10 : Speex, default value for this profile, highest quality, uses 42.2kbits/s of bandwidth
-    *  speex9 : 34.2kbits/s
-    *  speex8 : 27.8kbits/s
-    *  speex7 : 23.8kbits/s
-    *  speex6 : Speex, uses 20.6kbits/s of bandwidth
-    *  speex5 : 16.8kbits/s
-    *  speex4 : 12.8kbits/s
-    *  speex3 : Speex, low quality, lowest usable quality, uses 9.80kbits/s
-    *  speex2 : 7.75kbits/s
-    *  speex1 : 5.75kbits/s
-    *  speex0 : Speex, lowest quality, not really usable, uses 3.95kbits/s
-  * `<sndSilencelevel>` Takes values from 0 to 100. Flash Player will consider any sound that is lower than the value of this tag as "silence" and thus will not send any data to the media server. Use 100 if you want to never send audio to the media server. Use 0 if you always want to send to the media server whatever the mic captures (even noise). We recommend using 0 since if you use the default (10) Flash Player will stop broadcasting sound when you stop speaking. Even though this seems like a cool feature that cuts bandwidth in reality the listeners will frequently get the feeling that you've been cut off.
+  Possible values:
+  *  44 : NellyMoser, highest quality
+  *  22 : NellyMoser, medium high quality
+  *  11 : NellyMoser, medium low quality
+  *  8 : NellyMoser, low quality
+  *  5 : NellyMoser, lowest quality
+  *  speex10 : Speex, default value for this profile, highest quality, uses 42.2kbits/s of bandwidth
+  *  speex9 : 34.2kbits/s
+  *  speex8 : 27.8kbits/s
+  *  speex7 : 23.8kbits/s
+  *  speex6 : Speex, uses 20.6kbits/s of bandwidth
+  *  speex5 : 16.8kbits/s
+  *  speex4 : 12.8kbits/s
+  *  speex3 : Speex, low quality, lowest usable quality, uses 9.80kbits/s
+  *  speex2 : 7.75kbits/s
+  *  speex1 : 5.75kbits/s
+  *  speex0 : Speex, lowest quality, not really usable, uses 3.95kbits/s
+* `<sndSilencelevel>` Takes values from 0 to 100. Flash Player will consider any sound that is lower than the value of this tag as "silence" and thus will not send any data to the media server. Use 100 if you want to never send audio to the media server. Use 0 if you always want to send to the media server whatever the mic captures (even noise). We recommend using 0 since if you use the default (10) Flash Player will stop broadcasting sound when you stop speaking. Even though this seems like a cool feature that cuts bandwidth in reality the listeners will frequently get the feeling that you've been cut off.
 
-* Misc settings:
-  * `<nm>` This is the name of the connection type. The value of this tag is not used in AVChat.
-  * `<df>` If set to 1, this will be the connection type that will be used by default. The value of this tag is not used in AVChat.
+**Misc settings**
+* `<nm>` This is the name of the connection type. The value of this tag is not used in AVChat.
+* `<df>` If set to 1, this will be the connection type that will be used by default. The value of this tag is not used in AVChat.
 
 To edit a quality profile file open it in Notepad or any other text editor, change the value that you want to change, save it back to the web server. Now reload AVChat in the browser and start your webcam, you should see the changes in effect.
 
