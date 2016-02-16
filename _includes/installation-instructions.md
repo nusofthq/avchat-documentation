@@ -167,6 +167,7 @@ By default AVChat uses the PHP set of files (avc_settings.php, token_request.php
 
 1. Open up `index.html` and `admin.html` in a text editor and find the following variable: `sscode :"php"`, and replace with:
 `sscode :"aspx"`, like this:
+
 ![alt text](http://docs.avchat.net/assets/images/sscodeaspx.jpg)
 2. Edit `avc_settings.xml` and set the and set the `<value>` of the `<stylecssurl>` tag to style.aspx like this `<value>style.aspx</value>`:
 ![alt text](http://docs.avchat.net/assets/images/stylecss.jpg)
