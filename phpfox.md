@@ -21,7 +21,12 @@ Download these 2 archives from your [private client/trial area](https://nusofthq
 1. `AVChat 3.0.zip` contains AVChat
 2. `avchat3_phpfox30x_module.zip` contains the PHPFox module
 
-Extract the 2 archives somewhere on your computer.
+Extract the 2 archives somewhere on your computer. Here's their contents:
+
+<img src="{{site.github.url}}/assets/images/phpfox/phpfox-module-file-structure.gif" class="img-responsive" />
+
+
+
 
 <h2 id="installing-the-media-server-app">Media Server Application</h2>
 Once we've downloaded &amp; unzipped everything the next thing we need to do is to setup the media server app to which AVChat will connect to.
