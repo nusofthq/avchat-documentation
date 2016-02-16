@@ -44,23 +44,40 @@ Connect using an FTP client to your website and:
 
 <div class="bs-callout bs-callout-info" id="callout-tables-responsive-overflow"> <h4>Folder permissions</h4> <p markdown="1">If your website's hosted on a Linux server CHMOD the `uploadedFiles` and `tokens` folders to 777.</p> </div>
 
-Edit `/sites/default/settings.php`, search for `# $cookie_domain = '.example.com'`;, remove the `#` sign and replace `.example.com` with your domain name.
+Edit `/sites/default/settings.php` and search for `# $cookie_domain = '.example.com';` (line 340 on Drupal 7.42).
+Remove the `#` sign and replace `.example.com` with your domain name. Save.
+
+After making the change the file should look like this:
+<pre>
+/**
+ * Drupal automatically generates a unique session cookie name for each site
+ * based on its full domain name. If you have multiple domains pointing at the
+ * same Drupal site, you can either redirect them all to a single domain (see
+ * comment in .htaccess), or uncomment the line below and specify their shared
+ * base domain. Doing so assures that users remain logged in as they cross
+ * between your various domains. Make sure to always start the $cookie_domain
+ * with a leading dot, as per RFC 2109.
+ */
+$cookie_domain = 'yourwebsite.com';
+</pre>
 
 <h2 id="installing-the-module">Complete installation</h2>
-Now open your Drupal's admin area in a web browser, go to `Modules > List > CHAT Section` and enable the `AVChat 3 Module` .
+Now open your Drupal's admin area in a web browser, click on `Modules` in the top menu and scroll down to the `CHAT` section where you need to enable the new `AVChat3` module by clicking the empty checkbox at the left of it and then on <kbd>[Save Configuration]</kbd>.
 
 Two new menu items will show up in your Drupal menus:
 
-* "Flash Video Chat" in the main menu
-* "AVChat 3 Module Settings" in the admin menu
+* `Flash Video Chat` in the main menu
+* `AVChat 3 Module Settings` in the top admin menu
 
-Click on ` AVChat 3 Module Settings`, a list of AVChat 3 settings will show up including the RTMP connection string field.
+Click on `AVChat 3 Module Settings`, a list of AVChat 3 settings will show up including the `RTMP Connectionstring` field.
 
 Set it to the connection string for your new media server app like this:
 
 * `rtmp://media-server-ip/avchat30/_definst_`
 
-Click on `Flash Video Chat` to open the page with AVChat on it. The pre-filled AVChat login screen will show up, click `[Connect]`. AVChat will now connect to the media server and ask you for the license key.
+scroll to the bottom and press <kbd>Save configuration</kbd>.
+
+Now close the Modules modal and click on `Flash Video Chat` link in the main menu to open the page with AVChat on it. The pre-filled AVChat login screen will show up, click `[Connect]`. AVChat will now connect to the media server and ask you for the license key.
 
 Enter the key (It's in your [private client/trial area](https://nusofthq.com/c/)) and press `[Submit]`.
 
@@ -74,35 +91,31 @@ Enter the key (It's in your [private client/trial area](https://nusofthq.com/c/)
   <h2 id="accessing-the-avchat-admin-area">Access the AVChat admin area</h2>
 The AVChat admin interface allows you to kick and ban users, view private discussions, log in as hidden, close, open and delete rooms, change the license key, etc. .
 
-Drupal 7 comes with three user roles:
-
- * Anonymous user: this role is used for users that don't have a user account or that are not authenticated.
- * Authenticated user: this role is automatically granted to all logged in users.
- * Administrator
-
 To give other people access to the AVChat admin interface do the following:
 
-1. Go to `Modules -> AVChat3 Module`
-1. Click on the `Permissions` link
-2. Select which user roles you want to "access avchat3 admin interface" .
+1. Go to `Modules -> AVChat3` (it's in the CHAT section at the bottom)
+2. Click on the `Permissions` link to the right
+3. Tick the checkboxes for the roles you want to give access to in the `Allow this user role to access the chat as admins` line.
+4. Scroll to the bottom and click <kbd>Save permissions</kbd>
 
-Unce a user has access to the admin area of AVChat he just has to log in and click on the ` Flash Video Chat` link. AVChat's admin interface is automatically loaded.
+Unce a user has access to the admin area of AVChat he just has to log in your website and click on the `Flash Video Chat` link. AVChat's admin interface is automatically loaded.
 
 <h2 id="open-avchat-in-a-popup-window">Open AVChat in a pop up</h2>
 
 You might want AVChat to open in a pop up window to make it easier for your users to browse your website while in the chat.
 
-1. Go to `Admin Menu -> AVChat 3 Module Settings`
-2. Set `Chat will open` to `in popup` and save
+1. In the top admin menu click on `AVChat 3 Module Settings`
+2. In the `Chat will open` section check the `In popup` option
+4. Scroll to the bottom and click <kbd>Save configuration</kbd>
 
   <h2 id="permissions">Limiting features to certain user roles</h2>
   By default Drupal 7 comes with 3 user roles:
 
-  * **anonymous users** or visitors
-  * **authenticated users** or logged in users
-  * **administrator**
+  * *anonymous users* or visitors
+  * *authenticated users* or logged in users
+  * *administrator*
 
-On top of that you can add your own custom user roles from `Admin Menu -> People -> Permissions -> Roles`.
+On top of that you can add your own custom user roles from `People -> PERMISSIONS -> Roles`.
 <h3>Limiting AVChat features</h3>
 
 To control what AVChat features (creating rooms, sending PM's, viewing webcams, etc.) are available to each user role go to the Permissions page `Admin Menu -> People -> Permissions` .
@@ -110,9 +123,10 @@ To control what AVChat features (creating rooms, sending PM's, viewing webcams, 
 All user roles will be shown horizontally while all the AVChat features you can turn on and off will be shown vertically.
 
 <h2 id="location-of-avchat-files">Allowing visitors to enter AVChat</h2>
-1. Go to `Modules -> AVChat3 Module`
-2. Click on `Permissions`
-3. Click on the `access avchat3 user interface` option corresponding to the `anonymous user` column.
+1. Go to `Modules -> AVChat3` (it's in the CHAT section at the bottom)
+2. Click on the `Permissions` link to the right
+3. Tick the checkbox for the ANONYMOUS USER role in the `Allow this user role to access the chat as admins` line.
+4. Scroll to the bottom and click <kbd>Save permissions</kbd>
 
 
 <h2 id="location-of-avchat-files">Location of AVChat files</h2>
