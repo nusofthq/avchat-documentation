@@ -10,6 +10,10 @@ hide: true
   <h1 id="overview" class="page-header">Overview</h1>
   <p class="lead">The AVChat Module for Drupal 5 and 6 handles the integration between a Drupal 5 or 6 web site and the AVChat video chat software.</p>
 
+<div class="bs-callout bs-callout-warning" id="callout-tables-responsive-overflow"> <h4>End of life</h4> <p markdown="1">**Drupal 5** has reached end of life Jan 5th 2011 and is no longer supported. **Drupal 6** has reached end of life on February 24th 2016 and will no longer be supported. If you are looking to start a new Drupal website, you should use Drupal 7 or 8 instead.</p> </div>
+
+
+
   If you're looking for something specific just hit <kbd>Ctrl+F</kbd> on your browser.
 </section>
 
