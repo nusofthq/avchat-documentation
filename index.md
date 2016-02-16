@@ -31,7 +31,7 @@ isHome: true
   * Joomla! 1.6 -> 3.4
   <h2 id="socialengine,phpfox,drupal">Other CMS</h2>
   * SocialEngine PHP
-  * phpFox
+  * [phpFox](phpfox)
   * [Drupal 5/6](drupal)
   * [Drupal 7](drupal7)
   <h2 id="forums">Forums</h2>
