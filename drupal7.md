@@ -21,10 +21,12 @@ Download these 2 archives from your [private client/trial area](https://nusofthq
 1. `AVChat 3.0.zip` contains AVChat
 2. `avchat3_drupal_modules.zip` contains the Drupal modules
 
-Extract the 2 archives somewhere on your computer.
+Extract the 2 archives somewhere on your computer. Here's their contents:
+
+<img src="{{site.github.url}}/assets/images/avchat-drupal-folder-structure.gif" class="img-responsive" />
 
 <h2 id="installing-the-module">Media Server Application</h2>
-Once we've downloaded everything the 1st thing we need to do is to setup the media server app to which AVChat will connect to.
+Once we've downloaded &amp; unzipped everything the next thing we need to do is to setup the media server app to which AVChat will connect to.
 
 AVChat uses a media server to send all the audio video and text data between users. AVChat supports the 3 major media servers:
 
@@ -37,6 +39,7 @@ Here's how to install the `avchat30` app on each one of them:
 {% include media-server-app.md %}
 
 <h2 id="installing-the-module">Module & AVChat installation</h2>
+<h3>Upload files to your website</h3>
 Connect using an FTP client to your website and:
 
 1. upload the `avchat3` folder from `avchat3_drupal_modules.zip/drupal7.x_module` to `/sites/all/modules/`
@@ -44,26 +47,23 @@ Connect using an FTP client to your website and:
 
 <div class="bs-callout bs-callout-info" id="callout-tables-responsive-overflow"> <h4>Folder permissions</h4> <p markdown="1">If your website's hosted on a Linux server CHMOD the `uploadedFiles` and `tokens` folders to 777.</p> </div>
 
+<h3>Edit /sites/default/settings.php</h3>
+
 Edit `/sites/default/settings.php` and search for `# $cookie_domain = '.example.com';` (line 340 on Drupal 7.42).
 Remove the `#` sign and replace `.example.com` with your domain name. Save.
 
-After making the change the file should look like this:
+After making the change the line with the $cookie_domain variable should look like this:
 <pre>
-/**
- * Drupal automatically generates a unique session cookie name for each site
- * based on its full domain name. If you have multiple domains pointing at the
- * same Drupal site, you can either redirect them all to a single domain (see
- * comment in .htaccess), or uncomment the line below and specify their shared
- * base domain. Doing so assures that users remain logged in as they cross
- * between your various domains. Make sure to always start the $cookie_domain
- * with a leading dot, as per RFC 2109.
- */
 $cookie_domain = 'yourwebsite.com';
 </pre>
 
 <h2 id="installing-the-module">Complete installation</h2>
+<h3>Activate the module</h3>
 Now open your Drupal's admin area in a web browser, click on `Modules` in the top menu and scroll down to the `CHAT` section where you need to enable the new `AVChat3` module by clicking the empty checkbox at the left of it and then on <kbd>[Save Configuration]</kbd>.
 
+<img src="{{site.github.url}}/assets/images/drupal-7-enable-avchat-video-chat-module.png" class="img-responsive" />
+
+<h3>Connect AVChat to the media server app</h3>
 Two new menu items will show up in your Drupal menus:
 
 * `Flash Video Chat` in the main menu
@@ -77,6 +77,7 @@ Set it to the connection string for your new media server app like this:
 
 scroll to the bottom and press <kbd>Save configuration</kbd>.
 
+<h3>Enter the chat and insert the license key</h3>
 Now close the Modules modal and click on `Flash Video Chat` link in the main menu to open the page with AVChat on it. The pre-filled AVChat login screen will show up, click `[Connect]`. AVChat will now connect to the media server and ask you for the license key.
 
 Enter the key (It's in your [private client/trial area](https://nusofthq.com/c/)) and press `[Submit]`.
@@ -108,7 +109,10 @@ You might want AVChat to open in a pop up window to make it easier for your user
 2. In the `Chat will open` section check the `In popup` option
 4. Scroll to the bottom and click <kbd>Save configuration</kbd>
 
+<img src="{{site.github.url}}/assets/images/drupal-avchat-open-in-popup.png" class="img-responsive" />
+
   <h2 id="permissions">Limiting features to certain user roles</h2>
+  <h3>Drupal 7 user roles</h3>
   By default Drupal 7 comes with 3 user roles:
 
   * *anonymous users* or visitors
@@ -118,25 +122,34 @@ You might want AVChat to open in a pop up window to make it easier for your user
 On top of that you can add your own custom user roles from `People -> PERMISSIONS -> Roles`.
 <h3>Limiting AVChat features</h3>
 
-To control what AVChat features (creating rooms, sending PM's, viewing webcams, etc.) are available to each user role go to the Permissions page `Admin Menu -> People -> Permissions` .
+To control what AVChat features (creating rooms, sending PM's, viewing webcams, etc.) are available to each user click on `People` in the top menu and then on the `Permissions` tab.
 
 All user roles will be shown horizontally while all the AVChat features you can turn on and off will be shown vertically.
+
+<img src="{{site.github.url}}/assets/images/avchat-drupal-permissions-user-roles.png" class="img-responsive" />
+
+<!--
+<div class="bs-callout bs-callout-info" id="callout-tables-responsive-overflow"> <h4>Inheriting permissions from AUTHENTICATED USER</h4> <p markdown="1">Keep in mind that in Drupal 7 the AUTHENTICATED USER role controls all the other roles except ANONYMOUS USER. If you give the permission to broadcast video to the AUTHENTICATED USER, other roles (including ADMINISTRATOR) will gain that permission..</p> </div>
+</section>
+-->
+
 
 <h2 id="location-of-avchat-files">Allowing visitors to enter AVChat</h2>
 1. Go to `Modules -> AVChat3` (it's in the CHAT section at the bottom)
 2. Click on the `Permissions` link to the right
-3. Tick the checkbox for the ANONYMOUS USER role in the `Allow this user role to access the chat as admins` line.
+3. Tick the checkbox for the ANONYMOUS USER role in the `Allow this user role to access the chat interface` line.
 4. Scroll to the bottom and click <kbd>Save permissions</kbd>
-
 
 <h2 id="location-of-avchat-files">Location of AVChat files</h2>
 All the AVChat  files including:
 
 * all the module files
-* index.swf and admin.swf
+* `index.swf` and `admin.swf`
 * language files
+* themes
 * audio/video quality profile files
-* avc_settings.xml
+* `avc_settings.xml`
+* `integration.php`
 
 
 are located in `sites/all/modules/avchat3`.
