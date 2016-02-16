@@ -67,7 +67,17 @@ In `avc_settings.xml` you will find the following setting:
 
 Set it to 0 and the who-is-typing box will not be shown anymore in the chat.
 
-<h2 id="closing-avchat-pop-on-leave">How to close the pop up containing AVChat when clicking the [Leave] button</h2>
+<h2 id="closing-avchat-pop-on-leave">How to close the pop up containing AVChat when clicking the <kbd>Leave</kbd> button</h2>
+
+When AVChat 3 is opened in a pop up window you can use the <kbd>Leave</kbd> button to close the pop up window:
+
+1. Edit `avc_settings.xml`
+2. Set `disconnectButtonEnabled` `<value>` to 1;
+3. Set `disconnectButtonLink` `<value>` to `javascript:window.close();`
+
+By default clicking <kbd>Leave</kbd> takes you to a new web page instead of closing the window.
+
+<img src="http://docs.avchat.net/assets/images/leave-btn.png" class="img-responsive"/>
 
 <h2 id="recording-video-streams">Recording the video streams</h2>
 
