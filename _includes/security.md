@@ -41,7 +41,7 @@ To change the star with your own logo edit `avc_settings.xml` and change the val
 The watermark will be added to the top left of all the video streams.
 
 
-<h2 id="rtmps-and-rtmpe">Rtmps and rtmpe for encrypted communications</h2>
+<h2 id="rtmps-and-rtmpe">RTMPS and RTMPE for encrypted communications</h2>
 
 
 AVChat supports both RTMPS and RTMPE for encrypted data transfer between the users and the media server but depending on your media server you can use one or both:
@@ -70,7 +70,7 @@ If you're passionate about this stuff there's a more detailed article explaining
 Unfortunately SWF Verification is only available with FMS3 or later. Red5/Wowza do not have this feature.
 
 
-<h2 id="limiting-ips-for-admins">Limiting ip's from which admins can connect and execute admin functions</h2>
+<h2 id="limiting-ips-for-admins">Limiting IPs from which admins can connect and execute admin functions</h2>
 
 
 Because we give free trials to just about anyone, our script gets into a lot of hands, some of them are not well intended.
@@ -83,9 +83,9 @@ You just have to edit the settings file on the media server:
 * on Wowza its Wowza/conf/avchat30/`avchat3.properties`
 * on FMIS its FMIS/applications/`avchat30/settings.asc`
 
-And search for the `adminsAllowedFromTheseIps` variable. Set its value to your ip or to the range of ip's from which admins will be allowed to connect.
+And search for the `adminsAllowedFromTheseIps` variable. Set its value to your IP or to the range of IPs from which admins will be allowed to connect.
 
-Starting with build 1144 the verification is done every time a admin executes an admin function (kick, ban, change license key, etc.) not just on connection.
+Starting with build 1144 the verification is done every time an admin executes an admin function (kick, ban, change license key, etc.) not just on connection.
 
 <div class="alert alert-info" role="alert">There are more comments in the above mentioned settings files that will explain exactly how to add individual ips and ip ranges. After editing those files don't forget to restart the media server.</div>
 
