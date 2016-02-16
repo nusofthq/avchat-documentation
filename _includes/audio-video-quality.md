@@ -1,3 +1,4 @@
+
 AVChat (through Flash Player) captures raw audio and video data from your web cam and microphone, encodes it, and sends it to the media server from where it is sent to the other users.
 
 For encoding the video data AVChat can use `Sorenson Spark` and `H.264`. For encoding audio data AVChat can use the `Speex` and the `NellyMoser ASAO` audio codecs.
