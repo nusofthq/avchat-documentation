@@ -122,7 +122,7 @@ You might want AVChat to open in a pop up window to make it easier for your user
 On top of that you can add your own custom user roles from `People -> PERMISSIONS -> Roles`.
 <h3>Limiting AVChat features</h3>
 
-To control what AVChat features (creating rooms, sending PM's, viewing webcams, etc.) are available to each user click on `People` in the top menu and then on the `Permissions` tab.
+To control what AVChat features (creating rooms, sending PM's, viewing webcams, etc.) are available to each user role click on `People` in the top menu and then on the `Permissions` tab.
 
 All user roles will be shown horizontally while all the AVChat features you can turn on and off will be shown vertically.
 
@@ -152,7 +152,7 @@ All the AVChat  files including:
 * `integration.php`
 
 
-are located in `sites/all/modules/avchat3`.
+are located in `/sites/all/modules/avchat3/`.
 
 <h2 id="avchat-drupal-gpl-license">GPL License</h2>
 The AVChat Module for Drupal is licensed under the GNU General Public License, version 2.
