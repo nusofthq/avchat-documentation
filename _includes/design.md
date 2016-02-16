@@ -3,8 +3,7 @@
 
 The background color of AVChat is defined in the HMTL web page that embeds the AVChat swf file. By default AVChat ships with 2 HTML pages: `index.html` (for the user interface, embeds `index.swf`) and admin.html (for the admin/moderator interface, embeds `admin.swf`).
 
-In order to change the color of the user interface you will need to open `index.html` in a text editor and find the following lines:
-
+1. In order to change the color of the user interface you will need to open `index.html` in a text editor and find the following lines:
 ```javascript
 var params = {
 quality : "high",
@@ -14,8 +13,7 @@ loop : "false",
 allowFullScreen : "true"
 };
 ```
-
-Replace the default value `#272727` of `bgcolor` with your desired color.
+2. Replace the default value `#272727` of `bgcolor` with your desired color.
 
 *Hint: you can use a [color picker like this](http://www.colorpicker.com/)*
 
