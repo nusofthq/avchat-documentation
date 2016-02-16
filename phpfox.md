@@ -10,7 +10,7 @@ hide: true
   <h1 id="overview" class="page-header">Overview</h1>
   <p class="lead">The AVChat Module for PHPFox 3.8 (Nebula) handles the integration between a PHPFox 3.8 web site and the AVChat video chat software.</p>
 
-<div class="bs-callout bs-callout-warning" id="callout-tables-responsive-overflow"> <h4>End of life</h4> <p markdown="1"><strong>PHPFox 3.8 (Nebula)</strong> is the [last release](https://store.phpfox.com/announcement/v380-released)  in the 3.8 series. </p> </div>
+<div class="bs-callout bs-callout-warning" id="callout-tables-responsive-overflow"> <h4>End of life</h4> <p markdown="1"><strong>PHPFox 3.8 (Nebula)</strong>, released Nov 28, 2014, is the [last release](https://store.phpfox.com/announcement/v380-released)  in the 3.8 series. </p> </div>
 
   If you're looking for something specific just hit <kbd>Ctrl+F</kbd> on your browser.
 </section>
