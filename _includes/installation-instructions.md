@@ -65,11 +65,91 @@ You should now have 2 folders in your AMS/applications folder:
 That's all!
 
 To connect AVChat to the new AMS app use:
-rtmp://my-media-server.com/**avchat30_siteX**/_definst_ in `avc_settings.xml`.
+rtmp://my-media-server.com/**avchat30_siteX**/\_definst\_ in `avc_settings.xml`.
 
 <div class="alert alert-info" role="alert">With this kind of setup 2 different versions of AVChat can be run at the same time by FMS/AMS. Just be careful to connect the correct client to the correct server side application.</div>
 
+**Long version: Red5**
+
+All the app files for AVChat are placed inside the Red5/webapps/avchat30 folder. To create a new avchat30 app:
+
+1. duplicate the **avchat30** folder and
+2. rename the new one to **avchat30_siteX** (or to any other name that fits you).
+3. edit avchat30_siteX/WEB_INF/`red5-web.properties` and change: `webapp.contextPath=/avchat30` to `webapp.contextPath=/avchat30_siteX`
+4. edit avchat30_siteX/WEB_INF/`web.xml` and change
+```xml
+<context-param>
+<param-name>webAppRootKey</param-name>
+<param-value>/avchat30</param-value>```
+to
+```xml
+<context-param>
+<param-name>webAppRootKey</param-name>
+<param-value>/avchat30_siteX</param-value>
+</context-param>```
+5. rename this file:
+webapps/avchat30_siteX/WEB-INF/classes/`logback_avchat30.xml`
+to
+webapps/avchat30_siteX/WEB-INF/classes/`logback_avchat30_siteX.xml`
+6. edit
+webapps/avchat30_siteX/WEB-INFclasses/`logback_avchat30_siteX.xml`
+and change:
+```xml
+<jmxConfigurator contextName="avchat30" />```
+to
+```xml
+<jmxConfigurator contextName="avchat30_siteX" />```
+and
+```xml
+<fileNamePattern>log/avchat30.%d{yyyy-MM-dd}.log</fileNamePattern>```
+to
+```xml
+<fileNamePattern>log/avchat30_siteX.%d{yyyy-MM-dd}.log</fileNamePattern>```
+
+Steps 5 and 6 will ensure we will get separate logs for each app.
+
+That's all!
+
+To connect AVChat to the new Red5 app use:
+rtmp://my-media-server.com/avchat30_siteX/\_definst\_ in `avc_settings.xml` .
+
+<div class="alert alert-info" role="alert">With this kind of setup 2 different versions of AVChat can be run at the same time by Red5. Just be carefull to connect the correct client to the correct server side application.</div>
+
+**Long version: Wowza**
+
+This one is very simple!
+
+Just duplicate the **Wowza/applications/avchat30** folder and rename it to **avchat30_siteX**. Do the same thing with the **Wowza/conf/avchat30** folder: duplicate it and rename it to **avchat30_siteX**.
+
+That's all!
+
+To connect AVChat to the initial app/folder use:
+rtmp://my-media-server.com/avchat30/\_definst\_ in `avc_settings.xml` .
+
+To connect AVChat to the second app/folder use:
+rtmp://my-media-server.com/avchat30_siteX/\_definst\_ in `avc_settings.xml` .
+
+<div class="alert alert-info" role="alert">Wowza does NOT support running of 2 different versions of AVChat at the same time. The steps provided above only allow the setup of multiple apps of the SAME version.</div>
+
 <h2 id="using-different-app-instances">Using different app instances for 2 or more AVChat 3 installations</h2>
+
+
+
+There is also a 'quick and dirty' version of setting up multiple installations of AVChat to work on the same media server.
+
+This version involves using application instances and can be used the same way with all of the 3 media-servers (FMS/AMS, Wowza and Red5).
+
+To tell the media server to create a new instance of the same application simply edit the connection string of the second AVChat installation by changing **\_definst\_** to any other specific name like **newInstance**.
+
+So the final result will be:
+
+* One AVChat installation will have the default connection string type: **rtmp://my-media-server.com/avchat30/\_definst\_**
+* The second AVChat installation will have the modified connection string: **rtmp://my-media-server.com/avchat30/newInstance**
+
+Now each installation will connect to it's own instance of the media server side AVChat application.
+
+<div class="alert alert-info" role="alert">By using this kind of setup both AVChat installations will use the same media server settings files (settings.asc/avchat3.properties). Also it is possible that at least one of the installations won't correctly update the external users list.</div>
+
 
 <h2 id="switching-between-config-files">Switching between the PHP and ASPX configuration files in AVChat</h2>
 
