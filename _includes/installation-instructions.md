@@ -18,7 +18,7 @@ There are 2 sets of files in the AVChat archive, the avchat30 app which goes on 
 3. CHMOD the `uploadedFiles` folder to 777 (otherwise the upload function might not work).
 4. CHMOD the tokens folder to 777.
 5. Go to http://yoursite.com/your_new_video_chat_folder/, log in and enter your license key in the dialog box that shows up after the connection is established.
-![alt text](http://docs.avchat.net/assets/images/license_key.jpg)
+<img src="http://docs.avchat.net/assets/images/license_key.jpg" class="img-responsive"/>
 6. To access the admin interface go to http://yoursite.com/your_new_video_chat_folder/admin.html. We strongly suggest you rename `admin.html` and `admin.swf` files for security reasons.
 
 If you're on a ASP.NET server and it doesn't run PHP you need to configure AVChat to use the .aspx server side files.
@@ -150,7 +150,7 @@ To tell the media server to create a new instance of the same application simply
 So the final result will be:
 
 * One AVChat installation will have the default connection string type: `rtmp://my-media-server.com/avchat30/\_definst\_`
-* The second AVChat installation will have the modified connection string: `rtmp://my-media-server.com/avchat30/newInstance`
+* The second AVChat installation will have the modified connection string: **rtmp://my-media-server.com/avchat30/newInstance**
 
 Now each installation will connect to it's own instance of the media server side AVChat application.
 
@@ -167,9 +167,9 @@ By default AVChat uses the PHP set of files (avc_settings.php, token_request.php
 
 1. Open up `index.html` and `admin.html` in a text editor and find the following variable: `sscode :"php"`, and replace with:
 `sscode :"aspx"`, like this:
-![alt text](http://docs.avchat.net/assets/images/sscodeaspx.jpg)
+<img src="http://docs.avchat.net/assets/images/sscodeaspx.jpg" class="img-responsive"/>
 2. Edit `avc_settings.xml` and set the and set the `<value>` of the `<stylecssurl>` tag to style.aspx like this `<value>style.aspx</value>`:
-![alt text](http://docs.avchat.net/assets/images/stylecss.jpg)
+<img src="http://docs.avchat.net/assets/images/stylecss.jpg" class="img-responsive"/>
 
 The `sscode` flash var, if not specified, defaults to `php`.
 
@@ -191,7 +191,7 @@ Why would I change the license key?
 3. In the window that shows up, delete the old key from the text field and insert the new key
 4. Press the [Change Key] button
 5. If successful, you should now see the new limits/expiration date/domain above the license key text field!
-![alt text](http://docs.avchat.net/assets/images/licensekey.jpg)
+<img src="http://docs.avchat.net/assets/images/licensekey.jpg" class="img-responsive/>"
 
 <h2 id="reset-license-key">How to reset the license key</h2>
 
