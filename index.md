@@ -23,7 +23,7 @@ isHome: true
   <h1 id="installation" class="page-header">Integration Kits</h1>
   <h2 id="wordpress">WordPress</h2>
   * Community Lite
-  * Community PRO
+  * [Community PRO](/wordpress-community-pro)
   * Pay Per Session
   <h2 id="joomla">Joomla!</h2>
   * Joomla! 1.0
