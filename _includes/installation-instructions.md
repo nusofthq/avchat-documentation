@@ -159,9 +159,55 @@ Now each installation will connect to it's own instance of the media server side
 
 <h2 id="switching-between-config-files">Switching between the PHP and ASPX configuration files in AVChat</h2>
 
+You have the possibility to switch the type of the configuration files used by AVChat to communicate with the web server (load the settings, request tokens, etc...).
+
+Switching to other types of config files (like the .aspx ones also provided with AVChat) can be done via the sscode flash var explained below.
+
+By default AVChat uses the PHP set of files (avc_settings.php, token_request.php, etc.) so we need to tell it to use the .aspx set of files. To do that we will use the `sscode` flash var.
+
+1. Open up `index.html` and `admin.html` in a text editor and find the following variable: `sscode :"php"`, and replace with:
+`sscode :"aspx"`, like this:
+![alt text](http://docs.avchat.net/assets/images/sscodeaspx.jpg)
+2. Edit `avc_settings.xml` and set the and set the `<value>` of the `<stylecssurl>` tag to style.aspx like this `<value>style.aspx</value>`:
+![alt text](http://docs.avchat.net/assets/images/stylecss.jpg)
+
+The `sscode` flash var, if not specified, defaults to `php`.
+
+Instead of `aspx` you can use any other extension (.rb, .asp, etc) as long as the corresponding files exist in the video chat folder.
+
 <h2 id="change-license-key">How to change the license key</h2>
 
+Why would I change the license key?
+
+* Insert a new trial key.
+* Switch from trial to non-trial key.
+* Switch the domain on which the software will be used.
+* Upgrade from Lite (20 users) to Basic (40 users) for example.
+
+**What do I have to do?**
+
+1. Log in the video chat using the admin interface (admin.swf)
+2. Click the [Settings] button at the top
+3. In the window that shows up, delete the old key from the text field and insert the new key
+4. Press the [Change Key] button
+5. If successful, you should now see the new limits/expiration date/domain above the license key text field!
+![alt text](http://docs.avchat.net/assets/images/licensekey.jpg)
+
 <h2 id="reset-license-key">How to reset the license key</h2>
+
+**Why would I need to reset it?**
+
+If something goes awfully wrong and you find yourself locked out of the video chat (you’ve inserted a key for a domain to which you do not have yet access or has not yet been registered ) you can reset the license key.
+
+**What do I have to do?**
+
+1. Delete this file
+  * on Red5: red5/webapps/avchat30/persistence/SharedObject/\_definst\_/`licensekey.red5`
+  * on FMIS: fms/applications/avchat30/sharedobjects/\_definst\_/`licensekey.fso`
+  * on Wowza: wowza/applications/avchat30/sharedobjects/\_definst\_/`licensekey.rso`
+2. Restart Red5, FMIS or Wowza
+3. Enter the video chat and you will be asked for the key again!
+
 
 <h2 id="installed-version">What AVChat build/version I have installed?</h2>
 
