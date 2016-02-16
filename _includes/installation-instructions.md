@@ -13,9 +13,9 @@ There are 2 sets of files in the AVChat archive, the avchat30 app which goes on 
 
 **Installing AVChat Standalone in a folder on your web site**
 
-1. Create a new folder in your web site and upload the contents of **Files to upload to your web site** (from the AVChat archive received) to it.
+1. Create a new folder in your web site and upload the contents of `Files to upload to your web site` (from the AVChat archive received) to it.
 2. Edit `avc_settings.xml` with a text editor, and set the `<value>` of the first XML tag - `<connectionstring>` to: `<value>rtmp://my-media-server.com/avchat30/_definst_</value>` where `my-media-server.com` is the domain name or ip of the server where your media server is installed.
-3. CHMOD the **uploadedFiles** folder to 777 (otherwise the upload function might not work).
+3. CHMOD the `uploadedFiles` folder to 777 (otherwise the upload function might not work).
 4. CHMOD the tokens folder to 777.
 5. Go to http://yoursite.com/your_new_video_chat_folder/, log in and enter your license key in the dialog box that shows up after the connection is established.
 ![alt text](http://docs.avchat.net/assets/images/license_key.jpg)
@@ -39,7 +39,7 @@ The connection string inside the avc_settings.xxx is made out of 4 parts and whe
 * rtmp is the protocol used to communicate between the AVChat client and the media server.
 * my-media-server.com is the address where you host your Media Server (AMS, RED5, Wowza), it can also be an ip.
 * avchat30 this is the (default) name of the application on the media server to which your users will connect.
-* **\_definst\_** is the instance of the avchat30 app to which we connect (AMS for example supports multiple instances).
+* `\_definst\_` is the instance of the avchat30 app to which we connect (AMS for example supports multiple instances).
 
 To connect 2 installations of the AVChat client to the same media server, you will basically have to:
 
@@ -52,20 +52,20 @@ On Red5 and Wowza it's slightly more complicated so make sure you read the long 
 
 On AMS the process is pretty straight forward.
 
-All the app files for AVChat are placed inside the AMS/applications/**avchat30** folder. To create a new avchat30 app:
+All the app files for AVChat are placed inside the AMS/applications/`avchat30` folder. To create a new avchat30 app:
 
 1. duplicate the avchat30 folder and
 2. rename the new one to avchat30_siteX (or to any other name that fits you).
 
 You should now have 2 folders in your AMS/applications folder:
 
-* applications/**avchat30**
-* applications/**avchat30_siteX**
+* applications/`avchat30`
+* applications/`avchat30_siteX`
 
 That's all!
 
 To connect AVChat to the new AMS app use:
-rtmp://my-media-server.com/**avchat30_siteX**/\_definst\_ in `avc_settings.xml`.
+rtmp://my-media-server.com/`avchat30_siteX`/\_definst\_ in `avc_settings.xml`.
 
 <div class="alert alert-info" role="alert">With this kind of setup 2 different versions of AVChat can be run at the same time by FMS/AMS. Just be careful to connect the correct client to the correct server side application.</div>
 
@@ -73,8 +73,8 @@ rtmp://my-media-server.com/**avchat30_siteX**/\_definst\_ in `avc_settings.xml`.
 
 All the app files for AVChat are placed inside the Red5/webapps/avchat30 folder. To create a new avchat30 app:
 
-1. duplicate the **avchat30** folder and
-2. rename the new one to **avchat30_siteX** (or to any other name that fits you).
+1. duplicate the `avchat30` folder and
+2. rename the new one to `avchat30_siteX` (or to any other name that fits you).
 3. edit avchat30_siteX/WEB_INF/`red5-web.properties` and change: `webapp.contextPath=/avchat30` to `webapp.contextPath=/avchat30_siteX`
 4. edit avchat30_siteX/WEB_INF/`web.xml` and change
 
@@ -125,7 +125,7 @@ rtmp://my-media-server.com/avchat30_siteX/\_definst\_ in `avc_settings.xml` .
 
 This one is very simple!
 
-Just duplicate the **Wowza/applications/avchat30** folder and rename it to **avchat30_siteX**. Do the same thing with the **Wowza/conf/avchat30** folder: duplicate it and rename it to **avchat30_siteX**.
+Just duplicate the `Wowza/applications/avchat30` folder and rename it to `avchat30_siteX`. Do the same thing with the `Wowza/conf/avchat30` folder: duplicate it and rename it to `avchat30_siteX`.
 
 That's all!
 
@@ -145,12 +145,12 @@ There is also a 'quick and dirty' version of setting up multiple installations o
 
 This version involves using application instances and can be used the same way with all of the 3 media-servers (FMS/AMS, Wowza and Red5).
 
-To tell the media server to create a new instance of the same application simply edit the connection string of the second AVChat installation by changing **\_definst\_** to any other specific name like **newInstance**.
+To tell the media server to create a new instance of the same application simply edit the connection string of the second AVChat installation by changing `\_definst\_` to any other specific name like `newInstance`.
 
 So the final result will be:
 
-* One AVChat installation will have the default connection string type: **rtmp://my-media-server.com/avchat30/\_definst\_**
-* The second AVChat installation will have the modified connection string: **rtmp://my-media-server.com/avchat30/newInstance**
+* One AVChat installation will have the default connection string type: `rtmp://my-media-server.com/avchat30/\_definst\_`
+* The second AVChat installation will have the modified connection string: `rtmp://my-media-server.com/avchat30/newInstance`
 
 Now each installation will connect to it's own instance of the media server side AVChat application.
 
