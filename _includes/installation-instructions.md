@@ -77,13 +77,13 @@ All the app files for AVChat are placed inside the Red5/webapps/avchat30 folder.
 2. rename the new one to **avchat30_siteX** (or to any other name that fits you).
 3. edit avchat30_siteX/WEB_INF/`red5-web.properties` and change: `webapp.contextPath=/avchat30` to `webapp.contextPath=/avchat30_siteX`
 4. edit avchat30_siteX/WEB_INF/`web.xml` and change
-```xml
+```
 <context-param>
 <param-name>webAppRootKey</param-name>
 <param-value>/avchat30</param-value>
 ```
 to
-```xml
+```
 <context-param>
 <param-name>webAppRootKey</param-name>
 <param-value>/avchat30_siteX</param-value>
@@ -96,19 +96,19 @@ webapps/avchat30_siteX/WEB-INF/classes/`logback_avchat30_siteX.xml`
 6. edit
 webapps/avchat30_siteX/WEB-INFclasses/`logback_avchat30_siteX.xml`
 and change:
-```xml
+```
 <jmxConfigurator contextName="avchat30" />
 ```
 to
-```xml
+```
 <jmxConfigurator contextName="avchat30_siteX" />
 ```
 and
-```xml
+```
 <fileNamePattern>log/avchat30.%d{yyyy-MM-dd}.log</fileNamePattern>
 ```
 to
-```xml
+```
 <fileNamePattern>log/avchat30_siteX.%d{yyyy-MM-dd}.log</fileNamePattern>
 ```
 
