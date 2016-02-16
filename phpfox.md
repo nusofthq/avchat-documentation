@@ -42,6 +42,9 @@ Connect using an FTP client to your website and:
 
 1. upload the `include` and `module` folders from the PHPFox module archive to your website root
 2. upload the contents of the `Files to upload to your web site` folder from  the AVChat archive to `/module/avchat3/include/plugin/`
+<img src="{{site.github.url}}/assets/images/phpfox/upload-avchat-files.png" class="img-responsive" />
+
+
 
 <div class="bs-callout bs-callout-info" id="callout-tables-responsive-overflow"> <h4>Folder permissions</h4> <p markdown="1">If your website's hosted on a Linux server go to `/module/avchat3/include/plugin/` and CHMOD the `uploadedFiles` and `tokens` folders to 777.</p> </div>
 
@@ -90,7 +93,7 @@ While logged in click the Video Chat link in the main menu. The AVChat admin int
 
 You might want AVChat to open in a pop up window to make it easier for your users to browse your website while in the chat.
 
-1. From Admin CP click on `Settings -> Manage Settings`
+1. From AdminCP click on `Settings -> Manage Settings`
 2. Click on `General AVChat 3 Settings`
 <img src="{{site.github.url}}/assets/images/phpfox/admin-manage-settings.png" class="img-responsive" />
 3. Under `Open Method` select `popup`
@@ -100,11 +103,12 @@ You might want AVChat to open in a pop up window to make it easier for your user
 <h3>PHPFox user groups</h3>
 Each user in PHPFox belongs to a user group.
 
-PHPFox ships with 4 default user groups that can not be removed
-  * *Administrators*
-  * *Staff* or logged in users
+PHPFox ships with 4 default user groups that can not be removed:
+
+  * *Administrator*
   * *Registered User*
   * *Guest*
+  * *Staff*
 
 <h3>Limiting AVChat features</h3>
 
@@ -112,7 +116,9 @@ To control what AVChat features (creating rooms, sending PM's, viewing webcams, 
 
 1. go to `Users -> Manage User Groups`.
 2. click the arrow in front of the user group you want to change AVChat permissions for and select `Manage User Settings`.
+<img src="{{site.github.url}}/assets/images/phpfox/avchat-manage-user-settings.png" class="img-responsive" />
 3. select `Avchat3` in the list to the left. The permissions for AVChat 3 will load up.
+<img src="{{site.github.url}}/assets/images/phpfox/avchat-permission.png" class="img-responsive" />
 4. change the permissions for that user group and click `SAVE` at the bottom.
 
 <h2 id="location-of-avchat-files">Location of AVChat &amp; module files</h2>
