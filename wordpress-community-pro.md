@@ -35,7 +35,7 @@ hide: true
   Extract the 2 archives somewhere on your computer and follow Steps 1.1 and 1.2 mentioned below.
 
   <h2 id="media-server-app">Setting up the media server application</h2>
-  foo
+  {% include media-server-app.md %}
   <h2 id="plugin">Plugin installation</h2>
   To install the plugin, you will need to be logged in as admin on your website. Once logged in:
 
@@ -92,63 +92,162 @@ hide: true
 </section>
 
 <section class="bs-docs-section" markdown="1">
-  <h1 id="accessing-admin">Accessing the AVChat admin interface in WordPress</h1>
-</section>
+  <h1 id="accessing-admin">Plugin Features</h1>
 
-<section class="bs-docs-section" markdown="1">
-  <h1 id="who-has-access">Who has access to the video chat admin interface</h1>
-</section>
+  <h2 id="access-admin">Embed the chat</h2>
+  In order for your users to access the chat, it must be accessible from a page on your website.
+  The Community PRO plugin will allow you to embed the chat easily, using a shortcode in a post or page.
 
-<section class="bs-docs-section" markdown="1">
-  <h1 id="location">Location of AVChat and plugin files</h1>
-</section>
+  To embed the chat in a page:
 
-<section class="bs-docs-section" markdown="1">
-  <h1 id="in-popup">Opening up the video chat in a pop up</h1>
-</section>
+  1. Go to the **Pages** section in your Wordpress Dashboard:
+  <img src="/assets/images/wordpress_images/pages.png" class="img-responsive"/>
+  2. Press <kbd>Add New</kbd> and give your page a title.
 
-<section class="bs-docs-section" markdown="1">
-  <h1 id="ads">Placing ads around the video chat</h1>
-</section>
+  3. Add the `[chat]` shortcode in your page body and press <kbd>Publish</kbd>:
+  <img src="/assets/images/wordpress_images/publish.png" class="img-responsive"/>
 
-<section class="bs-docs-section" markdown="1">
-  <h1 id="roles">WordPress's user roles and limiting features for specific user roles</h1>
-</section>
+  Going to this page will allow you and your users to access AVChat:
+  <img src="/assets/images/wordpress_images/embedded.png" class="img-responsive"/>
 
-<section class="bs-docs-section" markdown="1">
-  <h1 id="visitors">Allowing visitors to join the video chat</h1>
-</section>
+  <h2 id="permissions">User roles and permissions</h2>
+  The Community PRO plugin for WordPress allows you to control permissions for each user role.
+  By default, there are 5 user roles predefined on every WordPress installation:
 
-<section class="bs-docs-section" markdown="1">
-  <h1 id="facebook">Allow users to login with their Facebook account</h1>
-</section>
+  * Administrator
+  * Editor
+  * Author
+  * Contributor
+  * Subscriber
 
-<section class="bs-docs-section" markdown="1">
-  <h1 id="design">Changing the looks of AVChat to better fit your WordPress web site</h1>
-  <h2 id="design-color">Changing the background color</h2>
-  <h2 id="design-image">Changing the background image</h2>
-</section>
+  You can also handle permissions for non-registered users (visitors).
 
-<section class="bs-docs-section" markdown="1">
-  <h1>Community PRO for WordPress and GPL</h1>
-</section>
+  * In your WordPress Dashboard, go to **Video Chat PRO** > **Settings**.
+  * Select the **User roles & Permissions** tab.
+   <img src="/assets/images/wordpress_images/roles_permissions.png" class="img-responsive"/>
+  * Here you can enable or disable any permission for each user role
+  * Once you are done setting up the permissions, don't forget to press the <kbd>Update Options</kbd> button.
 
-<section class="bs-docs-section" markdown="1">
-  <h1>Removing the plugin</h1>
-</section>
+  For example, if you want to disable access for visitors, you will have to uncheck the **Can access chat** box under **Visitors**:
+  <img src="/assets/images/wordpress_images/visitors.png" class="img-responsive"/>
 
-<section class="bs-docs-section" markdown="1">
-  <h1>Updating the plugin when a new version is available</h1>
-</section>
+  <h2 id="admin-access">Admin access</h2>
+  The admin interface is visible to all the users that have the permission to access it (see [User Roles and Permissions](#permissions)).
 
-<section class="bs-docs-section" markdown="1">
-  <h1>Multisite support</h1>
-</section>
+  If you access the chat from a page in which AVChat is embedded, the integration plugin will automatically detect if the user has access to the admin interface, and will show it accordingly.
 
-<section class="bs-docs-section" markdown="1">
-  <h1>Allow users to login with their Twitter account</h1>
-</section>
+  If you access the chat from your WordPress Dashboard (**Video Chat PRO** > **Enter Chat**), you will get access to the admin interface.
 
-<section class="bs-docs-section" markdown="1">
-  <h1>Extended short code functionality</h1>
+  <h2 id="files">AVChat files location</h2>
+  All the files are in the `/wp-content/plugins/avchat-3-pro/` folder.
+
+  <h2 id="opening-method">Opening method</h2>
+  By default, AVChat will be embedded where you place the `[chat]` shortcode. However, you have the possibility of opening AVChat in a popup window.
+
+  To do so, go to **Video Chat PRO** > **Settings** and find **How AVChat opens**.
+
+  Change the opening method to **Popup** and press <kbd>Update Options</kbd>.
+
+  <h2 id="facebook-login">Facebook Login</h2>
+  To enable Facebook Login you will need to create a Facebook Application from where you will receive an App ID. You can follow the next steps to accomplish this.
+
+  1. Go and Register as a Developer at: http://developers.facebook.com
+  <img src="/assets/images/wordpress_images/fb_register_dev.png" class="img-responsive"/>
+  2. Click <kbd>+ Create New App</kbd>
+  <img src="/assets/images/wordpress_images/fb_create_new_app_btn.png" class="img-responsive"/>
+  3. Insert your application name (App Name), select the category and press <kbd>Continue</kbd>
+  <img src="/assets/images/wordpress_images/facebook_create_new_app.png" class="img-responsive"/>
+  4. After pressing the <kbd>Continue</kbd> button you will be redirected to the application page where you will find the App ID. Don't forget to enter your website URL in Website with Facebook Login
+  <img src="/assets/images/wordpress_images/fb_app_id_1.png" class="img-responsive"/>
+  <img src="/assets/images/wordpress_images/fb_app_id_2.png" class="img-responsive"/>
+  <img src="/assets/images/wordpress_images/fb_app_id_3.png" class="img-responsive"/>
+
+  5. Now that you have your Facebook App ID, in your website, go to your **WordPress Admin** > **Video Chat PRO** > **Facebook & Twitter Login** tab
+  <img src="/assets/images/wordpress_images/fb_conf.png" class="img-responsive"/>
+  6. Insert your Facebook App ID
+  <img src="/assets/images/wordpress_images/fb_insert_app_id.png" class="img-responsive"/>
+  7. Press <kbd>Update Options</kbd>
+
+  <h2 id="twitter-login">Twitter Login</h2>
+  To enable Twitter Login for your video chat you will need to create a Twitter Application that will provide you with a Consumer Key and an Consumer Secret. You can follow the next steps to accomplish this.
+
+  1. Go to https://dev.twitter.com/apps and click on the Create a new application button
+  <img src="/assets/images/wordpress_images/twitter_new_application.png" class="img-responsive"/>
+  2. Complete the form:
+  * **Name** - enter the name of your application
+  * **Description** - insert the description
+  * **Website** - enter your website URL
+  * Press <kbd>Create your Twitter application!</kbd>
+
+  <img src="/assets/images/wordpress_images/twitter_new_app_form.png" class="img-responsive"/>
+  3. After you completed the form you will be redirected to the application page, there you will find your Consumer key and Consumer secret.
+  <img src="/assets/images/wordpress_images/twitter_app_page.png" class="img-responsive"/>
+  4. Now that you have your Consumer key and Consumer Secret, in your website, go to your **WordPress Admin** > **Video Chat PRO** > **Facebook & Twitter Login** tab
+  <img src="/assets/images/wordpress_images/fb_conf.png" class="img-responsive"/>
+  5. Insert your Consumer key in Twitter Consumer Key option and Consumer secret in Twitter Consumer Secret
+  <img src="/assets/images/wordpress_images/wp_twitter_settingup.png" class="img-responsive"/>
+  6. Press <kbd>Update Options</kbd>
+
+  <h2 id="plugin-update">Updating the plugin</h2>
+  First you should download the new archive from your client area on nusofthq.com
+
+  Then we need to remove the old version. While logged in as and admin in the WP backend go to **Plugins** and click <kbd>Deactivate</kbd> followed by <kbd>Delete</kbd> for the AVChat PRO plugin. This will remove the **wp-content/plugins/avchat-3-pro** folder and all its contents.
+
+  You will now have to re-install the plugin and upload the AVChat 3 client side files again to the **wp-content/plugins/avchat-3-pro** folder, for more details check out the client side installation instructions.
+
+  Any existing settings or permissions will be kept. Any new settings or permissions added by the new version will most probably be empty, make sure you configure them as you wish for each user role from **Video Chat PRO** > **User Roles & Permissions** tab.
+
+  <h2 id="plugin-remove">Removing the plugin</h2>
+  While logged in as and admin in the WP backend go to Plugins and click <kbd>Deactivate</kbd> followed by Delete for the AVChat PRO plugin.
+
+  This will remove the **wp-content/plugins/avchat-3-pro** folder and all it's contents.
+
+  The plugin's database holding the permissions for each user role and general settings will still remain tough. To remove it delete the `wp_avchat3_general_settings` and the `wp_avchat3_permissions` tables.
+
+  You might also want to remove the page holding the `[chat]` tag that was replaced by the plugin with the AVChat 3 software
+
+  <h2 id="multisite">Multisite support</h2>
+  WP has a special mode called Multisite. This mode has been introduced in 2010 in WP 3.0.
+
+  Starting with build 2359 the plugin adds support for installations of WordPress with multisite on.
+
+  A new WP user role is present in multisite setups:
+
+  Super Admin – somebody with access to the site network administration features and all other features.
+  In such an installation the plugin can either be network activated for all sites or individually activated.
+
+  After installation, the super admin can network activate it for all the websites or he can activate it individually for each of his websites.
+
+  If **My Sites** > **Network Admin** > **Dashboard** > **Settings** > **Network Settings** > **Enable administration menus** > **[ ]Plugins** is checked then other network users can independently activate it for their websites too.
+
+  <h4>Network Activation</h4>
+
+  When network activated it can not be individually deactivated
+
+  When network activated you must visit the **Settings** > **Video Chat PRO** page for each of the websites in the network for the permissions tables for AVChat3 to be created. Otherwise in the front end you will find the following error:
+
+  `Warning: Invalid argument supplied for foreach() in /home/observer/public_html/wp-content/plugins/avchat-3-pro/avchat3.php on line 86`
+
+  When using a standard WP installation (non multisite) or when individually activating the plugin for each sub site in the network the tables are created at activation.
+  <h4>Network Users</h4>
+
+  When used in a multiste setup, the plugin will show a new column (role) in the Settings > Community PRO PRO area called Network users. These are users who belong to the network but they do not belong to any other website on the network other than their own. They have no role in other websites than their own.
+
+  <h4>Permissions and Settings</h4>
+
+  Each site on the nework can control the permissions and settings individually. This also means that each site on the network has to have their own connectionstring. It is possible for 2 or more websites to use the same connectionstring, in this case they will share the rooms and users list,etc. .
+
+  <h2 id="shortcode-opts">Extended short code functionality</h2>
+  To display AVChat 3 in your WordPress page or posts, you will use the short code [chat].
+
+  You can extend the functionality of short code by adding the following options:
+
+  * dropInRoom:r0 - this option allows you to define the rooms ids (r0, r1, r2 etc) in which users will be droped when entering the chat
+  * showOnlyRooms:r0 - this options allows you to define the rooms that users will be able to see
+  * roomsListEnabled:1 - you can disable (0), enable (1) or hide (2) the rooms list button in the top bar
+
+  <img src="/assets/images/wordpress_images/extended_shortcode.png" class="img-responsive"/>
+
+  <h2 id="gpl">Community PRO for WordPress and GPL</h2>
+  The AVChat Video Chat Plugin is licensed under the GPL v2 or later. Once you buy the plugin you can modify it and distribute it as long as you keep it under the GPL.
 </section>
