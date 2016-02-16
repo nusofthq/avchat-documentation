@@ -25,6 +25,50 @@ If you're on a ASP.NET server and it doesn't run PHP you need to configure AVCha
 
 <h2 id="using-different-medias-server-apps">Using different media server apps for 2 or more AVChat 3 installations</h2>
 
+You might have 2 installations of AVChat, either on the same domain or on different domains that you want to connect to the same media server.
+
+**Introduction**
+
+AVChat is made of 2 parts:
+
+* the client side files that go on your web server (html, xml, swf files, etc.)
+* the media server application (by default avchat30) that goes on your media server (Red5, AMS, Wowza)
+
+The connection string inside the avc_settings.xxx is made out of 4 parts and when combined it looks like this: `rtmp://my-media-server.com/avchat30/\_definst\_` .
+
+* rtmp is the protocol used to communicate between the AVChat client and the media server.
+* my-media-server.com is the address where you host your Media Server (AMS, RED5, Wowza), it can also be an ip.
+* avchat30 this is the (default) name of the application on the media server to which your users will connect.
+* **\_definst\_** is the instance of the avchat30 app to which we connect (AMS for example supports multiple instances).
+
+To connect 2 installations of the AVChat client to the same media server, you will basically have to:
+
+1. duplicate the avchat30 app on the media server
+2. connect the second installation of AVChat to the new avchat30 app by changing the connection string.
+
+On Red5 and Wowza it's slightly more complicated so make sure you read the long versions below:
+
+**Long version: Flash Media Interactive Server(AMS)**
+
+On AMS the process is pretty straight forward.
+
+All the app files for AVChat are placed inside the AMS/applications/**avchat30** folder. To create a new avchat30 app:
+
+1. duplicate the avchat30 folder and
+2. rename the new one to avchat30_siteX (or to any other name that fits you).
+
+You should now have 2 folders in your AMS/applications folder:
+
+* applications/**avchat30**
+* applications/**avchat30_siteX**
+
+That's all!
+
+To connect AVChat to the new AMS app use:
+rtmp://my-media-server.com/**avchat30_siteX**/_definst_ in `avc_settings.xml`.
+
+<div class="alert alert-info" role="alert">With this kind of setup 2 different versions of AVChat can be run at the same time by FMS/AMS. Just be careful to connect the correct client to the correct server side application.</div>
+
 <h2 id="using-different-app-instances">Using different app instances for 2 or more AVChat 3 installations</h2>
 
 <h2 id="switching-between-config-files">Switching between the PHP and ASPX configuration files in AVChat</h2>
