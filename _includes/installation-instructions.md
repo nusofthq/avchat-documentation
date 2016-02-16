@@ -285,6 +285,7 @@ Starting with [AVChat 3.6](http://avchat.net/blog/avchat-3-6-brings-a-new-mobile
 Here's how to set it up:
 
 On the media server/Red5:
+
 1. Download Json-smart library from [here](http://bit.ly/1aWDXEa) and put in the `Red5/libs` folder
 2. Open `Red5/conf/red5.properties`
 3. Search for `#WebSocket section`
@@ -292,6 +293,7 @@ On the media server/Red5:
 5. Save and restart Red5
 
 On the webserver:
+
 1. Download the mobile archive from your private client area at [https://nusofthq.com](https://nusofthq.com)
 2. Unzip and copy the `ws` folder to your AVChat installation directory.
 
