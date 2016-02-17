@@ -437,7 +437,77 @@ If set to `0`, the feature will be disabled.
 
 <h2 id="badnicks-badwords">Badnicks & Badwords</h2>
 
+
+AVChat 3 has 2 configuration files containing usernames and words which are not allowed to be used as nicknames or in the text chat.
+
+We're talking about 2 separate files: `badnicks.xml` and `badwords.xml`.
+Both files can be found in the main AVChat 3 installation folder.
+
+**Bad nicks**
+
+`badnicks.xml` - contains 2 groups of XML elements:
+
+* `<nicks>` - the exact usernames defined there will not be allowed in chat
+* `<widcards>` - usernames containing that wildcard string will not be allowed in chat.
+
+Any username found either in the `<nicks>` or in the `<widcards>` tags will not be allowed in chat.
+
+Bad nick example: `<bad>john</bad>` - meaning that any user trying to connect with username "john" will not be allowed.
+
+Wildcard example: `<bad>adr</bad>` - meaning any user trying to connect with an username containing "adr" (adrian, adrienne) will not be allowed.
+
+Only the user interface (`index.swf`) will check the member's username against the usernames in `badnicks.xml`. The admin interface (`admin.swf`) does not apply the check, so if the "admin" or "administrator" usernames are present in `badnicks.xml` they can be used in `admin.swf` but `index.swf` will not let users with these usernames go past the login screen.
+
+**Bad words**
+
+`badwords.xml` - contains 2 groups of XML elements as well:
+
+* `<words>` - words defined there will not be allowed in chat
+* `<widcards>` - words containing the wildcard will not be allowed.
+
+If some user uses in chat a word from that list you have created, it will be replaced with asterisks (\***).
+
+The badwords check also applies to admins.
+
+
 <h2 id="rotating-messages">Rotating messages feature</h2>
+
+AVChat 3 has a feature which gives the possibility for the owner to add info messages, text ads with links or any announcements.
+
+This feature was added in [Build 1505](http://avchathq.com/blog/rotatting-text-messages-in-avchat-may-build-1505/) of AVChat 3 to give the website owner the ability to add info messages, text ads with links or any other announcements in the text chat.
+
+**In detail**
+
+The file which stores the messages is `rotate_messages.php` located in the AVChat 3 installation folder. It is called by AVChat 3 every `rotatingMessageTime` seconds (option in `avc_settings.xml`) and it sends to it a GET variable named `count` which stores the number of times it was called by that user.
+
+The file comes by default with several messages. These can all be replaced and more can be added.
+
+To replace the messages, open `rotate_messages.php` with a text editor and replace the text between the quotes, without affecting the PHP code.
+
+Here’s the default file with the text that you should edit highlighted:
+
+<img src="http://docs.avchat.net/assets/images/rotate_messages.php_.png" class="img-responsive"/>
+
+If you’ve edited the 6 default messages and you want to add more here’s what you need to do:
+
+1. Duplicate the last case (case 0, lines 29-31 above) and replace 0 with 6 like this:
+		case 6:
+		echo "<font color='#999999' face='Tahoma' size='11' ><b>A new message.</b></font>";
+		break;
+2. On line 13 change the number 6 with 7 like this:
+`switch ($count%7)`
+
+As you can see, you can customize these messages using some HTML tags for color, font, size, etc. The supported list of HTML tags that can be used can be found [here](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/text/TextField.html#htmlText).
+
+If you are an experienced web developer you can create your own `rotate_messages.php` file with messages being pulled out of a database, more complex logic, ads, etc. and point AVChat 3 to use it through the `rotatingMessageUrl` option located in `avc_settings.xml`.
+
+**Other notes**
+
+
+* `rotatingMessageUrl` in `avc_settings.xml` contains the path to `rotating_messages.php`
+* To disable the feature open `avc_settings.xml` file with a text editor and set `rotatingMessageTime` to `0` (`<value>0</value>`)
+* To increase the time between calls to `rotate_messages.php` open `avc_settings.xml` file with a text editor and set `rotatingMessageTime` to `120` (`<value>120</value>`) which means 2 minutes between calls or any other value in seconds.
+
 
 <h2 id="register-tab-disable">Register & Sign in tab disable/enable</h2>
 
