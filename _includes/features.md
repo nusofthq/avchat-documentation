@@ -486,15 +486,17 @@ To replace the messages, open `rotate_messages.php` with a text editor and repla
 
 Here’s the default file with the text that you should edit highlighted:
 
-<img src="http://docs.avchat.net/assets/images/rotate_messages.php_.png" class="img-responsive"/>
+<img src="http://docs.avchat.net/assets/images/rotate_messages.png" class="img-responsive"/>
 
 If you’ve edited the 6 default messages and you want to add more here’s what you need to do:
 
-1. Duplicate the last case (case 0, lines 29-31 above) and replace 0 with 6 like this:
-		case 6:
-		echo "<font color='#999999' face='Tahoma' size='11' ><b>A new message.</b></font>";
-		break;
-2. On line 13 change the number 6 with 7 like this:
++ Duplicate the last case (case 0, lines 29-31 above) and replace 0 with 6 like this:
+```php
+case 6:
+echo "<font color='#999999' face='Tahoma' size='11' ><b>A new message.</b></font>";
+break;
+```		
++ On line 13 change the number 6 with 7 like this:
 `switch ($count%7)`
 
 As you can see, you can customize these messages using some HTML tags for color, font, size, etc. The supported list of HTML tags that can be used can be found [here](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/text/TextField.html#htmlText).
