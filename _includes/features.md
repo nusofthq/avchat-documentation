@@ -190,7 +190,7 @@ FLV files with no meta data
 
 Because of the way they are recorded, some .flv files will end up having no duration metadata, thus resulting in funny playback. To fix this run those flv files through [flvmdi](http://www.buraks.com/flvmdi/) or [flvtool2](https://github.com/unnu/flvtool2).
 
-<div class="alert alert-info" role="alert" markdown="1">You can also use [FFmpeg](https://www.ffmpeg.org/) which provides a lot of functionality and it's quickly becoming the go to tool for video processing.</div>
+You can also use [FFmpeg](https://www.ffmpeg.org/) which provides a lot of functionality and it's quickly becoming the go to tool for video processing.
 
 <h2 id="dynamic-bandwidth-usage-reduction">Dynamic bandwidth usage reduction explained</h2>
 
