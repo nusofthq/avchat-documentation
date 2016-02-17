@@ -31,11 +31,11 @@ isHome: true
   * Joomla! 1.6 -> 3.4
   <h2 id="socialengine,phpfox,drupal">Other CMS</h2>
   * SocialEngine PHP
-  * [phpFox](phpfox)
+  * [PHPFox 3.8 (Nebula)](phpfox)
   * [Drupal 5/6](drupal)
   * [Drupal 7](drupal7)
   <h2 id="forums">Forums</h2>
-  * IP.Board
+  * [IP.Board 3.4](ipboard)
   * xenForo
   * vBulletin
   <h2 id="dating">Dating</h2>
