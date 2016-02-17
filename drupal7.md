@@ -78,7 +78,7 @@ Set it to the connection string for your new media server app like this:
 scroll to the bottom and press <kbd>Save configuration</kbd>.
 
 <h3>Enter the chat and insert the license key</h3>
-Now close the Modules modal and click on `Flash Video Chat` link in the main menu to open the page with AVChat on it. The pre-filled AVChat login screen will show up, click `[Connect]`. AVChat will now connect to the media server and ask you for the license key.
+Now close the Modules modal and click on `Flash Video Chat` link in the main menu to open the page with AVChat on it. The pre-filled AVChat login screen will show up, click `[Enter Chat]`. AVChat will now connect to the media server and ask you for the license key.
 
 Enter the key (It's in your [private client/trial area](https://nusofthq.com/c/)) and press `[Submit]`.
 

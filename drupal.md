@@ -63,7 +63,7 @@ Two new menu items will show up in your Drupal menu:
 * AVChat Video Chat (User)
 * AVChat Video Chat (Admin)
 
-Click on either of them, you will be taken to a new web page where AVChat will load in the browser and will ask for a username. Type one and click `[Connect]`. AVChat will now connect to the media server and ask you for the license key.
+Click on either of them, you will be taken to a new web page where AVChat will load in the browser and will ask for a username. Type one and click `[Enter Chat]`. AVChat will now connect to the media server and ask you for the license key.
 
 Enter the key (It's in your [private client/trial area](https://nusofthq.com/c/)) and press `[Submit]`.
 </section>

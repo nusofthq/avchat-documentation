@@ -82,7 +82,7 @@ The page with AVChat on it will load and AVChat's login screen will show up.
 **Your username will be automatically filled and the gender will be pre-selected:**
 
 <img src="{{site.github.url}}/assets/images/phpfox/avchat-connect.png" class="img-responsive" />
-Click `[Connect]`. AVChat will now connect to the media server and ask you for the license key.
+Click `[Enter Chat]`. AVChat will now connect to the media server and ask you for the license key.
 
 Enter the key (It's in your [private client/trial area](https://nusofthq.com/c/)) and press `[Submit]`.
 </section>
