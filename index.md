@@ -28,7 +28,7 @@ isHome: true
   <h2 id="joomla">Joomla!</h2>
   * Joomla! 1.0
   * Joomla! 1.5
-  * Joomla! 1.6 -> 3.4
+  * [Joomla! 1.6 -> 3.4](/joomla-3)
   <h2 id="socialengine,phpfox,drupal">Other CMS</h2>
   * SocialEngine PHP
   * [PHPFox 3.8 (Nebula)](phpfox)

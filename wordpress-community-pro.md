@@ -258,5 +258,5 @@ hide: true
   <img src="/assets/images/wordpress_images/extended_shortcode.png" class="img-responsive"/>
 
   <h2 id="gpl">Community PRO for WordPress and GPL</h2>
-  The AVChat Video Chat Plugin is licensed under the GPL v2 or later. Once you buy the plugin you can modify it and distribute it as long as you keep it under the GPL.
+  The AVChat Video Chat Plugin is licensed under the [GPL v2](http://www.gnu.org/licenses/gpl.txt) or later. Once you buy the plugin you can modify it and distribute it as long as you keep it under the GPL.
 </section>
