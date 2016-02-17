@@ -49,8 +49,12 @@ Here's how to install the `avchat30` app on each one of them:
 Connect using an FTP client to your website and:
 
 1. upload the `library` and `videochat` folders from the xenForo's archive to your forum's root folder
+<img src="{{site.github.url}}/assets/images/xenforo/copy-addon.png" class="img-responsive" />
 2. upload the contents of the `Files to upload to your web site` folder (except `admin.html` and `index.html` ) from the AVChat archive to `/videochat/`
-3. Edit the `.htaccess`in your forum's root folder and replace the following lines:
+<img src="{{site.github.url}}/assets/images/xenforo/copy-avchat.png" class="img-responsive" />
+
+
+<div class="bs-callout bs-callout-warning" id="callout-tables-responsive-overflow"> <h4>Edit .htaccess</h4> <p markdown="1">If you use the xenForo's `.htaccess` (for [SEO friendly URLs](https://xenforo.com/help/friendly-urls/) or any other reason) you'll also have to prevent it from redirecting AVChat paths by editing the `.htaccess`in your forum's root folder and replacing the following line:</p>
 
 {% highlight PHP %}
 RewriteRule
@@ -62,31 +66,56 @@ with:
 {% highlight PHP %}
 RewriteRule
 ^(data/|js/|styles/|install/|favicon\.ico|crossdomain\.xml|robots\.txt|videochat/|index_popup\.php) - [NC,L]
-{% endhighlight %}
+{% endhighlight %} </div>
+
+
 
 <div class="bs-callout bs-callout-info" id="callout-tables-responsive-overflow"> <h4>Folder permissions</h4> <p markdown="1">If your website's hosted on a Linux server CHMOD the `/videochat/uploadedFiles` and `/videochat/tokens` folders to 777.</p> </div>
 
 <h2 id="completing-the-installation">Complete installation</h2>
 <h3>Install the add-on</h3>
-In the xenForos's `Admin CP` area click on `Install Add-on` in the left side menu. On the Install New Add-on page click on <kbd>Choose&nbsp;File</kbd> and select the `addon-AVChat3VideoChat.xml` from the xenForo add-on archive. Click <kbd>Install Add-on</kbd>
+In the xenForos's **Admin CP** area:
+
+1. click on **Install Add-on** in the left side menu.
+2. on the Install New Add-on page click on <kbd>Choose&nbsp;File</kbd>
+3. select the `addon-AVChat3VideoChat.xml` from the xenForo add-on archive.
+4. click <kbd>Install Add-on</kbd>
+
+<img src="{{site.github.url}}/assets/images/xenforo/install-addon.png" class="img-responsive" />
+
 
 <h3>Connect AVChat to the media server app</h3>
-In Admin CP's top menu  go to `Home -> Options`. Select `AVChat 3 Video Chat Options` from the list.
+In the Admin CP:
 
-In the `RTMP Connectionstring` section insert your connection string for the media server app ( it should look like this `rtmp://media-server-ip/avchat30/_definst_` ). Scroll to the bottom and click <kbd>Save Changes</kbd>.
+1. go to **Home** and click on **Options** in the left sidemenu
+2. select **AVChat 3 Video Chat Options** from the list (should be 1st)
+3. in the **RTMP Connectionstring** section insert your connection string for the media server app ( it should look like this `rtmp://media-server-ip/avchat30/_definst_` )
+4. scroll to the bottom and click <kbd>Save Changes</kbd>
 
-Your AVChat copy is now configured to connect to the media server.
+<img src="{{site.github.url}}/assets/images/xenforo/connect-avchat-to-media-server.png" class="img-responsive" />
+
+
+Your AVChat installation is now configured to connect to the media server.
+
+<h3>Allow access to the chat</h3>
+From the Admin CP:
+
+1. Go to **Users -> Group Permissions**
+2. Click the group you want to have access to AVChat
+3. Scroll down to the **AVChat 3 Video Chat - User Permissions** section and click **Allow** (green box)
+4. Scroll to the end and click <kbd>Update Permissions</kbd>
+
+Repeat 2-4 for each group you want to have access to the chat. Make sure you allow access to the *Administrative* user group since you're part of it.
 
 <h3>Enter the chat and insert the license key</h3>
-There's a new `Video Chat` link in xenForo's front end menu, click on it.
 
-The page with AVChat on it will load and AVChat's login screen will show up.
+1. Go to the forum's front end. There's a new **Video Chat** link in xenForo's main menu, click on it.
 
-**Your username will be automatically filled:**
+2. The page with AVChat on it will load and AVChat's login screen will show up. **Your username will be automatically filled.**
 
-Click `[Enter Chat]`. AVChat will now connect to the media server and ask you for the license key.
+3. Click <kbd>Enter Chat</kbd>. AVChat will now connect to the media server and ask you for the license key.
 
-Enter the key (It's in your [private client/trial area](https://nusofthq.com/c/)) and press `[Submit]`.
+4. Enter the key (It's in your [private client/trial area](https://nusofthq.com/c/)) and press <kbd>Submit</kbd>.
 </section>
 
 <section class="bs-docs-section" markdown="1">
@@ -94,14 +123,14 @@ Enter the key (It's in your [private client/trial area](https://nusofthq.com/c/)
 <h2 id="accessing-the-avchat-admin-area-xenforo">Access the AVChat admin area</h2>
 If you want to log in as hidden, kick/ban users, close/delete rooms, view users IP's and a lot of other cool stuff that admins do, you'll have to use the AVChat admin interface.
 
-**By default no xenForo user group has access to the video chat as admin. You will need to configure this permission for each user group.**
+**By default no xenForo user group has access to the video chat as admin. You will need to configure this permission for each group.**
 
 While logged in the Admin CP do the following:
 
- * Click on `Users` in the top menu
+ * Click on **Users** in the top menu
  * Click on the user group you want to give AVChat admin access to
- * On the following page search for `AVChat 3 Video Chat - User Permissions` and you will see AVChat's permissions list
- * Check `Allow` (the green box) for `Can access chat as admin`
+ * On the following page search for **AVChat 3 Video Chat - User Permissions** and you will see AVChat's permissions list
+ * Check **Allow** (the green box) for **Can access chat as admin**
  * Scroll to the bottom and click on <kbd>Update Permissions</kbd>
 
 
@@ -111,9 +140,9 @@ Now, whenever a user belonging to that user group will access the chat, the AVCh
 
 By default AVChat 3 is embedded in your xenForo page but you might want AVChat to open in a pop up window to make it easier for your users to browse your website while in the chat.
 
-1. From Admin CP go to `Home -> Options`
-2. Search for `AVChat 3 Video Chat Options` and click on it
-2. Select `Popup` for `Display Mode`
+1. From Admin CP go to **Home -> Options**
+2. Search for **AVChat 3 Video Chat Options** and click on it
+2. Select **Popup** for **Display Mode**
 3. Scroll to the bottom and click <kbd>Save Changes</kbd>
 
 <h2 id="avchat-xenforo-permissions">Limiting features to certain user groups</h2>
@@ -133,8 +162,8 @@ xenForo ships with 4 user groups:
 
 To control what AVChat features (creating rooms, sending PM's, viewing webcams, etc.) are available to each user group do the following from the AdminCP:
 
-1. go to `Users` and the click on `User Group Permissions` in the left sidebar.
-2. click on the user group you want to edit and then search for `AVChat 3 Video Chat - User Permissions`
+1. go to **Users** and the click on **User Group Permissions** in the left sidebar.
+2. click on the user group you want to edit and then search for **AVChat 3 Video Chat - User Permissions**
 3. change the AVChat permissions for that user group and click <kbd>Update Permissions</kbd> at the bottom.
 
 <!--
@@ -149,8 +178,24 @@ From the  AdminCP:
 
 Visitors will still see the `Video Chat` link but they will be asked to sign in or register.
 
-<img src="{{site.github.url}}/assets/images/ipboard/visitor-register-signing.png" class="img-responsive" />
+<img src="{{site.github.url}}/assets/images/xenforo/visitor-register-signing.png" class="img-responsive" />
 -->
+
+<h2 id="allow-chat-access-to-visitors">Allowing visitors access to the video chat</h2>
+
+The xenForo addon does not allow any user group to access the chat by default. Every group (including *Unregistered / Unconfirmed* which covers visitors) need to be given permission from the group's permissions page.
+
+From the Admin CP:
+
+1. go to **Users -> Group Permissions**
+2. click on the **Unregistered / Unconfirmed**
+3. Scroll down to **AVChat 3 Video Chat - User Permissions** and select **Allow** (the green box) for **Can access chat**
+4. Scroll down and click <kbd>Update Permissions</kbd>
+
+<div class="alert alert-info" role="alert">
+<p markdown="1">When a user group doesn't have permission to access the chat they still see the `Video Chat` link in the menu but on the chat page they're asked to register or sign in.</p>
+</div>
+
 
 <h2 id="location-of-avchat-files">Location of AVChat &amp; add-on files</h2>
 All the AVChat  files including:
