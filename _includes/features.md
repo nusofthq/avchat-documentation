@@ -627,7 +627,7 @@ The API is intended to be used with an integrated version of AVChat and makes us
 7. `PPVIcon` - This setting provides the URL to the icon loaded in the PPV button located in the status bar. The icon size should be 16x16.
 
 The PPV Button mentioned above is a new button added in the status bar that displays dynamically the amount of time/credits left if PPV is enabled. Here's how it looks:
-<img src="http://docs.avchat.net/assets/images/PPVbutton.png" class="img-responsive"/>
+<img src="http://docs.avchat.net/assets/images/PPVButton.png" class="img-responsive"/>
 
 **The API**
 
