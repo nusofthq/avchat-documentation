@@ -427,7 +427,7 @@ If set to `0`, the feature will be disabled.
 5. You will be taken into a more advance setup screen but AVChat already has all the code needed so you can press <kbd>Skip Quick Start</kbd>
 <img src="http://docs.avchat.net/assets/images/skip-start.png" class="img-responsive"/>
 6. You wil be taken to your app Dashboard page. Click the <kbd>Settings</kbd> button
-<img src="http://docs.avchat.net/assets/images/fb-dashboard.png" class="img-responsive"/>
+<img src="http://docs.avchat.net/assets/images/app-dashboard.png" class="img-responsive"/>
 
 7. Make sure a your site URL is typed in in the input, if not add it and click <kbd>Save Changes </kbd>
 8. Open up the `index.html`
