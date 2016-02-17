@@ -430,7 +430,7 @@ If set to `0`, the feature will be disabled.
 <img src="http://docs.avchat.net/assets/images/fb-dashboard.png" class="img-responsive"/>
 7. Make sure a your site URL is typed in in the input, if not add it and click <kbd>Save Changes </kbd>
 8. Open up the `index.html`
-9 .Find the line where the `appId` is specified and replace the existing app ID with the Facebook generated one for your personal app.
+9. Find the line where the `appId` is specified and replace the existing app ID with the Facebook generated one for your personal app.
 10. Save the file.
 
 <div class="alert alert-info" role="alert">.Also note that in order for the Facebook based login to work for the admin interface (admin.swf and admin.html) the same modifications need to be made to admin.html</div>
