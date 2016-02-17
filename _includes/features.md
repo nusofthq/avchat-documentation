@@ -516,7 +516,94 @@ If you are an experienced web developer you can create your own `rotate_messages
 
 <h2 id="register-tab-disable">Register & Sign in tab disable/enable</h2>
 
+You can disable the register tab using the setting `enableRegisterTab` and found in the `avc_settings.xml` file.
+
+To disable the tab:
+
+1. Open the file with a text editor.
+2. Search for `enableRegisterTab`.
+3. Set it's `<value>` tag to `0`.
+4. Save the file and upload it back to the server.
+
+Example:
+
+```xml
+<enableRegisterTab>
+	<title>enableRegisterTab</title>
+	<name>Enable register tab</name>
+	<type>boolean</type>
+	<desc>controls the status (enabled, disabled) of the Register and Sign-in tab (the second tab)</desc>
+	<values>0 for disabled, 1 for enabled</values>
+	<default>1</default>
+	<value>0</value>
+</enableRegisterTab>
+```
+
+You can also translate the tab's label and it's content to use it in some other purpose.
+The text used in this tab can be found in `translations/en.xml` file located in the AVChat installation folder.
+
 <h2 id="reporting-users">Report user feature</h2>
+
+**Sending a report**
+
+Starting with [build 2760](http://nusofthq.com/blog/avchat-august-build-2760/) a user can be reported by any other user if necessary. This options is easily accessed by pressing the <kbd>Report this user</kbd> button located in a user's side menu.
+
+<img src="http://docs.avchat.net/assets/images/report.png" class="img-responsive"/>
+
+The same button can also be accessed directly from the user's web-cam window.
+
+<img src="http://docs.avchat.net/assets/images/reportFromCam.png" class="img-responsive"/>
+
+Once pressed a window opens that allows the following:
+
+* Selecting a report reason
+* Adding more information of why the user is reported in the limit of 200 characters
+<img src="http://docs.avchat.net/assets/images/reportW.png" class="img-responsive"/>
+
+Pressing <kbd>Report</kbd> will send the report, <kbd>Cancel</kbd> will cancel the sending.
+
+Upon sending the report, automatically, two screenshots are taken:
+
+* A screenshot of the text-chat area
+* A screenshot of the reported user's web-cam
+
+These screenshots are sent to the web-server and can be found in the AVChat installation directory in the folder named report_snaps. The filename is composed of the user's siteId and the screenshot type (CAM or TEXT), so a screenshot will be named like so: `userSitedId_CAM.jpg` and `userSitedId_TEXT.jpg`
+
+All of the information of the report is also available through a PHP API, the file `sendReport.php`. This file can be configured to send an automatic email with the data of the reported user along with links to the two above mentioned screenshots. By default the code for the email sending is commented. It can also be customized to be used in any other way it is seen fit.
+
+The email address will have to be set manually, by opening the file with any text editor and editing the following line of code:
+`$to = "webmaster@example.com";`
+
+The default mail that it is sent will look similar to this:
+
+<img src="http://docs.avchat.net/assets/images/reportMail.png" class="img-responsive"/>
+
+**Viewing a report**
+
+All of the reports can be seen using the AVChat administrator area -> Reports panel. The number between the parentheses is a notification for the total number of reports.
+
+<img src="http://docs.avchat.net/assets/images/reportsPanel.png" class="img-responsive"/>
+
+The notifications work in the following way:
+Upon entering the chat as admin, the [Reports] button will show the total number of reports like so: Reports (10). When a new reports is received and the reported users window is not opened, the total number of NEW reports will be displayed in the top right corner of the [Reports] button like so:
+
+<img src="http://docs.avchat.net/assets/images/reportNotif.png" class="img-responsive"/>
+
+Pressing the <kbd>Report</kbd> button will open a new window and the notifications for the total number of NEW reports disappears.
+The new window displays all of the reports sent. Here you have the following options:
+
+* View the camera snapshot for a particular report (this is only active if a screenshot of the reported user's webcam was taken).
+* View the text-chat snapshot for a particular report
+* Copy username (copy the username of the reported user)
+* Copy user IP (copy the IP of the reported user)
+* Remove a report
+* Close (closes the window)
+
+<img src="http://docs.avchat.net/assets/images/reportList.png" class="img-responsive"/>
+
+Removing a report will permenantly delete it.
+
+Additionally the report feature can be disabled by setting `enableReportSending` to `0`. Also an admin can be blocked to see the reports by setting `adminCanSeeReports` to `0`. By default they are both enabled (set to `1`).
 
 <h2 id="pay-per-view-api">Pay Per View API</h2>
 
