@@ -428,6 +428,7 @@ If set to `0`, the feature will be disabled.
 <img src="http://docs.avchat.net/assets/images/skip-start.png" class="img-responsive"/>
 6. You wil be taken to your app Dashboard page. Click the <kbd>Settings</kbd> button
 <img src="http://docs.avchat.net/assets/images/fb-dashboard.png" class="img-responsive"/>
+
 7. Make sure a your site URL is typed in in the input, if not add it and click <kbd>Save Changes </kbd>
 8. Open up the `index.html`
 9. Find the line where the `appId` is specified and replace the existing app ID with the Facebook generated one for your personal app.
@@ -491,11 +492,13 @@ Here’s the default file with the text that you should edit highlighted:
 If you’ve edited the 6 default messages and you want to add more here’s what you need to do:
 
 + Duplicate the last case (case 0, lines 29-31 above) and replace 0 with 6 like this:
+
 ```php
 case 6:
 echo "<font color='#999999' face='Tahoma' size='11' ><b>A new message.</b></font>";
 break;
-```		
+```
+
 + On line 13 change the number 6 with 7 like this:
 `switch ($count%7)`
 
