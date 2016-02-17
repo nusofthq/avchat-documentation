@@ -607,11 +607,187 @@ Additionally the report feature can be disabled by setting `enableReportSending`
 
 <h2 id="pay-per-view-api">Pay Per View API</h2>
 
+Starting with [build 3078](http://nusofthq.com/blog/avchat-october-build-3078-has-been-released/) the Pay Per View API has been introduced, API that deprecates the old `freeVideoTime` setting and functionality.
+
+The API offers a series of settings and functionalities, which will be detailed later, that enable you to create and integrate a costum build payment solution based on several criteria for example:how much does a user stay in chat, how many minutes can he watch other streams.
+
+The API comes in 2 parts: settings that can be controlled from the `avc_settings.xml` file and the actual API for JavaScript, PHP and .NET.
+
+**The settings in avc_settings.xml detailed**
+
+The API is intended to be used with an integrated version of AVChat and makes use of the following settings in `avc_settings.xml`:
+
+
+1. `PPVEnabled` - This setting controls whether or not the PPV feature is enabled, and also depending on that, the status of the PPV button. When disabled the PPV button is not shown in the status bar.
+2. `PPVAmount` - This setting holds the amount of time or credits, depending on the `PPVType` setting. The `PPVAmount` starts to decrease as soon as the user enters the chat or as soon as he starts viewing a webcam (depending on `PPVTrigger`) with a ratio equal to `PPVRatio`/second. The remaining `PPVAmount` is then sent (every second) to the JS function onPPVUpdate which can be usually be found in index.html and `admin.html` and to `ppvUpdate.php` and `ppvUpdate.aspx`.
+3. `PPVType` - This setting controls what `PPVAmount` represents (time, money, credits). When set to time the `PPVAmount` will be shown in the chat time formated (i.e. 15:32).
+4. `PPVTrigger` - This setting indicates what triggers the `PPVAmount` to decrease. When set to `viewing_webcams` the `PPVAmount` starts to decrease as soon as you start viewing someone, viewing 2 or more cams will NOT decrease the timer faster. When set to `connected` the `PPVAmount` starts to decrease as soon as you enter the chat.
+5. `PPVRatio` - This setting controls the ratio at which the `PPVAmount` is decreased every second. When set to 0.5 for example there will be a 0.5 credits or seconds decreased every second.
+6. `PPVLink` - This setting holds the URL for the page from which more time/credits may be purchased for more video stream access. Pressing the PPV button will open the PPV Link.
+7. `PPVIcon` - This setting provides the URL to the icon loaded in the PPV button located in the status bar. The icon size should be 16x16.
+
+The PPV Button mentioned above is a new button added in the status bar that displays dynamically the amount of time/credits left if PPV is enabled. Here's how it looks:
+<img src="http://docs.avchat.net/assets/images/PPVbutton.png" class="img-responsive"/>
+
+**The API**
+
+The API comes in 3 flavors:
+* a Javascript API, represented by the function `onPPVUpdate` (found in `index.html` and `admin.html`).
+* a PHP file `ppvUpdate.php`
+* a .NET file `ppvUpdate.aspx`
+
+All of the above are called every second that passes while viewing a stream or being in chat, depending on the trigger set, by the AVChat client, with the following parameters:
+* `ppvAmountLeft`: the amount of time/money/credits left for a particular user.
+* `ppvInitialAmount`: the initial amount of time/money/credits that a user had.
+* `ppvRatio`: the rate at which the ppvAmountLeft is decreased.
+* `userSiteId`: the siteId value as sent by avc_settings.xxx
+* `sessionTimeStamp`: the timestamp from the last login.
+
+**Working with the API**
+
+All of this information feed and parameters will have to be stored and updated in the database of the site in which AVChat will be integrated.
+
+A general workflow will look something like this:
+
+1. Registered site user enters AVChat.
+2. AVChat starts churning down data to the API based on the settings set in `avc_settings.xml`.
+3. Parameters passed to the API will have to be taken and stored/updated in site database.
+4. Based on the information stored a custom made script will have to update the `PPVAmount` setting so that when a user re-enters chat the correct amount of time/credits left will be used.
+
+**Controlling the API**
+
+The API can be controlled by the setting `PPVEnabled`. Depending on the value set here just parts of the API can be enabled.
+
+**Enabling just the JavaScript API**
+
+To only enable the JavaScript API set `PPVEnabled` to `1`.
+
+**Enabling just the PHP/.NET API**
+
+To only enable the PHP/.NET API set `PPVEnabled` to `2`.
+
+**Enabling both JavaScript and PHP/.NET API**
+
+To enable both JavaScript and PHP/.NET API set `PPVEnabled` to `3`.
+
 <h2 id="avchat-twitter-authentication">How to setup AVChat for Twitter authentication</h2>
+
+**The Twitter authentication explained**
+
+Starting with [build 2915](http://avchat.net/support/documentation) AVChat supports Twitter authentication.
+
+This feature allows your users to connect to AVChat using their Twitter account.
+
+Clicking the Twitter logo in the login screen will open up a popup asking for the user's Twitter credentials in order the authorize the app for that particular account.
+
+<img src="http://docs.avchat.net/assets/images/twAuth.png" class="img-responsive"/>
+
+Upon given permission AVChat will automatically login using the user's Twitter profile name and profile picture. Opening the user's profile from the user side menu will lead you to the user's Twitter profile.
+
+<img src="http://docs.avchat.net/assets/images/twProfile.png" class="img-responsive"/>
+
+This feature is controlled by the setting `enableOtherAccountOptions` located in the `avc_settings.xml` file. If set to `0`, the feature will be disabled.
+
+**Setting it up**
+
+Here are the steps that will guide you on how to set this up:
+
+1. Go to [https://dev.twitter.com/apps](https://dev.twitter.com/apps)
+2. Create a Twitter application by clicking "Create a new application" (you must have a Twitter account, if not create one prior to this).
+3. Enter the Name, Description, Website URL (your website) and the Callback URL (this will be a placeholder for the actual callback URL but it is needed. You can enter the same website URL completed earlier).
+4. Agree with the terms, enter the CAPTCHA and click "Create your Twitter application".
+5. You will receive a message at the top of the page that the application was succesfully created and be redirected to a new page that lists all the details for the created application.
+<img src="http://docs.avchat.net/assets/images/twDetails.png" class="img-responsive"/>
+6. Open up `index.html`(that can be found in your AVChat installation folder) with any text editor.
+7. Find the lines similar to this: `var consumerKey = "U3yvRmc....";` and `var consumerSecret = "YtlvlqRTXjdjmK.....";` and replace those values with the ones generated by Twitter for your own application (marked in the image above by the green rectangle).
+8. Find the line similar to this var `pathToAVChat = "http://avchat.net/demos/avchat30";` and replace the value with the link to your AVChat installation.
+9. Save and close the file.
+
+<div class="alert alert-info" role="alert">Also note that in order for the Twitter based login to work for the admin interface (admin.swf and admin.html) the same modifications need to be made to admin.html</div>
 
 <h2 id="editing-columns">How to edit columns in the rooms panel</h2>
 
+This feature allows you to edit the info displayed regarding a room in the rooms panel. The values represent the table heads for each column:
+
+<img src="http://docs.avchat.net/assets/images/rooms_list_th.png" class="img-responsive"/>
+
+In the above image, you can see that small arrow icon annotated with green. Users are able to sort the rooms in the rooms list by that option.
+
+For example, clicking the name once (as in the example), will sort the rooms alphabetically, by name (from A to Z). Clicking it once again will reverse the sort (from Z to A).
+
+Same procedure for the rest of the colums.
+
+Also, you can remove some of the columns so that you will only display the name of the room, having only the "name" label in the `<value>` node, like:
+`<value>name</value>`
+
+How to do it:
+
+* Open `avc_settings.xml` - you can find it in your AVChat installation folder.
+* Search for `columnsInRoomsPanel` (line 1116).
+* Based on the values in the `<default>` node (name, users, private, owner, created), set the `<value>` node to what you need.
+* Save the file and upload it back to the server.
+
+```xml
+<columnsInRoomsPanel>
+   <title>columnsInRoomsPanel</title>
+   <name>Columns in rooms panel</name>
+   <type>string</type>
+   <desc>a string that allows you to configure and edit the columns shown by the rooms list inside the rooms panel.</desc>
+   <default>name users private owner created</default>
+   <examples></examples>
+   <value>name users private owner created</value>
+</sortRoomListOn>
+```
+
 <h2 id="autostart-webcam">How to make the webcams auto start</h2>
+
+Perhaps you're using AVChat for live conferences where people will use audio/video by default and you want to eliminate some steps, to make AVChat more user friendly.
+
+In this matter, you can set the webcams to open automatically for each user, after connecting.
+
+There are 2 possibilities here:
+
+After connecting, each user will start seeing all other public streams automatically.
+
+How to set this:
+
+*	Open `avc_settings.xml` - you can find it in your AVChat installation folder
+* search for `autoStartCameras` (line 426)
+* set it's `<value>` node to `1` which enables it
+* save the file and upload it back to the server
+
+```xml
+<autoStartCameras>
+   <title>autoStartCameras</title>
+   <name>Autostart cameras</name>
+   <type>boolean</type>
+   <desc>if set to 1 the user will start to view PUBLIC cams automatically as soon as they are started, admins with the permission to view private streams will also view private streams automatically</desc>
+   <examples>0 for disabled, 1 for enabled</examples>
+   <default>0</default>
+   <value>1</value>
+</autoStartCameras>
+```
+
+After connecting, each user will start streaming, with or without microphone.
+
+How to set this:
+
+* Open `avc_settings.xml` - you can find it in your AVChat installation folder
+* Search for `autoStartMyCamera` (line 435)
+* Set it's `<value>` node to `1` which enables it
+* Save the file and upload it back to the server
+
+```xml
+<autoStartMyCamera>
+   <title>autoStartMyCamera</title>
+   <name>Autostart my camera</name>
+   <type>eboolean</type>
+   <desc>if set to 2, when a user has a webcam, immediatley after joining the first room, his camera will start broadcasting (the mic will start muted if the user has one).if set to 1, when a user has a webcam/microphone, immediatley after joining the first room, his camera/mic will start broadcasting. If set to 0, the user will have to press the 'Start my camera/mic' buttons to start it . This setting also takes into consideration the allowAudioStreaming and allowVideoStreaming variables</desc>
+   <examples>0, 1, 2</examples>
+   <default>0</default>
+   <value>1</value>
+</autoStartCameras>
+```
 
 <h2 id="allow-block-video-streaming">Allowing/blocking audio and video streaming</h2>
 
