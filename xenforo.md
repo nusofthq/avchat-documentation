@@ -23,7 +23,7 @@ If you're looking for something specific just hit <kbd>Ctrl+F</kbd> on your brow
 
 <section class="bs-docs-section" markdown="1">
   <h1 id="installation-instructions" class="page-header">Installation Instructions</h1>
-<h2 id="download-avchat-and-ipboard34-application">Download & extract archives</h2>
+<h2 id="download-avchat-and-xenforo-application">Download & extract archives</h2>
 Download these 2 archives from your [private client/trial area](https://nusofthq.com/c/) to your computer:
 
 1. `AVChat 3.0.zip` contains AVChat
@@ -44,7 +44,7 @@ Here's how to install the `avchat30` app on each one of them:
 
 {% include media-server-app.md %}
 
-<h2 id="installing-the-application-and-avchat-on-ipboard34">xenForo add-on &amp; AVChat installation</h2>
+<h2 id="installing-the-application-and-avchat-on-xenforo">xenForo add-on &amp; AVChat installation</h2>
 <h3>Upload files to your website</h3>
 Connect using an FTP client to your website and:
 
@@ -52,13 +52,14 @@ Connect using an FTP client to your website and:
 2. upload the contents of the `Files to upload to your web site` folder (except `admin.html` and `index.html` ) from the AVChat archive to `/videochat/`
 3. Edit the `.htaccess`in your forum's root folder and replace the following lines:
 
-{% highlight ActionScript %}
+{% highlight PHP %}
 RewriteRule
 ^(data/|js/|styles/|install/|favicon\.ico|crossdomain\.xml|robots\.txt) - [NC,L]
 {% endhighlight %}
+
 with:
 
-{% highlight ActionScript %}
+{% highlight PHP %}
 RewriteRule
 ^(data/|js/|styles/|install/|favicon\.ico|crossdomain\.xml|robots\.txt|videochat/|index_popup\.php) - [NC,L]
 {% endhighlight %}
@@ -89,8 +90,8 @@ Enter the key (It's in your [private client/trial area](https://nusofthq.com/c/)
 </section>
 
 <section class="bs-docs-section" markdown="1">
-<h1 id="avchat-ipboard34-application-features" class="page-header">Add-on Features</h1>
-<h2 id="accessing-the-avchat-admin-area-ipboard34">Access the AVChat admin area</h2>
+<h1 id="avchat-xenforo-application-features" class="page-header">Add-on Features</h1>
+<h2 id="accessing-the-avchat-admin-area-xenforo">Access the AVChat admin area</h2>
 If you want to log in as hidden, kick/ban users, close/delete rooms, view users IP's and a lot of other cool stuff that admins do, you'll have to use the AVChat admin interface.
 
 **By default no xenForo user group has access to the video chat as admin. You will need to configure this permission for each user group.**
@@ -106,7 +107,7 @@ While logged in the Admin CP do the following:
 
 Now, whenever a user belonging to that user group will access the chat, the AVChat admin interface will now load, instead of the one for regular members.
 
-<h2 id="open-avchat-in-a-popup-window-ipboard34">Open AVChat in a pop up</h2>
+<h2 id="open-avchat-in-a-popup-window-xenforo">Open AVChat in a pop up</h2>
 
 By default AVChat 3 is embedded in your xenForo page but you might want AVChat to open in a pop up window to make it easier for your users to browse your website while in the chat.
 
@@ -115,15 +116,18 @@ By default AVChat 3 is embedded in your xenForo page but you might want AVChat t
 2. Select `Popup` for `Display Mode`
 3. Scroll to the bottom and click <kbd>Save Changes</kbd>
 
-<h2 id="avchat-ipboard34-permissions">Limiting features to certain user groups</h2>
-<h3>xenForo 3 user groups</h3>
+<h2 id="avchat-xenforo-permissions">Limiting features to certain user groups</h2>
+<h3>xenForo user groups</h3>
 
-xenForo 3 ships with 4 user groups:
+xenForo ships with 4 user groups:
 
   * *Administrative*
   * *Moderating*
   * *Registered*
   * *Unregistered / Unconfirmed*
+
+<img src="{{site.github.url}}/assets/images/xenforo/user-groups.png" class="img-responsive" />
+
 
 <h3>Limiting AVChat features</h3>
 
