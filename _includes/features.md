@@ -1080,4 +1080,4 @@ Example for one room:
 
 To create more than 1 default room add another room object to the `defaultRooms` array and separate the room objects with a comma:
 
-`application.`defaultRooms=[{name:"The Lobby(auto)",description:"The Main Room",password:"",maxusers:50,ownerName:"",ownerId:"",siteId:"",ip:"127.0.0.1",clientId:"",welcomeMessage:"This is an autocreated room",playListArray:""}, {...another room object...}]`
+`application.defaultRooms=[{name:"The Lobby(auto)",description:"The Main Room",password:"",maxusers:50,ownerName:"",ownerId:"",siteId:"",ip:"127.0.0.1",clientId:"",welcomeMessage:"This is an autocreated room",playListArray:""}, {...another room object...}]`
