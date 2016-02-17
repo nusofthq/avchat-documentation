@@ -20,7 +20,7 @@ hide: true
 
 <div class="bs-callout bs-callout-warning" id="callout-tables-responsive-overflow">
 <h4>IP.Board 3.4 End of Support</h4>
-<p markdown="1">[Invision Power](https://www.invisionpower.com), the company behind IP.Board, [have announced](https://community.invisionpower.com/blogs/entry/9745-ipboard-34-end-of-support/) the following product cycle for IP.Board 3.4:
+<p markdown="1">[Invision Power](https://www.invisionpower.com), the company behind IP.Board, [have announced](https://community.invisionpower.com/blogs/entry/9745-ipboard-34-end-of-support/) in December 2015 the following product cycle for IP.Board 3.4:
 </p>
 <ul>
 <li>March 1, 2016 - End of advanced technical support and development. Basic / limited technical support will continue.</li>
