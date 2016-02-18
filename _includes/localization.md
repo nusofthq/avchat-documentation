@@ -24,7 +24,7 @@ In order to change a word, to translate the entire interface in another language
 
 The `languagefile` variable in `avc_settings.xml` controls which language file will be loaded. You can have several language files (en.xml, es.xml, fr.xml, etc.) and load one or another based on the user's location, ip or language settings in the browser (this is not a feature built in AVChat but it's something that's possible).
 
-<div class="alert alert-info" role="alert" markdown="1">After editing the `en.xml` file and uploading it back to your web server, make sure you clear your cache so that the browser picks up the new version.</div>
+<div class="alert alert-info" role="alert">After editing the en.xml file and uploading it back to your web server, make sure you clear your cache so that the browser picks up the new version.</div>
 
 Where to find and share translations?
 
