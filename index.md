@@ -24,7 +24,7 @@ isHome: true
   <h2 id="wordpress">WordPress</h2>
   * Community Lite
   * [Community PRO](/wordpress-community-pro)
-  * Pay Per Session
+  * [Pay Per Session](/wordpress-pps)
   <h2 id="joomla">Joomla!</h2>
   * Joomla! 1.0
   * Joomla! 1.5
