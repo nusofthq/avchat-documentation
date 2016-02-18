@@ -27,8 +27,8 @@ isHome: true
   * [Pay Per Session](/wordpress-pps)
   <h2 id="joomla">Joomla!</h2>
   * Joomla! 1.0
-  * Joomla! 1.5
-  * [Joomla! 1.6 -> 3.4](/joomla-3)
+  * [Joomla! 1.6 -> 2.5](/joomla-2)
+  * [Joomla! 3.1 -> 3.4](/joomla-3)
   <h2 id="socialengine,phpfox,drupal">Other CMS</h2>
   * [SocialEngine PHP](/socialengine)
   * [PHPFox 3.8 (Nebula)](phpfox)
