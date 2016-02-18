@@ -150,4 +150,90 @@ But access to AVChat is not the only thing you can control. What makes this inte
 
 Click the image below to see a screenshot with all the permissions that you can control individually for each member level:
 
+<img src="{{site.github.url}}/assets/images/se/full_se4_permissions_list.png" class="img-responsive" />
+
+
+<h2 id="allowing-visitors-socialengine">Allowing visitors to join the video chat</h2>
+
+
+By default the AVChat Module for SE4 does not allow visitors of your web site to enter the video chat. Only signed in users are allowed in the video chat.
+
+By default SE4 considers visitors as part of its internal Public member level so to allow visitors in we need to allow access to AVChat for the Public member level:
+
+1. Log in the admin area of SE4:
+2. Go to Manage -> Member Level AVChat 3 Settings
+3. Select Public in the Member Level drop down...
+4. The AVChat permissions for the Public member level will load...
+5. Set the Allow Access AVChat radio option to Yes, allow access to AVChat
+6. Scroll to the bottom and click <kbd>Save Changes</kbd>
+
+Visitors will have the option to choose their user name and gender before joining the video chat.
+
+
+<h2 id="change-page-title-socialengine">How to change the Flash Video Chat page title</h2>
+
+The only way at this moment to change the title is by editing a file. In future updates we will add the option to change the title by editing a phrase in the SE4 phrase system.
+
+What you have to do now to change the title:
+
+1. Login into your FTP account with an FTP client
+2. Go to `application/modules/Avchat3/Controllers/` and open in a text editor `IndexController.php`
+3. Find this line `$this->view->avchat3_title = 'Flash Video Chat';` and change Flash Video Chat with what you want.
+4. Save the file and that's it.
+
+<h2 id="change-menu-title-socialengine">How to change the Flash Video Chat menu item title</h2>
+
+1. Login as admin into your Social Engine PHP 4 website
+2. Go to Layout ->Menu Editor
+3. By default the Video Chat link is placed into the Main Navigation Menu. If you placed it into other menu, select the corresponding menu from the drop down. Find the Video Chat item, and click edit (see the screenshot below).
+<img src="{{site.github.url}}/assets/images/se/se4_avchat3_menu_item.gif" class="img-responsive" />
+4. Type the new menu title in the "Label" field and save (see the screenshot below).
+<img src="{{site.github.url}}/assets/images/se/se4_avchat_edit_menu_item.gif" class="img-responsive" />
+
+
+<h2 id="change-url-socialengine">How to change the default URL</h2>
+
+This is a delicate task which requires editing a sensitive file, `application/index.php`.
+
+<div class="alert alert-warning" role="alert">Before going further make sure that you BACKUP application/index.php</div>
+
+Let's say that you want to access AVChat 3 by going to http://yourse4site.com/outstandingchat instead of http://yourse4site.com/avchat3. SE4 automatically creates the URL and it cannot be changed from the admin area. Editing the .htaccess file is a nightmare. So the easiest possible way is this:
+
+1. Login into your FTP account with an FTP client
+2. Go to `application` and open in a text editor `index.php`
+3. **Before any code line** add these lines:
+
+```php
+if($\_SERVER['REQUEST_URI'] == '/outstandingchat'){
+$\_SERVER['REQUEST_URI'] = '/avchat3';
+}
+```
+
+Save the file and that's it. You can access now AVChat by going to http://youse4site.com/outstandingchat
+
+
+* Do not use `videochat` as alias because `videochat` holds the AVChat 3 standalone files that are used by the AVChat 3 SE4 module.
+* If you have Social Engine 4 installed in a folder like this http://yourse4site.com/se4folder/ then to change the URL you need to modify the code above:
+
+```php
+if($\_SERVER['REQUEST_URI'] == '/se4folder/outstandingchat'){
+$\_SERVER['REQUEST_URI'] = '/se4folder/avchat3';
+}
+```
+
+<h2 id="upgrade-avchat-module-socialengine">How to upgrade the AVChat module</h2>
+
+SocialEngine Package Manager is responsible for all the packages in the SocialEngine system. It offers us an easy way for installing/upgrading a module or a widget. Next I will present a series of steps that can help you upgrade a module or widget easily.
+
+
+1. Go to **ACP->Manage Packages & Plugins->Manage Packages->Install New Packages->Add Packages**;
+2. **Choose Packages**: Select the new archive and after upload click Continue button;
+3. **Run Pre-install Check**: You should see the following text: **Upgrade package "module-avchat3"[old_build_no] to [new_build_no]**. Here will also be shown the differences between the two archives. Click the <kbd>Continue</kbd> button;
+4. **Enter FTP Info**: Enter your connection details and the click the <kbd>Continue</kbd> button;
+5. **Run Permissions Check**: Here it will inform you about permissions beeing set and the number of files that will be copied during the installtion. Click the <kbd>Continue</kbd> button to go to next steps;
+6. Copy Files. A message should inform you that all files were successfully copied.
+7. **Update Database**. A message should inform you all necessary changes to the database have been made successfully. Click <kbd>Finalize Installation</kbd> button to complete the upgrade;
+8. **Complete**: A message that informs you the installation was successfully should appear. From here you can return to **Package Manager** or to the **Dashboard**.
+
+
 </section>
