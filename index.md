@@ -30,7 +30,7 @@ isHome: true
   * Joomla! 1.5
   * [Joomla! 1.6 -> 3.4](/joomla-3)
   <h2 id="socialengine,phpfox,drupal">Other CMS</h2>
-  * SocialEngine PHP
+  * [SocialEngine PHP](/socialengine)
   * [PHPFox 3.8 (Nebula)](phpfox)
   * [Drupal 5/6](drupal)
   * [Drupal 7](drupal7)
