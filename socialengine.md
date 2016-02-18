@@ -218,4 +218,19 @@ Save the file and that's it. You can access now AVChat by going to http://youse4
     }
 
 
+<h2 id="upgrade-avchat-module-socialengine">How to upgrade the AVChat module</h2>
+
+SocialEngine Package Manager is responsible for all the packages in the SocialEngine system. It offers us an easy way for installing/upgrading a module or a widget. Next I will present a series of steps that can help you upgrade a module or widget easily.
+
+
+1. Go to **ACP->Manage Packages & Plugins->Manage Packages->Install New Packages->Add Packages**;
+2. **Choose Packages**: Select the new archive and after upload click Continue button;
+3. **Run Pre-install Check**: You should see the following text: **Upgrade package "module-avchat3"[old_build_no] to [new_build_no]**. Here will also be shown the differences between the two archives. Click the <kbd>Continue</kbd> button;
+4. **Enter FTP Info**: Enter your connection details and the click the <kbd>Continue</kbd> button;
+5. **Run Permissions Check**: Here it will inform you about permissions beeing set and the number of files that will be copied during the installtion. Click the <kbd>Continue</kbd> button to go to next steps;
+6. Copy Files. A message should inform you that all files were successfully copied.
+7. **Update Database**. A message should inform you all necessary changes to the database have been made successfully. Click <kbd>Finalize Installation</kbd> button to complete the upgrade;
+8. **Complete**: A message that informs you the installation was successfully should appear. From here you can return to **Package Manager** or to the **Dashboard**.
+
+
 </section>
