@@ -70,15 +70,15 @@ hide: true
   You should see a new folder called **avchat-3-pro**. Open it.
 
   Also open the folder on your computer containing the AVChat client files (the ones from the **AVChat 3.0 Build xxxx.zip** archive):
-  <img src="/assets/images/wordpress_images/avchat_archive_folder.png" class="img-responsive"/>
+  <img src="/assets/images/avchat_archive_folder.png" class="img-responsive"/>
   Copy all the files in the **Files to upload to your website** folder inside the **avchat-3-pro** folder:
   <img src="/assets/images/wordpress_images/uploaded_files.png" class="img-responsive"/>
 
   Make sure you change the permissions on the **tokens** and **uploadedFiles** folders to `777`:
-  <img src="/assets/images/wordpress_images/chmod.png" class="img-responsive"/>
+  <img src="/assets/images/chmod.png" class="img-responsive"/>
 
   <h2 id="plugin-configure">Plugin Configuration</h2>
-  You can now activate the plugin. Once activated, a new page has been added in your WordPress Dashboard: **Video Chat PRO**.
+  You can now activate the plugin. Once activated, a new page is added in your WordPress Dashboard: **Video Chat PRO**.
   <img src="/assets/images/wordpress_images/activate.png" class="img-responsive"/>
 
   You need to insert the connection string. The connection string has the following form:
