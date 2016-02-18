@@ -203,9 +203,11 @@ Let's say that you want to access AVChat 3 by going to http://yourse4site.com/ou
 2. Go to `application` and open in a text editor `index.php`
 3. **Before any code line** add these lines:
 
-    if($\_SERVER['REQUEST_URI'] == '/outstandingchat'){
-    $\_SERVER['REQUEST_URI'] = '/avchat3';
-    }
+```php
+if($\_SERVER['REQUEST_URI'] == '/outstandingchat'){
+$\_SERVER['REQUEST_URI'] = '/avchat3';
+}
+```
 
 Save the file and that's it. You can access now AVChat by going to http://youse4site.com/outstandingchat
 
@@ -213,10 +215,11 @@ Save the file and that's it. You can access now AVChat by going to http://youse4
 * Do not use `videochat` as alias because `videochat` holds the AVChat 3 standalone files that are used by the AVChat 3 SE4 module.
 * If you have Social Engine 4 installed in a folder like this http://yourse4site.com/se4folder/ then to change the URL you need to modify the code above:
 
-    if($\_SERVER['REQUEST_URI'] == '/se4folder/outstandingchat'){
-    $\_SERVER['REQUEST_URI'] = '/se4folder/avchat3';
-    }
-
+```php
+if($\_SERVER['REQUEST_URI'] == '/se4folder/outstandingchat'){
+$\_SERVER['REQUEST_URI'] = '/se4folder/avchat3';
+}
+```
 
 <h2 id="upgrade-avchat-module-socialengine">How to upgrade the AVChat module</h2>
 
