@@ -1,7 +1,7 @@
 ---
 layout: default
-title: AVChat xenForo Add-on
-description: Documentation covering the AVChat add-on for xenForo
+title: AVChat SocialEngine 4 Add-on
+description: Documentation covering the AVChat add-on for SocialEngine 4
 isHome: false
 hide: true
 ---
@@ -10,24 +10,28 @@ hide: true
   <h1 id="overview" class="page-header">Overview</h1>
   <p class="lead">The AVChat Video Chat Add-on for SocialEngine 4 handles the integration between your SocialEngine 4 community and our AVChat software:</p>
 
-* username and gender integration
+* user name integration
 * profile url integration
-* profile picture integration
-* Facebook and Twitter integration
+* profile image integration
 * placement of video chat within the web site (user and admin interface)
-* control what features each user group from xenForo has access to
-* control AVChat 3 general settings from the xenForo admin area
+* control video chat permissions for each SocialEngine PHP 4 member levels  directly from the SE4 admin area
+
+The AVChat Module for SE4 is one of the best most advanced integration we have done! Why? because directly in SE4's admin area you can control access to AVChat and its features based on the level of the user
+
+If you like the AVChat Module for SocialEngine PHP 4 don't forget to [rate it and review it in the SE Community Addons area](http://www.socialengine.com/customize/se4/mod-page?mod_id=187). You can also view our [Developer Profile on socialengine.com](http://www.socialengine.com/customize/se4/developer?dev_id=4292).
+
+If you cannot find the answer you’re looking for here, we encourage you to try our [FAQ](http://avchat.net/faq) or [forums](http://discuss.avchat.net/). There's also more documentation regarding AVChat in the [documentation area for the main standalone version](http://docs.avchat.net/standalone).
 
 If you're looking for something specific just hit <kbd>Ctrl+F</kbd> on your browser.
 </section>
 
 <section class="bs-docs-section" markdown="1">
   <h1 id="installation-instructions" class="page-header">Installation Instructions</h1>
-<h2 id="download-avchat-and-xenforo-application">Download & extract archives</h2>
+<h2 id="download-avchat-and-socialengine-application">Download & extract archives</h2>
 Download these 2 archives from your [private client/trial area](https://nusofthq.com/c/) to your computer:
 
 1. `AVChat 3.0.zip` contains AVChat
-2. `avchat3_video_chat_xenforo_addon.zip` contains the xenForo add-on
+2. `avchat3_socialengineall.zip` contains the SocialEngine add-on
 
 Extract the 2 archives somewhere on your computer.
 
@@ -44,56 +48,40 @@ Here's how to install the `avchat30` app on each one of them:
 
 {% include media-server-app.md %}
 
-<h2 id="installing-the-application-and-avchat-on-xenforo">xenForo add-on &amp; AVChat installation</h2>
-<h3>Upload files to your website</h3>
-Connect using an FTP client to your website and:
+<h2 id="installing-the-application-and-avchat-on-socialengine">SocialEngine 4 add-on &amp; AVChat installation</h2>
 
-1. upload the `library` and `videochat` folders from the xenForo's archive to your forum's root folder
-<img src="{{site.github.url}}/assets/images/xenforo/copy-addon.png" class="img-responsive" />
-2. upload the contents of the `Files to upload to your web site` folder (except `admin.html` and `index.html` ) from the AVChat archive to `/videochat/`
-<img src="{{site.github.url}}/assets/images/xenforo/copy-avchat.png" class="img-responsive" />
-
-
-<div class="bs-callout bs-callout-warning" id="callout-tables-responsive-overflow"> <h4>Edit .htaccess</h4> <p markdown="1">If you use the xenForo's `.htaccess` (for [SEO friendly URLs](https://xenforo.com/help/friendly-urls/) or any other reason) you'll also have to prevent it from redirecting AVChat paths by editing the `.htaccess`in your forum's root folder and replacing the following line:</p>
-
-{% highlight PHP %}
-RewriteRule
-^(data/|js/|styles/|install/|favicon\.ico|crossdomain\.xml|robots\.txt) - [NC,L]
-{% endhighlight %}
-
-with:
-
-{% highlight PHP %}
-RewriteRule
-^(data/|js/|styles/|install/|favicon\.ico|crossdomain\.xml|robots\.txt|videochat/|index_popup\.php) - [NC,L]
-{% endhighlight %} </div>
-
-
-
-<div class="bs-callout bs-callout-info" id="callout-tables-responsive-overflow"> <h4>Folder permissions</h4> <p markdown="1">If your website's hosted on a Linux server CHMOD the `/videochat/uploadedFiles` and `/videochat/tokens` folders to 777.</p> </div>
+1. Connect with an FTP client (like [WinSCP](http://winscp.net/eng/index.php) or [FileZilla](http://filezilla-project.org/)) to your website and go to the root of your website (usually in public_html).
+2. Copy the `videochat` folder from the `socialengine_4.x` folder from the archive, to the root of your website.
+3. Now in the new `videochat` folder copy the contents of the folder named `Files to upload to your web site` from the `AVChat 3.0.zip` archive.
+4. If the previous two steps are not completed an error message will appear: "The videochat folder or the AVChat files are missing from your SocialEngine installation."
+5. CHMOD the `videochat/uploadedFiles` folder to `777` (otherwise the upload function might not work)
+6. Create a new folder `tokens` (`videochat/tokens`) and CHMOD it to `777` (otherwise we might have token generation issues later on)
+7. Now back in the SE4 admin area go to Admin -> Plugins -> Flash Video Chat to enter the video chat, you will be asked for the license key:
+<img src="{{site.github.url}}/assets/images/se/license_key.jpg" class="img-responsive" />
+8. Enter the key (it's in your client/trial area) and press <kbd>Submit</kbd>
 
 <h2 id="completing-the-installation">Complete installation</h2>
 <h3>Install the add-on</h3>
-In the xenForos's **Admin CP** area:
 
-1. click on **Install Add-on** in the left side menu.
-2. on the Install New Add-on page click on <kbd>Choose&nbsp;File</kbd>
-3. select the `addon-AVChat3VideoChat.xml` from the xenForo add-on archive.
-4. click <kbd>Install Add-on</kbd>
-
-<img src="{{site.github.url}}/assets/images/xenforo/install-addon.png" class="img-responsive" />
-
+1. Login as admin into your SocialEngine PHP 4 Website and go to Admin >> Manage >> Packages & Plugins
+<img src="{{site.github.url}}/assets/images/se/se_01.gif.png" class="img-responsive" />
+2. Click on <kbd>Install New Packages</kbd> then on <kbd>Add Packages</kbd>
+3. Browse to where you unzipped `avchat3_socialengineall_UNZIPFIRST.zip` and select the `module-avchat3-xxxx.tar` file from the `socialengine_4.x` folder.
+4. Wait for it to be uploaded
+5. Click <kbd>Continue</kbd> and follow the on-screen installation instructions until the package is installed.
+6. Click <kbd>Manage Packages</kbd> (top left) and make sure the AVChat Module in the list is enabled.
+<img src="{{site.github.url}}/assets/images/se/se_2.gif" class="img-responsive" />
+7. Click <kbd>Return to Admin Panel</kbd>
+9. Users will see a new link in the menu that will take them to the video chat.
 
 <h3>Connect AVChat to the media server app</h3>
-In the Admin CP:
 
-1. go to **Home** and click on **Options** in the left sidemenu
-2. select **AVChat 3 Video Chat Options** from the list (should be 1st)
-3. in the **RTMP Connectionstring** section insert your connection string for the media server app ( it should look like this `rtmp://media-server-ip/avchat30/_definst_` )
-4. scroll to the bottom and click <kbd>Save Changes</kbd>
-
-<img src="{{site.github.url}}/assets/images/xenforo/connect-avchat-to-media-server.png" class="img-responsive" />
-
+1. Go to Settings >> AVChat 3 Settings
+<img src="{{site.github.url}}/assets/images/se/se_04.gif.png" class="img-responsive" />
+and enter the RTMP connection string to your `avchat30` application on the media server. It should look like this:
+`rtmp://myFMSserver.com/avchat30/_definst_`
+where `myFMSserver.com` is the domain name or ip of the your media server.
+2. Click <kbd>Save Changes</kbd> at the bottom
 
 Your AVChat installation is now configured to connect to the media server.
 
