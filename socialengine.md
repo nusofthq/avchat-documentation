@@ -70,7 +70,7 @@ Here's how to install the `avchat30` app on each one of them:
 4. Wait for it to be uploaded
 5. Click <kbd>Continue</kbd> and follow the on-screen installation instructions until the package is installed.
 6. Click <kbd>Manage Packages</kbd> (top left) and make sure the AVChat Module in the list is enabled.
-<img src="{{site.github.url}}/assets/images/se/se_2.gif" class="img-responsive" />
+<img src="{{site.github.url}}/assets/images/se/se_2.png" class="img-responsive" />
 7. Click <kbd>Return to Admin Panel</kbd>
 9. Users will see a new link in the menu that will take them to the video chat.
 
@@ -85,117 +85,68 @@ where `myFMSserver.com` is the domain name or ip of the your media server.
 
 Your AVChat installation is now configured to connect to the media server.
 
-<h3>Allow access to the chat</h3>
-From the Admin CP:
-
-1. Go to **Users -> Group Permissions**
-2. Click the group you want to have access to AVChat
-3. Scroll down to the **AVChat 3 Video Chat - User Permissions** section and click **Allow** (green box)
-4. Scroll to the end and click <kbd>Update Permissions</kbd>
-
-Repeat 2-4 for each group you want to have access to the chat. Make sure you allow access to the *Administrative* user group since you're part of it.
-
-<h3>Enter the chat and insert the license key</h3>
-
-1. Go to the forum's front end. There's a new **Video Chat** link in xenForo's main menu, click on it.
-
-2. The page with AVChat on it will load and AVChat's login screen will show up. **Your username will be automatically filled.**
-
-3. Click <kbd>Enter Chat</kbd>. AVChat will now connect to the media server and ask you for the license key.
-
-4. Enter the key (It's in your [private client/trial area](https://nusofthq.com/c/)) and press <kbd>Submit</kbd>.
 </section>
 
 <section class="bs-docs-section" markdown="1">
-<h1 id="avchat-xenforo-application-features" class="page-header">Add-on Features</h1>
-<h2 id="accessing-the-avchat-admin-area-xenforo">Access the AVChat admin area</h2>
-If you want to log in as hidden, kick/ban users, close/delete rooms, view users IP's and a lot of other cool stuff that admins do, you'll have to use the AVChat admin interface.
+<h1 id="avchat-socialengine-application-features" class="page-header">Add-on Features</h1>
+<h2 id="accessing-the-avchat-admin-area-socialengine">Access the AVChat admin area</h2>
 
-**By default no xenForo user group has access to the video chat as admin. You will need to configure this permission for each group.**
+The AVChat admin interface allows you to kick and ban users, view private discussions, log in as hidden, close, open and delete rooms, change the license key, etc.
+SocialEngine PHP 4 has 5 default member levels: Public, Default Level, Moderators, Admins and Super Admins.
 
-While logged in the Admin CP do the following:
+By default Moderators, Admins and Super Admins have access to the AVChat admin interface.
 
- * Click on **Users** in the top menu
- * Click on the user group you want to give AVChat admin access to
- * On the following page search for **AVChat 3 Video Chat - User Permissions** and you will see AVChat's permissions list
- * Check **Allow** (the green box) for **Can access chat as admin**
- * Scroll to the bottom and click on <kbd>Update Permissions</kbd>
+Access to the AVChat admin interface and what admin features each member level gets can be controlled from: Manage -> Member Level AVChat 3 Permision.
 
 
-Now, whenever a user belonging to that user group will access the chat, the AVChat admin interface will now load, instead of the one for regular members.
+<h2 id="open-avchat-in-a-popup-window-socialengine">Open AVChat in a pop up</h2>
 
-<h2 id="open-avchat-in-a-popup-window-xenforo">Open AVChat in a pop up</h2>
+By default AVChat 3 is embedded in your Socialengine page but you might want AVChat to open in a pop up window to make it easier for your users to browse your website while in the chat.
+While logged in the admin area of SE4:
 
-By default AVChat 3 is embedded in your xenForo page but you might want AVChat to open in a pop up window to make it easier for your users to browse your website while in the chat.
-
-1. From Admin CP go to **Home -> Options**
-2. Search for **AVChat 3 Video Chat Options** and click on it
-2. Select **Popup** for **Display Mode**
-3. Scroll to the bottom and click <kbd>Save Changes</kbd>
-
-<h2 id="avchat-xenforo-permissions">Limiting features to certain user groups</h2>
-<h3>xenForo user groups</h3>
-
-xenForo ships with 4 user groups:
-
-  * *Administrative*
-  * *Moderating*
-  * *Registered*
-  * *Unregistered / Unconfirmed*
-
-<img src="{{site.github.url}}/assets/images/xenforo/user-groups.png" class="img-responsive" />
+* Go to Settings -> General AVChat 3 Settings
+* Set the Open AVChat 3 in radio option to in popup
+* Scroll to the bottom and click Save Changes
 
 
-<h3>Limiting AVChat features</h3>
+<h2 id="avchat-socialengine-ads">Placing ads around the video chat</h2>
 
-To control what AVChat features (creating rooms, sending PM's, viewing webcams, etc.) are available to each user group do the following from the AdminCP:
+Any ads can be placed around AVChat, including Google Ad-Sense.
 
-1. go to **Users** and the click on **User Group Permissions** in the left sidebar.
-2. click on the user group you want to edit and then search for **AVChat 3 Video Chat - User Permissions**
-3. change the AVChat permissions for that user group and click <kbd>Update Permissions</kbd> at the bottom.
+You can place ads around:
 
-<!--
-<h2 id="location-of-avchat-files">Preventing visitors (guests) from accessing the video chat</h2>
+* The chat area if the selected open method is Embeded.
+* The Open chat button if the selected open method is Popup.
 
-From the  AdminCP:
+To place ads around AVChat (or around the Open Chat Button if open popup open method is selected), you need to edit this file: `application/modules/Avchat3/views/scripts/index/index.tpl`
 
-1. Go to `Members` and click on `Manage Member Groups`
-2. Click on `Guests` then on the `AVChat 3` tab
-3. Select `No` for `Can access chat`
-4. Scroll to the bottom and click <kbd>Complete Edit</kbd>
+Where you can place the ads:
 
-Visitors will still see the `Video Chat` link but they will be asked to sign in or register.
-
-<img src="{{site.github.url}}/assets/images/xenforo/visitor-register-signing.png" class="img-responsive" />
--->
-
-<h2 id="allow-chat-access-to-visitors">Allowing visitors access to the video chat</h2>
-
-The xenForo addon does not allow any user group to access the chat by default. Every group (including *Unregistered / Unconfirmed* which covers visitors) need to be given permission from the group's permissions page.
-
-From the Admin CP:
-
-1. go to **Users -> Group Permissions**
-2. click on the **Unregistered / Unconfirmed**
-3. Scroll down to **AVChat 3 Video Chat - User Permissions** and select **Allow** (the green box) for **Can access chat**
-4. Scroll down and click <kbd>Update Permissions</kbd>
-
-<div class="alert alert-info" role="alert">
-<p markdown="1">When a user group doesn't have permission to access the chat they still see the `Video Chat` link in the menu but on the chat page they're asked to register or sign in.</p>
-</div>
+1. On the top of the chat. In this case what you have to do is place the ads code before this line:
+`<?php if($this->open_method == 1){ ?>`
+2. In the right side of the chat. In this case you will have to use floated divs or tables to encapsulate the chat area and the ads.
+3. On the bottom of the chat. In this case what you have to do is place the ads code after this line:
+`<?php } ?>`
+4. In the left side of the chat. In this case you will have to use floated divs or tables to encapsulate the chat area and the ads.
+5. Or you can place the ads in any of the combined situations presented.
 
 
-<h2 id="location-of-avchat-files">Location of AVChat &amp; add-on files</h2>
-All the AVChat  files including:
+<h2 id="socialengine-member-levels">SocialEngine 4's member levels and AVChat</h2>
 
-* all the add-on files
-* `index.swf` and `admin.swf`
-* language files
-* themes
-* audio/video quality profile files
-* `avc_settings.xml`
-* `integration.php`
+<div class="alert alert-info" role="alert">SocialEngine 4 has 5 default member levels: Public, Default Level, Moderators, Admins and Super Admins.</div>
 
-are located in `/videochat/`.
+By default:
+
+* Moderators, Admins and Super Admins have access to the AVChat admin interface
+* Default Level has access to the AVChat user interface
+* Public does not have access to AVChat
+
+The default setup can be changed from: Manage -> Member Level AVChat 3 Permission
+
+<img src="{{site.github.url}}/assets/images/se/se_05.gif.png" class="img-responsive" />
+
+But access to AVChat is not the only thing you can control. What makes this integration so great is that you can control in detail to what AVChat features each member level has access to without leaving the SE4 admin area.
+
+Click the image below to see a screenshot with all the permissions that you can control individually for each member level:
 
 </section>
