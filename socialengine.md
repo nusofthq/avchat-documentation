@@ -49,18 +49,6 @@ Here's how to install the `avchat30` app on each one of them:
 {% include media-server-app.md %}
 
 <h2 id="installing-the-application-and-avchat-on-socialengine">SocialEngine 4 add-on &amp; AVChat installation</h2>
-
-1. Connect with an FTP client (like [WinSCP](http://winscp.net/eng/index.php) or [FileZilla](http://filezilla-project.org/)) to your website and go to the root of your website (usually in public_html).
-2. Copy the `videochat` folder from the `socialengine_4.x` folder from the archive, to the root of your website.
-3. Now in the new `videochat` folder copy the contents of the folder named `Files to upload to your web site` from the `AVChat 3.0.zip` archive.
-4. If the previous two steps are not completed an error message will appear: "The videochat folder or the AVChat files are missing from your SocialEngine installation."
-5. CHMOD the `videochat/uploadedFiles` folder to `777` (otherwise the upload function might not work)
-6. Create a new folder `tokens` (`videochat/tokens`) and CHMOD it to `777` (otherwise we might have token generation issues later on)
-7. Now back in the SE4 admin area go to Admin -> Plugins -> Flash Video Chat to enter the video chat, you will be asked for the license key:
-<img src="{{site.github.url}}/assets/images/se/license_key.jpg" class="img-responsive" />
-8. Enter the key (it's in your client/trial area) and press <kbd>Submit</kbd>
-
-<h2 id="completing-the-installation">Complete installation</h2>
 <h3>Install the add-on</h3>
 
 1. Login as admin into your SocialEngine PHP 4 Website and go to Admin >> Manage >> Packages & Plugins
@@ -73,6 +61,19 @@ Here's how to install the `avchat30` app on each one of them:
 <img src="{{site.github.url}}/assets/images/se/se_2.png" class="img-responsive" />
 7. Click <kbd>Return to Admin Panel</kbd>
 9. Users will see a new link in the menu that will take them to the video chat.
+
+<h2 id="completing-the-installation">Complete installation</h2>
+<h3>Install AVChat</h3>
+
+1. Connect with an FTP client (like [WinSCP](http://winscp.net/eng/index.php) or [FileZilla](http://filezilla-project.org/)) to your website and go to the root of your website (usually in public_html).
+2. Copy the `videochat` folder from the `socialengine_4.x` folder from the archive, to the root of your website.
+3. Now in the new `videochat` folder copy the contents of the folder named `Files to upload to your web site` from the `AVChat 3.0.zip` archive.
+4. If the previous two steps are not completed an error message will appear: "The videochat folder or the AVChat files are missing from your SocialEngine installation."
+5. CHMOD the `videochat/uploadedFiles` folder to `777` (otherwise the upload function might not work)
+6. Create a new folder `tokens` (`videochat/tokens`) and CHMOD it to `777` (otherwise we might have token generation issues later on)
+7. Now back in the SE4 admin area go to Admin -> Plugins -> Flash Video Chat to enter the video chat, you will be asked for the license key:
+<img src="{{site.github.url}}/assets/images/se/license_key.jpg" class="img-responsive" />
+8. Enter the key (it's in your client/trial area) and press <kbd>Submit</kbd>
 
 <h3>Connect AVChat to the media server app</h3>
 
