@@ -434,7 +434,7 @@ If set to `0`, the feature will be disabled.
 9. Find the line where the `appId` is specified and replace the existing app ID with the Facebook generated one for your personal app.
 10. Save the file.
 
-<div class="alert alert-info" role="alert">.Also note that in order for the Facebook based login to work for the admin interface (admin.swf and admin.html) the same modifications need to be made to admin.html</div>
+<div class="alert alert-info" role="alert">Also note that in order for the Facebook based login to work for the admin interface (admin.swf and admin.html) the same modifications need to be made to admin.html</div>
 
 <h2 id="badnicks-badwords">Badnicks & Badwords</h2>
 
@@ -986,7 +986,7 @@ Additional changes can be made. You can hide the users list for both broadcaster
 
 Starting with [AVChat 3.5.2](http://avchat.net/blog/avchat-3-5-2-update-now-released/) The entire text chat area can be hidden as well separately using the setting `hideTextChat` set to `1`.
 
-<h2 id="accessing-videos-via-http">Accessing the videos via http from the avchat30/streams/\_definst\_ folder (Red5 only)</h2>
+<h2 id="accessing-videos-via-http">Accessing the videos via http from the avchat30/streams/_definst_ folder (Red5 only)</h2>
 
 When recording using the Red5 media server the video files are created in `Red5/webapps/avchat30/streams/_definst_`. Starting with [AVChat 3.6](http://avchat.net/support/documentation#) the streams folder can be exposed - via Red5's Tomcat web server - to be accessible via http (from the browser) at http://RED5_SERVER_ADDRESS:5080/avchat30/streams/
 
