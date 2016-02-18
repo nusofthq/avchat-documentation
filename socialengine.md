@@ -62,7 +62,6 @@ Here's how to install the `avchat30` app on each one of them:
 7. Click <kbd>Return to Admin Panel</kbd>
 9. Users will see a new link in the menu that will take them to the video chat.
 
-<h2 id="completing-the-installation">Complete installation</h2>
 <h3>Install AVChat</h3>
 
 1. Connect with an FTP client (like [WinSCP](http://winscp.net/eng/index.php) or [FileZilla](http://filezilla-project.org/)) to your website and go to the root of your website (usually in public_html).
@@ -75,6 +74,7 @@ Here's how to install the `avchat30` app on each one of them:
 <img src="{{site.github.url}}/assets/images/se/license_key.jpg" class="img-responsive" />
 8. Enter the key (it's in your client/trial area) and press <kbd>Submit</kbd>
 
+<h2 id="completing-the-installation">Complete installation</h2>
 <h3>Connect AVChat to the media server app</h3>
 
 1. Go to Settings >> AVChat 3 Settings
