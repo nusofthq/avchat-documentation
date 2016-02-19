@@ -5,10 +5,10 @@ description: Simple documentation template for Github pages
 isHome: false
 ---
 
-> All the AVChat Standalone documentation is on this page.
-
-<section class="bs-docs-section" markdown="1">
+<section class="bs-docs-section" markdown="1" >
   <h1 id="overview" class="page-header">Quick Overview</h1>
+  <p class="lead">This page aims to be a comprehensive guide to the AVChat platform. We’ll cover topics such as getting AVChat up and running on different media servers, configuring AVChat, customizing the way AVChat works and looks, security and troubleshooting.</p>
+
     {% include overview.md %}
 </section>
 
