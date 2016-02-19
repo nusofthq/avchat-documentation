@@ -1,14 +1,14 @@
 ---
 layout: default
-title: AVChat vBulletin 3.8 add-on
-description: Documentation covering the AVChat add-on for vBulletin 3.8
+title: AVChat vBulletin 3.8.x add-on
+description: Documentation covering the AVChat add-on for vBulletin 3.8.x
 isHome: false
 hide: true
 ---
 
 <section class="bs-docs-section" markdown="1">
   <h1 id="overview" class="page-header">Overview</h1>
-  <p class="lead">The AVChat Video Chat Product for vBulletin 3.8 integrates AVChat with your existing vBulletin 3.8 web site and users database:</p>
+  <p class="lead">The AVChat Video Chat Product for vBulletin 3.8.x integrates AVChat with your existing vBulletin 3.8.x web site and users database:</p>
 
 
 * Username integration: users will have the same username and gender in the web site and in the video chat.
@@ -16,7 +16,7 @@ hide: true
 * Direct access to the admin area for Administrators, Moderators and Super Moderators. They have access to the admin area of AVChat 3 from where you can do all sorts of powerful things like kick and ban.
 * Different permissions for different usergroups, You can control the video chat features independently for each usergroup. You can also control to what admin features (kick,ban,etc...) do Administrators, Moderators and Super Moderators have access to.
 * Access user profiles directly from the video chat: you can access the profiles of users directly from the video chat.
-* Simple install, it installs as any other vBulletin 3.8 Product.
+* Simple install, it installs as any other vBulletin 3.8.x Product.
 * One click away from users, a link to the video chat is placed in the main menu in the user area.
 
 
@@ -31,7 +31,7 @@ If you're looking for something specific just hit <kbd>Ctrl+F</kbd> on your brow
 Download these 2 archives from your [private client/trial area](https://nusofthq.com/c/) to your computer:
 
 1. `AVChat 3.0.zip` contains AVChat
-2. `avchat3_vbulletin_38x_and_4x_product.zip` (contains the AVChat Product for vBulletin 3.8)
+2. `avchat3_vbulletin_38x_and_4x_product.zip` (contains the AVChat Product for vBulletin 3.8.x)
 
 Extract the 2 archives somewhere on your computer.
 
@@ -48,11 +48,11 @@ Here's how to install the `avchat30` app on each one of them:
 
 {% include media-server-app.md %}
 
-<h2 id="installing-the-application-and-avchat-on-vbulletin">vBulletin 3.8 add-on &amp; AVChat installation</h2>
+<h2 id="installing-the-application-and-avchat-on-vbulletin">vBulletin 3.8.x add-on &amp; AVChat installation</h2>
 <h3>Install AVChat</h3>
 
 1. Unpack the `avchat3_vbulletin_38x_and_4x_product.zip` archive.
-2. Copy the `videochat` and the `includes` folder into the root of your vBulletin 3.8 installation.
+2. Copy the `videochat` and the `includes` folder into the root of your vBulletin 3.8.x installation.
 3. Now go to the folder where you unzipped the latest AVChat3 archive and copy all the content from `Files to upload to your website` to the `videochat` folder that you just copied
 4. Edit `videochat/avc_settings.xml` in a text editor and set the `<value>` of the `<connectionstring>` tag
 `<value>rtmp://media-server-ip-address/avchat30/_definst_</value>`
@@ -76,7 +76,7 @@ Here's how to install the `avchat30` app on each one of them:
 <h1 id="avchat-vbulletin-application-features" class="page-header">Add-on Features</h1>
 <h2 id="open-avchat-in-a-popup-window-vbulletin">Open AVChat in a pop up</h2>
 
-This guide will show you how to create a link in the vBuletin 3.8 menu that will open up AVChat in a pop up window.
+This guide will show you how to create a link in the vBuletin 3.8.x menu that will open up AVChat in a pop up window.
 
 This is the recommended way to open AVChat as it's easier for your web site users to visit the web site, user profiles, threads on the forum, without leaving the video chat.
 

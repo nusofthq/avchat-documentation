@@ -37,7 +37,8 @@ isHome: true
   <h2 id="forums">Forums</h2>
   * [IP.Board 3.4](ipboard)
   * [xenForo](xenforo)
-  * vBulletin
+  * [vBulletin 3.8.x](vbulletin-3.8)
+  * [vBulletin 4.x](vbulletin-4.x)
   <h2 id="dating">Dating</h2>
   * [osDate](osdate)
   * eMeeting
