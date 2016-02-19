@@ -24,7 +24,7 @@ If you're looking for something specific just hit <kbd>Ctrl+F</kbd> on your brow
 
 <section class="bs-docs-section" markdown="1">
   <h1 id="installation-instructions" class="page-header">Installation Instructions</h1>
-<h2 id="download-avchat-and-socialengine-application">Download & extract archives</h2>
+<h2 id="download-avchat-and-osdate-application">Download & extract archives</h2>
 Download these 2 archives from your [private client/trial area](https://nusofthq.com/c/) to your computer:
 
 1. `AVChat 3.0.zip` contains AVChat
@@ -52,9 +52,9 @@ Here's how to install the `avchat30` app on each one of them:
 2. Now go to the folder where you unzipped the latest AVChat3 archive and copy all the content from `Files to upload to your website` to your site `plugins/AVChat3/includes/` folder
 3. Now open `plugins/AVChat3/includes/avc_settings.xml` in a text editor and set the value of
 
-    <connectionstring>
-       <value>rtmp://media-server-ip-address/avchat30/_definst_</value>
-    </connectionstring>
+      <connectionstring>
+         <value>rtmp://media-server-ip-address/avchat30/_definst_</value>
+      </connectionstring>
 
 4. Chmod the `plugins/AVChat3/includes/uploadedFiles` folder to 777 (otherwise the upload function might not work)
 5. Chmod the `tokens` folder (`plugins/AVChat3/includes/tokens`) to 777
