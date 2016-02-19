@@ -28,6 +28,7 @@ There are 2 sets of files in the AVChat archive:
 If you're using ASP.NET on the web server, and it doesn't run PHP, you need to [configure AVChat to use the .aspx server side files](#switching-between-config-files).
 
 <h2 id="switching-between-config-files">Switching between the PHP and ASPX configuration files in AVChat</h2>
+<p class="lead">AVChat ships with 2 sets of server side files, once for PHP (the default) and one for ASP.NET .</p>
 
 You have the possibility to switch the type of the configuration files used by AVChat to communicate with the web server (load the settings, request tokens, etc...).
 
@@ -47,7 +48,7 @@ Instead of `aspx` you can use any other extension (.rb, .asp, etc) as long as th
 
 <h2 id="using-different-medias-server-apps">Connecting different AVChat installations to the same media server.</h2>
 
-When you have AVChat installed in 2 different locations (different folders or different websites) there are 3 ways to connect them to the same media server :
+<p class="lead">When you have AVChat installed in 2 different locations (different folders or different websites) there are 3 ways to connect them to the same media server:</p>
 
 1. Connect them to the same app and app instance (users from one location will interact with users from a different location)
 2. Connect them to the same app but different instance (separate rooms and users but same sahred application level config file)
