@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AVChat - WordPress Community PRO
-description: AVChat - WordPress Community PRO documentation
+description: WordPress Community PRO documentation
 isHome: false
 hide: true
 ---

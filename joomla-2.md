@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AVChat - Joomla 1.6 - 2.5
-description: Simple documentation template for Github pages
+description: Joomla! Integration Plugin
 isHome: false
 hide: true
 ---
