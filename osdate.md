@@ -74,7 +74,7 @@ Here's how to install the `avchat30` app on each one of them:
 
 From the osDate admin area go to **Plugins > AVChat 3**
 
-<h2 id="osDate-member-levels">osDate's user levels and AVCha</h2>
+<h2 id="osDate-member-levels">osDate's user levels and AVChat</h2>
 
 You can configure who has access to the video chat by going to: **Tools > Plugins > AVChat 3 > Edit** .
 
