@@ -27,7 +27,7 @@ isHome: true
   * [Pay Per Session](/wordpress-pps)
   <h2 id="joomla">Joomla!</h2>
   * [Joomla! 1.6 > 2.5](/joomla-2)
-  * [Joomla! 3.1 > 3.4](/joomla-3)
+  * [Joomla! 3.0 > 3.x](/joomla-3)
   <h2 id="socialengine,phpfox,drupal">Other CMS</h2>
   * [SocialEngine PHP](/socialengine)
   * [PHPFox 3.8 (Nebula)](phpfox)
@@ -40,7 +40,5 @@ isHome: true
   * [vBulletin 4.x](vbulletin-4.x)
   <h2 id="dating">Dating</h2>
   * [osDate](osdate)
-  * eMeeting
-  * vldPersonals
 </section>
 </div>

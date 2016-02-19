@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AVChat - WordPress Pay Per Session
-description: WordPress Pay Per Session documentation
+description: WordPress Pay Per Session plugin
 isHome: false
 hide: true
 ---
@@ -35,7 +35,7 @@ hide: true
   <img src="/assets/images/wordpress_images/upload_plugin.png" class="img-responsive"/>
 
 
-  3. Press <kbd>Choose File</kbd> and select the avchat3_wordpress_plugins_pro.zip file:
+  3. Press <kbd>Choose File</kbd> and select the `avchat3_wordpress_plugins_pro.zip` file:
   <img src="/assets/images/wordpress-pps_images/select_archive.png" class="img-responsive"/>
 
 
@@ -78,14 +78,14 @@ hide: true
 
   Insert the IP Address of your media server in the **Media Server IP** field.
 
-  Insert your PayPal e-mail address in the **PayPal e-mail** field.
+  Insert your PayPal e-mail address in the **PayPal e-mail** field, in the **PayPal Standard** tab.
 
   <img src="/assets/images/wordpress-pps_images/info.png" class="img-responsive"/>
 
   Press <kbd>Update Options</kbd>
 
-  Now create a new page on your website, and place the [hosts] shortcode.
-  Our recommandation is to exclude any left or right side menus and leave the page as simple as you can.
+  Now create a new page on your website, and place the `[hosts]` shortcode.
+  Our recommendation is to exclude any left or right side menus and leave the page as simple as you can.
 
 </section>
 
@@ -98,17 +98,18 @@ hide: true
   2. From here you can assign any user as host. He/She will receive an e-mail, confirming the change. Only registered users will show up in this list, therefore make sure the user is registered with your site. To add a new user, go to your **WordPress backend** > **Users** > **Add new**
   3. The new host will be able to change his/hers profile by going to your **WordPress backend** > **Pay Per Session** > **My Profile**. All fields are mandatory.
 
-  All payments made are visible for all hosts in Pay Per Session -> View Payments
-  Hosts will be able to consult their personal earnings by going to Pay Per Session -> My sessions
+  All payments made are visible for all hosts in **Pay Per Session** > **View Payments**
+
+  Hosts will be able to consult their personal earnings by going to **Pay Per Session** > **My sessions**
 
   <h2 id="create-profile">Creating your host profile & services</h2>
   A complete host profile will increase your users' confidence in acquiring new services and it will build loyalty for returning clients.
 
-  <h4>Creating your profile</h4>
+  <h3>Creating your profile</h3>
 
   Complete your public host profile by going to **Pay Per Session** > **My Profile** and fill up all details about yourself. We strongly recommend you to upload an avatar (profile picture) and a cover image, just like on Facebook.
 
-  <h4>Adding your services</h4>
+  <h3>Adding your services</h3>
   Add new services by going to **Pay Per Session** > **My services**. Each service represents what you are selling (name), how much it costs (price), for how long the session will last (duration) and a full description of what you will be doing in that timespan. Choose an insightful title and a detailed description. You can add as many services as needed.
 
   You cannot delete services, but you can always disable and re-enable them at anytime. If mistakes occur, simply disable the service and create a new one with the same characteristics.
