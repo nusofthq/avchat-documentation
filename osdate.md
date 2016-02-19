@@ -52,9 +52,11 @@ Here's how to install the `avchat30` app on each one of them:
 2. Now go to the folder where you unzipped the latest AVChat3 archive and copy all the content from `Files to upload to your website` to your site `plugins/AVChat3/includes/` folder
 3. Now open `plugins/AVChat3/includes/avc_settings.xml` in a text editor and set the value of
 
-      <connectionstring>
-         <value>rtmp://media-server-ip-address/avchat30/_definst_</value>
-      </connectionstring>
+```xml
+<connectionstring>
+  <value>rtmp://media-server-ip-address/avchat30/_definst_</value>
+</connectionstring>
+```
 
 4. Chmod the `plugins/AVChat3/includes/uploadedFiles` folder to 777 (otherwise the upload function might not work)
 5. Chmod the `tokens` folder (`plugins/AVChat3/includes/tokens`) to 777
