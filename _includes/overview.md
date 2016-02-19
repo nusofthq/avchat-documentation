@@ -1,10 +1,13 @@
 
-<h2 id="file-groups">AVChat 3 groups of files</h2>
+All the AVChat documentation is on this page so if you're looking for something specific just hit <kbd>Ctrl+F</kbd> on your browser.
 
+If you cannot find the answer you’re looking for here, we encourage you to try the [AVChat discussion forum](http://discuss.avchat.net).
+
+<h2 id="file-groups">AVChat archive structure</h2>
 AVChat 3 has two groups of files:
 
-* client side files, that go on your web server (html, js, xml, swf files, etc.) and are loaded by your web site users in their browsers
-* media server files that go on your media server (Red5,FMIS,Wowza) these handle all the logic of sending messages between users, banning IPs, accepting connections, etc...
+* client side files, that go on your web server (html, js, xml, swf files, etc.)
+* media server files (the media server app) that go on your media server (Red 5, AMS, Wowza). These handle all the logic of sending audio, video and text between users, etc...
 
 
 
@@ -12,29 +15,35 @@ AVChat 3 has two groups of files:
 
 AVChat has 2 main configuration files:
 
-1. `avc_settings.xxx` which you will find in your AVChat installation folder on your web server (its's part of the client side files) Starting with [build 2060](http://nusofthq.com/blog/avchat-december-holiday-build-2060/ "AVChat build 2060")  all the settings from `avc_settings.php` and `avc_settings.aspx.cs` were moved to a new file `avc_settings.xml` from which they are imported. For simple ASP avc_setting.asp remains unchanged:
-2. the media server app config file:
-  * `settings.asc` on FMS/AMS, you will find it in `/applications/avchat30` on FMS or `/FMSApps/avchat30` on AMS
-  * `avchat3.properties` on Red5, you will find it in `/webapps/avchat30`
-  * `avchat3.properties` on Wowza , you will find it in `Wowza/conf/avchat30`
+1. `avc_settings.xml`, you will find it in your AVChat installation folder on your web server
+2. the config file for the media server app which is different for each media server:
+  * AMS: `settings.asc` , you will find it in `AMS/applications/avchat30`
+  * Red5: `avchat3.properties`, you will find it in `Red5/webapps/avchat30`
+  * Wowza: `avchat3.properties` , you will find it in `Wowza/conf/avchat30`
 
-There are other less important config files (like the video quality .xml file or the logback_avchat30.xml file on Red5 that specifies where the log files should be created) but we will cover them below as needed.
+
+<!--<div class="alert alert-info" role="alert">With this kind of setup 2 different versions of AVChat can be run at the same time by Red5. Just be carefull to connect the correct client to the correct server side application.</div>-->
+
+<div class="bs-callout bs-callout-warning" id="callout-tables-responsive-overflow"> <h4>Changes in build 2060</h4> <p markdown="1">`avc_settings.xml` has been introduced in [build 2060](http://nusofthq.com/blog/avchat-december-holiday-build-2060/ "AVChat build 2060") when all the settings from `avc_settings.php` and `avc_settings.aspx.cs` were removed from thsoe 2 files and grouped into one single file: `avc_settings.xml`. For simple ASP `avc_setting.asp` is used before and after build 2060.</p> </div>
+
+
+There are other config files like the video quality  and themes but we will cover them below as needed.
 
 <h2 id="file-structure">File Structure</h2>
 
-AVChat ships in an archive that looks like this:
+AVChat ships as a zip archive that contains the following file/folder structure:
 
 * Files to upload to your website
-  * audio_video_quality_profiles (folder containing audio video quality files in .xml format)
-  * codebird-js
-  * emoticons (folder containing sets of emote icons)
-  * gender_icons
-  * report_snaps
-  * sounds (folder containing sounds used in the video chat in mp3 format)
-  * themes (subfolders dark and light each with a `style.xml`)
-  * tokens
-  * translations (folder containing UI translations in .xml)
-  * uploadedFiles (folder where files uploaded by users will go)
+  * /audio_video_quality_profiles (folder containing audio video quality files in .xml format)
+  * /codebird-js
+  * /emoticons (folder containing sets of emote icons)
+  * /gender_icons
+  * /report_snaps
+  * /sounds (folder containing sounds used in the video chat in mp3 format)
+  * /themes (subfolders dark and light each with a `style.xml`)
+  * /tokens
+  * /translations (folder containing UI translations in .xml)
+  * /uploadedFiles (folder where files uploaded by users will go)
   * `admin.html` (html file that embeds admin.swf)
   * `admin.swf` (admin interface)
   * ajax-loading.gif
@@ -140,31 +149,29 @@ A web hosting account with PHP or ASP.NET support is needed. This is where the c
 
 **A media server**
 
-AVChat (and all Flash based video chat apps including the peer to peer ones) needs a media server to transport data (audio, video and text chat) between your chat users.
+AVChat (and all Flash based video chat apps including the peer to peer ones) needs a media server to transport data (audio, video and text chat) betweenusers.
 
-There are 3 media servers:
+AVChat supports the 3 major media servers:
 
-* [Red5](https://github.com/Red5/red5-server "Red5 Media Server") (free open source)
-* [Wowza](http://www.wowza.com "Wowza Media Server") (commercial, free trial)
-* [Adobe Media Server](http://www.adobe.com/products/adobe-media-server-family.html "Adobe Media Server") (commercial, free edition)
+* [Red5](https://github.com/Red5/red5-server "Red5 Media Server") (free and open source)
+* [Wowza](http://www.wowza.com "Wowza Media Server") (commercial)
+* [Adobe Media Server](http://www.adobe.com/products/adobe-media-server-family.html "Adobe Media Server") (commercial)
 
 AVChat (desktop) is compatible with:
 
 * Red5 1.0.5+
 * Wowza 1.7.x -> Wowza Streaming Engine 4
-* Adobe Media Server 5 Starter, Professional and Extended
-* Flash Media Server 2, 3, 3.5, 4 and 4.5
+* Adobe Media Server 5 Starter, Professional and Extended and Flash Media Server 2, 3, 3.5, 4 and 4.5
 
-AVChat (mobile version) is compatible with:
+AVChat (mobile) is compatible with:
 
 * Red5 1.0.5+
 
 Other compatibility notes:
 
 * AVChat versions up to and including 3.5.2 are compatible with Red5 0.8 and 1.0RC1.
-* Red5 1.0.5 specifically needs at least Java JDK version 1.8
-* Adobe Media Server Standard is not supported
-* Flash Media Streaming Server is not supported
+* Red5 1.0.5 needs at least Java JDK version 1.8
+* Adobe Media Server *Standard* and Flash Media *Streaming Server* are not supported
 
 **Setting up your own media server**
 
@@ -176,6 +183,8 @@ Any VPS, dedicated server or cloud server will work. If you don't have one yet w
 * [Leaseweb - VPS servers starting at €5/month](https://www.leaseweb.com/cloud/public/virtual-server)
 * [DigitalOcean - VPS servers starting at $5/month](https://www.digitalocean.com/?refcode=cd50d47eef55)
 
-Each media server has it's own installation instructions but we can install a media server for you through our [Media Server Installation Service ($99)](http://avchat.net/services#installms).
+Each media server has it's own installation instructions. We can also install a media server for you, on your server, through our [Media Server Installation Service ($99)](http://avchat.net/services#installms).
 
-We're also offering [VPS servers with Red5 pre-installed](http://avchat.net/hosting) and configured for AVChat starting with $14.99/month. We use servers in San Francisco, New York, Amsterdam, Singapore and more.
+**Media server porvided by us**
+
+We're also offering [VPS servers with Red5 pre-installed](http://avchat.net/hosting) and configured for AVChat starting with $14.99/month. We can use servers in Toronto, San Francisco, New York, London, Amsterdam, Frankfurt and Singapore.
