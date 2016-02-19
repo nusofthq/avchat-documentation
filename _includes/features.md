@@ -727,7 +727,7 @@ How to do it:
 * Based on the values in the `<default>` node (name, users, private, owner, created), set the `<value>` node to what you need.
 * Save the file and upload it back to the server.
 
-```xml
+{% highlight xml %}
 <columnsInRoomsPanel>
    <title>columnsInRoomsPanel</title>
    <name>Columns in rooms panel</name>
@@ -737,7 +737,7 @@ How to do it:
    <examples></examples>
    <value>name users private owner created</value>
 </sortRoomListOn>
-```
+{% endhighlight %}
 
 <h2 id="autostart-webcam">How to make the webcams auto start</h2>
 
@@ -756,7 +756,7 @@ How to set this:
 * set it's `<value>` node to `1` which enables it
 * save the file and upload it back to the server
 
-```xml
+{% highlight xml %}
 <autoStartCameras>
    <title>autoStartCameras</title>
    <name>Autostart cameras</name>
@@ -766,7 +766,7 @@ How to set this:
    <default>0</default>
    <value>1</value>
 </autoStartCameras>
-```
+{% endhighlight %}
 
 After connecting, each user will start streaming, with or without microphone.
 
@@ -777,7 +777,7 @@ How to set this:
 * Set it's `<value>` node to `1` which enables it
 * Save the file and upload it back to the server
 
-```xml
+{% highlight xml %}
 <autoStartMyCamera>
    <title>autoStartMyCamera</title>
    <name>Autostart my camera</name>
@@ -787,7 +787,7 @@ How to set this:
    <default>0</default>
    <value>1</value>
 </autoStartCameras>
-```
+{% endhighlight %}
 
 <h2 id="allow-block-video-streaming">Allowing/blocking audio and video streaming</h2>
 
@@ -1012,7 +1012,7 @@ If you now go to http://RED5_SERVER_ADDRESS:5080/avchat30/streams/ in your web b
 This open directory listing can be a security issue (you don't want to expose all the recorded videos to anyone snooping around). To turn off the directory listing do the following:
 
 1. Go to Red5/conf/ on your media server.
-2. Open web.xml with a text editor.
+2. Open `web.xml` with a text editor.
 3. Search for this code:
 
 		<init-param>
