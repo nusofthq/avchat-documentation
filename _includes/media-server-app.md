@@ -6,41 +6,51 @@
 
 <div class="tab-content">
 
-  <div class="tab-pane active" id="red5">
+<div class="tab-pane active" id="red5">
+<div class="panel panel-default">
+<div class="panel-body">
 
-<p>Upload the <code class="highlighter-rouge">avchat30</code> folder from the <b>Files to upload to your media server (Red5)</b> folder to your Red5's <b>webapps</b> folder (C:\Program Files\Red5\webapps on Win, /opt/red5/webapps/ on Linux).</p>
+<p>Upload the <code class="highlighter-rouge">avchat30</code> folder from the <b>Files to upload to your media server (Red5)</b> folder to your Red5's <b>webapps</b> folder (<code class="highlighter-rouge">C:\Program Files\Red5\webapps</code> on Win, <code class="highlighter-rouge">/opt/red5/webapps/</code> on Linux).</p>
 
 <p>On Linux, chmod the new <code class="highlighter-rouge">avchat30</code> folder to 777.</p>
 
 <p>Restart the Red5 server.</p>
 
-  </div>
+</div>
+</div>
+</div>
 
-  <div class="tab-pane" id="ams">
-
+<div class="tab-pane" id="ams">
+<div class="panel panel-default">
+<div class="panel-body">
 Upload the <code class="highlighter-rouge">avchat30</code> folder (you will find it in your AVChat archive in the <b>Files to upload to your media server (FMS) folder)</b> to the <b>applications</b> folder of your AMS installation.
 
 Chmod the new <code class="highlighter-rouge">avchat30</code> folder to 777.
 
-  </div>
+</div>
+</div>
+</div>
 
-  <div class="tab-pane" id="wowza">
+<div class="tab-pane" id="wowza">
+<div class="panel panel-default">
+<div class="panel-body">
+<p>Upload the <code class="highlighter-rouge">applications</code>, <code class="highlighter-rouge">lib</code> and <code class="highlighter-rouge">conf</code> folders from the <b>Files to upload to your media server (Wowza)</b> folder to the root folder of your Wowza Media Server installation.</p>
 
-Upload the <code class="highlighter-rouge">applications</code>, <code class="highlighter-rouge">lib</code> and <code class="highlighter-rouge">conf</code> folders from the <b>Files to upload to your media server (Wowza)</b> folder to the root folder of your Wowza Media Server installation.
+<p>Restart the Wowza server.</p>
 
-Restart the Wowza server.
+<!--Starting with Wowza Streaming Engine 4, a new GUI has been added that allows you to control the server and individual applications. This can be accessed using a browser by going to <b>http://WOWZA_SERVER_ADDRESS:8088/enginemanager</b>-->
 
-Starting with Wowza Streaming Engine 4, a new GUI has been added that allows you to control the server and individual applications. This can be accessed using a browser by going to <b>http://WOWZA_SERVER_ADDRESS:8088/enginemanager</b>
-
-Wowza Streaming Engine 4 comes with the default stream prefix <b>mp4</b>. This needs to be changed to <b>flv</b>. Here's how:
+<p>Wowza Streaming Engine 4 comes with the default stream prefix <b>mp4</b>. This needs to be changed to <b>flv</b>:</p>
 <ol>
 <li>Go to <b>http://WOWZA_SERVER_ADDRESS:8088/enginemanager/</b></li>
-<li>From the top menu click the [Server] page</li>
-<li>In Server Setup click Edit</li>
-<li>Change Default Stream Prefix from mp4 to flv</li>
+<li>From the top menu click the <b>Server</b> page</li>
+<li>In <b>Server Setup</b> click <b>Edit</b></li>
+<li>Change <b>Default Stream Prefix</b> from <code class="highlighter-rouge">applications</code>mp4</code> to <code class="highlighter-rouge">applications</code>flv</code></li>
 <li>Save</li>
 </ol>
-  </div>
+</div>
+</div>
+</div>
 
 </div>
 
