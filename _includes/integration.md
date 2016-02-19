@@ -24,7 +24,7 @@ What you need to do is edit `avc_settings.xml` and change the value of the `drop
 
 Below you see the setting configured (`<value>` tag) to drop in the room with id `r1`
 
-```php
+{% highlight xml %}
 <dropInRoom>
 	<title>dropInRoom</title>
 	<name>Drop in room</name>
@@ -34,13 +34,13 @@ Below you see the setting configured (`<value>` tag) to drop in the room with id
 	<default></default>
 	<value>r1</value>
 </dropInRoom>
-```
+{% endhighlight %}
 
 Starting with [build 1880](http://nusofthq.com/blog/new-avchat-november-build-1880-has-arrived) the `dropInRoom` variable also supports an array of id's so that the users will automatically join multiple rooms.
 
 Example notice the `<value>`;
 
-```php
+{% highlight xml %}
 <dropInRoom>
 	<title>dropInRoom</title>
 	<name>Drop in room</name>
@@ -50,7 +50,7 @@ Example notice the `<value>`;
 	<default></default>
 	<value>[r1,r2,r3]</value>
 </dropInRoom>
-```
+{% endhighlight %}
 
 Every room in AVChat 3 has a unique `id`. When you log in the AVChat through the admin interface (`admin.swf`) the leftmost column in the rooms list shows the id of each room:
 
