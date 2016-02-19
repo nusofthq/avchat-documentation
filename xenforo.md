@@ -7,8 +7,8 @@ hide: true
 ---
 
 <section class="bs-docs-section" markdown="1">
-  <h1 id="overview" class="page-header">Overview</h1>
-  <p class="lead">The AVChat Video Chat Add-on for xenForo handles the integration between your xenForo community and our AVChat software:</p>
+<h1 id="overview" class="page-header">Overview</h1>
+<p class="lead">The AVChat Video Chat Add-on for xenForo handles the integration between your xenForo community and our AVChat software:</p>
 
  * username and gender integration
  * profile url integration
@@ -22,7 +22,7 @@ If you're looking for something specific just hit <kbd>Ctrl+F</kbd> on your brow
 </section>
 
 <section class="bs-docs-section" markdown="1">
-  <h1 id="installation-instructions" class="page-header">Installation Instructions</h1>
+<h1 id="installation-instructions" class="page-header">Installation Instructions</h1>
 <h2 id="download-avchat-and-xenforo-application">Download & extract archives</h2>
 Download these 2 archives from your [private client/trial area](https://nusofthq.com/c/) to your computer:
 
@@ -45,7 +45,7 @@ Here's how to install the `avchat30` app on each one of them:
 {% include media-server-app.md %}
 
 <h2 id="installing-the-application-and-avchat-on-xenforo">xenForo add-on &amp; AVChat installation</h2>
-<h3>Upload files to your website</h3>
+### Upload files to your website
 Connect using an FTP client to your website and:
 
 1. upload the `library` and `videochat` folders from the xenForo's archive to your forum's root folder
@@ -73,7 +73,7 @@ RewriteRule
 <div class="bs-callout bs-callout-info" id="callout-tables-responsive-overflow"> <h4>Folder permissions</h4> <p markdown="1">If your website's hosted on a Linux server CHMOD the `/videochat/uploadedFiles` and `/videochat/tokens` folders to 777.</p> </div>
 
 <h2 id="completing-the-installation">Complete installation</h2>
-<h3>Install the add-on</h3>
+### Install the add-on
 In the xenForos's **Admin CP** area:
 
 1. click on **Install Add-on** in the left side menu.
@@ -84,7 +84,7 @@ In the xenForos's **Admin CP** area:
 <img src="{{site.github.url}}/assets/images/xenforo/install-addon.png" class="img-responsive" />
 
 
-<h3>Connect AVChat to the media server app</h3>
+### Connect AVChat to the media server app
 In the Admin CP:
 
 1. go to **Home** and click on **Options** in the left sidemenu
@@ -97,7 +97,7 @@ In the Admin CP:
 
 Your AVChat installation is now configured to connect to the media server.
 
-<h3>Allow access to the chat</h3>
+### Allow access to the chat
 From the Admin CP:
 
 1. Go to **Users -> Group Permissions**
@@ -107,7 +107,7 @@ From the Admin CP:
 
 Repeat 2-4 for each group you want to have access to the chat. Make sure you allow access to the *Administrative* user group since you're part of it.
 
-<h3>Enter the chat and insert the license key</h3>
+### Enter the chat and insert the license key
 
 1. Go to the forum's front end. There's a new **Video Chat** link in xenForo's main menu, click on it.
 
@@ -146,7 +146,7 @@ By default AVChat 3 is embedded in your xenForo page but you might want AVChat t
 3. Scroll to the bottom and click <kbd>Save Changes</kbd>
 
 <h2 id="avchat-xenforo-permissions">Limiting features to certain user groups</h2>
-<h3>xenForo user groups</h3>
+### xenForo user groups
 
 xenForo ships with 4 user groups:
 
@@ -158,7 +158,7 @@ xenForo ships with 4 user groups:
 <img src="{{site.github.url}}/assets/images/xenforo/user-groups.png" class="img-responsive" />
 
 
-<h3>Limiting AVChat features</h3>
+### Limiting AVChat features
 
 To control what AVChat features (creating rooms, sending PM's, viewing webcams, etc.) are available to each user group do the following from the AdminCP:
 
