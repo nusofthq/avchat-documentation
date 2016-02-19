@@ -22,11 +22,10 @@ isHome: true
 <section class="bs-docs-section" markdown="1">
   <h1 id="installation" class="page-header">Integration Kits</h1>
   <h2 id="wordpress">WordPress</h2>
-  * Community Lite
+  * [Community Lite](https://wordpress.org/plugins/avchat-3/)
   * [Community PRO](/wordpress-community-pro)
   * [Pay Per Session](/wordpress-pps)
   <h2 id="joomla">Joomla!</h2>
-  * Joomla! 1.0
   * [Joomla! 1.6 -> 2.5](/joomla-2)
   * [Joomla! 3.1 -> 3.4](/joomla-3)
   <h2 id="socialengine,phpfox,drupal">Other CMS</h2>
