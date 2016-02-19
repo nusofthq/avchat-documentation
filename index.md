@@ -39,7 +39,7 @@ isHome: true
   * [xenForo](xenforo)
   * vBulletin
   <h2 id="dating">Dating</h2>
-  * osDate
+  * [osDate](osDate)
   * eMeeting
   * vldPersonals
 </section>
