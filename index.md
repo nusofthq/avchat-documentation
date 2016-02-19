@@ -40,7 +40,5 @@ isHome: true
   * [vBulletin 4.x](vbulletin-4.x)
   <h2 id="dating">Dating</h2>
   * [osDate](osdate)
-  * eMeeting
-  * vldPersonals
 </section>
 </div>
