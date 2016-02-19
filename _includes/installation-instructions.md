@@ -1,27 +1,29 @@
 
-<h2 id="standalone-installation-instructions">AVChat 3 Standalone installation instructions</h2>
+<h2 id="standalone-installation-instructions">AVChat 3 standalone installation instructions</h2>
 
-First you need to download the AVChat archive from the client/trial area on nusofthq.com to your computer and extract its contents.
+First you need to download the AVChat archive from the [client/trial area on nusofthq.com](https://nusofthq.com/c/) to your computer and extract it's contents.
 
-There are 2 sets of files in the AVChat archive, the avchat30 app which goes on your media server and the chat files which go on your web server.
+There are 2 sets of files in the AVChat archive:
 
-**Setting up the avchat30 application on the media server**
+* the `avchat30` app which goes on your media server
+* and the chat client files which go on your web server
+
+### Setting up the `avchat30` application on the media server
 
 
 {% include media-server-app.md %}
 
 
-**Installing AVChat Standalone in a folder on your web site**
+### Installing AVChat standalone in a folder on your web site
 
-1. Create a new folder in your web site and upload the contents of `Files to upload to your web site` (from the AVChat archive received) to it.
+1. Create a new folder in your web site and upload the contents of `Files to upload to your web site` (from the AVChat archive) to it.
 2. Edit `avc_settings.xml` with a text editor, and set the `<value>` of the first XML tag - `<connectionstring>` to: `<value>rtmp://my-media-server.com/avchat30/_definst_</value>` where `my-media-server.com` is the domain name or ip of the server where your media server is installed.
-3. CHMOD the `uploadedFiles` folder to 777 (otherwise the upload function might not work).
-4. CHMOD the tokens folder to 777.
+3. CHMOD the `uploadedFiles` and `tokens` folder to 777 (otherwise the upload adn token authentication functions might not work).
 5. Go to http://yoursite.com/your_new_video_chat_folder/, log in and enter your license key in the dialog box that shows up after the connection is established.
 <img src="http://docs.avchat.net/assets/images/license_key.jpg" class="img-responsive"/>
 6. To access the admin interface go to http://yoursite.com/your_new_video_chat_folder/admin.html. We strongly suggest you rename `admin.html` and `admin.swf` files for security reasons.
 
-If you're on a ASP.NET server and it doesn't run PHP you need to configure AVChat to use the .aspx server side files.
+If you're using ASP.NET on the web server, and it doesn't run PHP, you need to [configure AVChat to use the .aspx server side files](#switching-between-config-files).
 
 <h2 id="using-different-medias-server-apps">Using different media server apps for 2 or more AVChat 3 installations</h2>
 
@@ -37,7 +39,7 @@ AVChat is made of 2 parts:
 The connection string inside the avc_settings.xxx is made out of 4 parts and when combined it looks like this: `rtmp://my-media-server.com/avchat30/\_definst\_` .
 
 * rtmp is the protocol used to communicate between the AVChat client and the media server.
-* my-media-server.com is the address where you host your Media Server (AMS, RED5, Wowza), it can also be an ip.
+* my-media-server.com is the address where you host your media server (AMS, RED5, Wowza), it can also be an ip.
 * avchat30 this is the (default) name of the application on the media server to which your users will connect.
 * `\_definst\_` is the instance of the avchat30 app to which we connect (AMS for example supports multiple instances).
 
@@ -161,9 +163,9 @@ Now each installation will connect to it's own instance of the media server side
 
 You have the possibility to switch the type of the configuration files used by AVChat to communicate with the web server (load the settings, request tokens, etc...).
 
-Switching to other types of config files (like the .aspx ones also provided with AVChat) can be done via the sscode flash var explained below.
+Switching to other types of config files (like the .aspx ones also provided with AVChat) can be done via the `sscode` flash var explained below.
 
-By default AVChat uses the PHP set of files (avc_settings.php, token_request.php, etc.) so we need to tell it to use the .aspx set of files. To do that we will use the `sscode` flash var.
+By default AVChat uses the PHP set of files (`avc_settings.php`, `token_request.php`, etc.) so we need to tell it to use the .aspx set of files. To do that we will use the `sscode` flash var.
 
 1. Open up `index.html` and `admin.html` in a text editor and find the following variable: `sscode :"php"`, and replace with:
 `sscode :"aspx"`, like this:
@@ -190,8 +192,7 @@ Why would I change the license key?
 2. Click the [Settings] button at the top
 3. In the window that shows up, delete the old key from the text field and insert the new key
 4. Press the [Change Key] button
-5. If successful, you should now see the new limits/expiration date/domain above the license key text field!
-<img src="http://docs.avchat.net/assets/images/licensekey.jpg" class="img-responsive/>"
+5. If successful, you should now see the new limits/expiration date/domain above the license key text field <img src="http://docs.avchat.net/assets/images/licensekey.jpg" class="img-responsive"/>
 
 <h2 id="reset-license-key">How to reset the license key</h2>
 
@@ -235,7 +236,7 @@ You should check the release notes for the exact new features and bug fixes in e
 
 [Our online demo](http://avchat.net/demos/avchat30) is frequently updated, so even tough the latest build available for download might be 3097, the demo might be 4210 for example. We update the demo more frequently to test new features and UI changes before we release these changes to the customers.
 
-<h2 id="what-we-need-for-installation">What we need if you want us to perform the AVChat 3 installation</h2>
+<h2 id="what-we-need-for-installation">What we need to install AVChat 3</h2>
 
 Here's what we need to install AVChat for you:
 
@@ -249,11 +250,11 @@ Please open a support ticket from [your client area](https://nusofthq.com/c/) an
 
 AVChat installations are generally made in the same day if all the data above is correct and complete.
 
-<h2 id="what-we-need-for-installation-media-server">What we need if you want us to perform the media server (Red5/AMS/Wowza) installation</h2>
+<h2 id="what-we-need-for-installation-media-server">What we need to install a media server</h2>
 
-We offer [Media Sever installation service](http://avchat.net/services#installms) for $99/one time fee.
+We offer [Media Sever Installation Service](http://avchat.net/services#installms) for a $99 one time fee.
 
-Here's what we need to install the Media Server for you:
+Here's what we need to install the media server for you:
 
 1. root ssh access to the vps/dedicated server where you want the media server (Red5/FMIS/Wowza) to be installed if have a Linux Server, or Remote Desktop if you have a Windows server.
 2. If you want FMIS or Wowza installed, we will also need the licence key you received after purchasing them.
