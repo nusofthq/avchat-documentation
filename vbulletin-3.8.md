@@ -109,7 +109,7 @@ Altough we recommend opening AVChat in a pop-up, the following tutorial will sho
 <img src="{{site.github.url}}/assets/images/vbulletin/vbulletin_add_new_template.png" class="img-responsive" />
 4. Open `template.txt` from the `videochat_embedded_3.8.x`, copy its content and paste it into the **Template field**. **Make sure that the template's name is FlashVideoChat**. Click on the <kbd>Save</kbd> button.
 <img src="{{site.github.url}}/assets/images/vbulletin/vbulletin_add_new_template_content.png" class="img-responsive" />
-5. Now you need to add a link to the vBulletin menu that will take users to the new web page with the video chat embedded on it. To do this follow the [Open AVChat](http://docs.avchat.net/vbulletin-3.8#open-avchat-in-a-popup-window-vbulletin) in a pop up Step 4 use the following HTML code:
+5. Now you need to add a link to the vBulletin menu that will take users to the new web page with the video chat embedded on it. To do this follow the [Open AVChat in a pop up](http://docs.avchat.net/vbulletin-3.8#open-avchat-in-a-popup-window-vbulletin) **Step 4** use the following HTML code:
 
 ```html
 <td class="vbmenu_control"><a href="videochat.php">Flash Video Chat</a></td>
