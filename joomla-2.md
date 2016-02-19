@@ -12,9 +12,9 @@ hide: true
 
   Joomla! is the first CMS with which AVChat was ever integrated, and, to this day, it's the one we devote the most time to.
 
-  If you like our AVChat Integration Kits for Joomla! don't forget to rate them and review them in the Joomla! Extensions Directory.
+  If you like our AVChat Integration Kits for Joomla! don't forget to rate them and review them in the [Joomla! Extensions Directory](http://extensions.joomla.org/extensions/extension/communication/chat/avchat-video-chat-integration-kit).
 
-  If you cannot find the answer you’re looking for here, we encourage you to try our forums. There's also more documentation regarding AVChat in the documentation area for the main standalone version.
+  If you cannot find the answer you’re looking for here, we encourage you to try our forums. There's also more documentation regarding AVChat in the documentation area for the main [standalone](standalone) version.
 
   All the specific documentation regarding Joomla! is on this page so if you're looking for something specific just hit <kbd>Ctrl+F</kbd> on your browser.
 </section>
@@ -39,7 +39,7 @@ hide: true
   Go to **Extensions** > **Manage**
   <img src="/assets/images/joomla_images/2-0/extensions_menu.png" class="img-responsive"/>
 
-  Press <kbd>Choose File</kbd> and locate the **com_avchat3.zip** archive in the **joomla 1.6.x-2.5.x** > **joomla1.6.x-2.5.x_component** folder.
+  Press <kbd>Choose File</kbd> and locate the **com_avchat3.zip** archive in the **joomla 1.6.x-2.5.x** > **joomla1.6.x_1.7.x_2.5.x_component** folder.
   <img src="/assets/images/joomla_images/2-0/component_location.png" class="img-responsive"/>
 
   Press <kbd>Upload & Install</kbd> and wait for the installation to finish. You should see the success message:
@@ -110,7 +110,7 @@ hide: true
   * Publisher
   * Super Users
 
-  To limit powers for a certain user group you need to edit the permissions for the user group in the Permissions Tab:
+  To limit powers for a certain user group you need to edit the permissions for the user group in the **Components** > **AVChat 3** > **Options** > **Permissions** Tab:
   <img src="/assets/images/joomla_images/2-0/permissions.png" class="img-responsive"/>
 
   If you change a setting, it will apply to the active group and all child groups. If you're editing a child group the permissions set in the parent group might affect the permissions in the child group. The calculated final permission is in the "Calculated Setting" column. Here are the possible values for each setting and how they pass on to child groups:
@@ -145,7 +145,7 @@ hide: true
 
   To grant access to other groups follow these steps:
 
-  1. Login the Joomla! backend as a Super User
+  1. Login as a Super User
   2. Go to **Components** > **AVChat** > **Options** > **Permissions**
   3. Click on the user group you want to grant access to
   4. Set to Allow the following permission **Allow access to the Chat's Admin Interface**
@@ -165,7 +165,7 @@ hide: true
   * By default Managers and Administrators do not have access to the Components part of the backend so if given permission to access the AVChat admin area they need to access it trough the front-end OR they must be given permissions to access the Components area in the backend.
   </div>
 
-  Here is a tutorial on how to allow **Managers** and **Administrators** access to the Components area in the Joomla! backend and thus have access to the AVChat Component:
+  Here is how to allow **Managers** and **Administrators** to access the Components area in the Joomla! backend and thus have access to the AVChat Component:
 
   1. Login as a Super User in the Joomla! backend area
   2. Go to **System** > **Global Configuration** > **Permissions**
@@ -173,7 +173,7 @@ hide: true
   4. The **Administrators** user group will automatically inherit the permission.
   5. Click <kbd>Save</kbd>
 
-  Now Managers and Administrators will have access to the AVChat Component in the Joomla! backend.
+  Now **Managers** and **Administrators** will have access to the AVChat Component in the Joomla! backend.
 
   <h2 id="files">AVChat files</h2>
   All the files are in the `/components/com_avchat3/` folder.
@@ -211,7 +211,7 @@ hide: true
   5. Click <kbd>Save & Close</kbd>.
 
   <h2 id="design">Customizing the looks</h2>
-  <h4>Changing the size</h4>
+  <h3>Changing the size</h3>
   If you're using the Popup opening method, the size of the popup window can be changed from **Components** > **AVChat 3** > **Options** > **AVChat 3 Open Method**.
 
   If you're embedding the chat in a page, to change the size of the chat interface:
@@ -226,7 +226,7 @@ hide: true
   4. `600` represents the height (in pixels) of the chat interface
   5. Change these values as you need and save the file.
 
-  <h4>Changing the background color</h4>
+  <h3>Changing the background color</h3>
   1. Open `components/com_avchat3/views/avchat3/tmpl/default.php` in a text editor
   2. Search for `bgcolor` and enter the color code you want
   3. Save the file.

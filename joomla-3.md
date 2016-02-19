@@ -1,6 +1,6 @@
 ---
 layout: default
-title: AVChat - Joomla 3.0-3.x
+title: AVChat - Joomla 3.0 - 3.x
 description: Joomla! Integration Plugin
 isHome: false
 hide: true
@@ -12,9 +12,9 @@ hide: true
 
   Joomla! is the first CMS with which AVChat was ever integrated, and, to this day, it's the one we devote the most time to.
 
-  If you like our AVChat Integration Kits for Joomla! don't forget to rate them and review them in the Joomla! Extensions Directory.
+  If you like our AVChat Integration Kits for Joomla! don't forget to rate them and review them in the [Joomla! Extensions Directory](http://extensions.joomla.org/extensions/extension/communication/chat/avchat-video-chat-integration-kit).
 
-  If you cannot find the answer you’re looking for here, we encourage you to try our forums. There's also more documentation regarding AVChat in the documentation area for the main standalone version.
+  If you cannot find the answer you’re looking for here, we encourage you to try our forums. There's also more documentation regarding AVChat in the documentation area for the main [standalone](standalone) version.
 
   All the specific documentation regarding Joomla! is on this page so if you're looking for something specific just hit <kbd>Ctrl+F</kbd> on your browser.
 </section>
@@ -48,7 +48,7 @@ hide: true
   In the Joomla! administration area go to **Components** > **Avchat 3**. There is a warning about permissions and settings not being set. Click the <kbd>Options</kbd> button then click <kbd>Save & Close</kbd>:
   <img src="/assets/images/joomla_images/3-0/options.png" class="img-responsive"/>
 
-  We'll get back to that a little.
+  We'll get back to that a little later.
 
   You should now see a message informing you that the AVChat files are missing, because we installed the plugin but not the chat client files.
 
@@ -111,7 +111,7 @@ hide: true
   * Publisher
   * Super Users
 
-  To limit powers for a certain user group you need to edit the permissions for the user group in the Permissions Tab:
+  To limit powers for a certain user group you need to edit the permissions for the user group in the **Components** > **AVChat** > **Options** > **Permissions** tab:
   <img src="/assets/images/joomla_images/3-0/permissions.png" class="img-responsive"/>
 
   If you change a setting, it will apply to the active group and all child groups. If you're editing a child group the permissions set in the parent group might affect the permissions in the child group. The calculated final permission is in the "Calculated Setting" column. Here are the possible values for each setting and how they pass on to child groups:
@@ -174,7 +174,7 @@ hide: true
   4. The **Administrators** user group will automatically inherit the permission.
   5. Click <kbd>Save</kbd>
 
-  Now Managers and Administrators will have access to the AVChat Component in the Joomla! backend.
+  Now **Managers** and **Administrators** will have access to the AVChat Component in the Joomla! backend.
 
   <h2 id="files">AVChat files</h2>
   All the files are in the `/components/com_avchat3/` folder.
@@ -204,6 +204,7 @@ hide: true
 
   <h2 id="facebook-login">Facebook Login</h2>
   By default, Facebook login is enabled, but in order to connect to the Facebook servers, you need to have an application registered under the same domain as your website. Follow the following steps to configure the Facebook login
+
   1. [Setup the Facebook application](standalone#setup-facebook-authentication)
   2. Log in the administrator area of Joomla!.
   3. Go to **Components** > **AVChat 3** > **Options**
@@ -211,7 +212,7 @@ hide: true
   5. Click <kbd>Save & Close</kbd>.
 
   <h2 id="design">Customizing the looks</h2>
-  <h4>Changing the size</h4>
+  <h3>Changing the size</h3>
   If you're using the Popup opening method, the size of the popup window can be changed from **Components** > **AVChat 3** > **Options** > **AVChat 3 Open Method**.
 
   If you're embedding the chat in a page, to change the size of the chat interface:
@@ -226,7 +227,7 @@ hide: true
   4. `600` represents the height (in pixels) of the chat interface
   5. Change these values as you need and save the file.
 
-  <h4>Changing the background color</h4>
+  <h3>Changing the background color</h3>
   1. Open `components/com_avchat3/views/avchat3/tmpl/default.php` in a text editor
   2. Search for `bgcolor` and enter the color code you want
   3. Save the file.

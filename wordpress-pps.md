@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AVChat - WordPress Pay Per Session
-description: WordPress Pay Per Session documentation
+description: WordPress Pay Per Session plugin
 isHome: false
 hide: true
 ---

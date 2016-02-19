@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AVChat - WordPress Community PRO
-description: WordPress Community PRO documentation
+description: WordPress Community PRO plugin
 isHome: false
 hide: true
 ---
@@ -246,7 +246,7 @@ hide: true
 
   Each site on the network can control the permissions and settings individually. This also means that each site on the network has to have their own connection string. It is possible for 2 or more websites to use the same connection string, in this case they will share the rooms and users list,etc. .
 
-  
+
   <h2 id="shortcode-opts">Extended short code functionality</h2>
   To display AVChat 3 in your WordPress page or posts, you will use the short code [chat].
 
