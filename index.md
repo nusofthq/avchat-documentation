@@ -22,13 +22,12 @@ isHome: true
 <section class="bs-docs-section" markdown="1">
   <h1 id="installation" class="page-header">Integration Kits</h1>
   <h2 id="wordpress">WordPress</h2>
-  * Community Lite
+  * [Community Lite](https://wordpress.org/plugins/avchat-3/)
   * [Community PRO](/wordpress-community-pro)
   * [Pay Per Session](/wordpress-pps)
   <h2 id="joomla">Joomla!</h2>
-  * Joomla! 1.0
-  * [Joomla! 1.6 -> 2.5](/joomla-2)
-  * [Joomla! 3.1 -> 3.4](/joomla-3)
+  * [Joomla! 1.6 > 2.5](/joomla-2)
+  * [Joomla! 3.1 > 3.4](/joomla-3)
   <h2 id="socialengine,phpfox,drupal">Other CMS</h2>
   * [SocialEngine PHP](/socialengine)
   * [PHPFox 3.8 (Nebula)](phpfox)
@@ -37,9 +36,10 @@ isHome: true
   <h2 id="forums">Forums</h2>
   * [IP.Board 3.4](ipboard)
   * [xenForo](xenforo)
-  * vBulletin
+  * [vBulletin 3.8.x](vbulletin-3.8)
+  * [vBulletin 4.x](vbulletin-4.x)
   <h2 id="dating">Dating</h2>
-  * osDate
+  * [osDate](osdate)
   * eMeeting
   * vldPersonals
 </section>

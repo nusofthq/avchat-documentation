@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AVChat Standalone
-description: Simple documentation template for Github pages
+description: Comprehensive guide to the AVChat platform
 isHome: false
 ---
 

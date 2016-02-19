@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AVChat - Joomla 1.6 - 2.5
-description: Simple documentation template for Github pages
+description: Joomla! Integration Plugin
 isHome: false
 hide: true
 ---
@@ -89,20 +89,19 @@ hide: true
   1. Go to **Menus** > **Main Menu** > **Add New Menu Item**
   2. In the **Menu Item Type** field, click <kbd>Select</kbd>
   3. Find **AVChat 3** in the list and select it:
-  <img src="/assets/images/joomla_images/3-0/main_menu_select.png" class="img-responsive"/>
+  <img src="/assets/images/joomla_images/2-0/main_menu_select.png" class="img-responsive"/>
   4. Add a **Title** to your menu item by filling the **Menu Title** field.
   5. From the **Access** list select the desired access level.
   6. Press <kbd>Save and close</kbd>.
 
   AVChat can now be accessed from the page you just created:
-  <img src="/assets/images/joomla_images/3-0/page_created.png" class="img-responsive"/>
+  <img src="/assets/images/joomla_images/2-0/page_created.png" class="img-responsive"/>
 
   <h2 id="permissions">User roles and Permissions</h2>
 
-  Joomla! comes with 9 default user groups and the possibility to add more.
+  Joomla! comes with 8 default user groups and the possibility to add more.
 
   * Public
-  * Guest
   * Manager
   * Administrator
   * Registered
@@ -112,7 +111,7 @@ hide: true
   * Super Users
 
   To limit powers for a certain user group you need to edit the permissions for the user group in the Permissions Tab:
-  <img src="/assets/images/joomla_images/3-0/permissions.png" class="img-responsive"/>
+  <img src="/assets/images/joomla_images/2-0/permissions.png" class="img-responsive"/>
 
   If you change a setting, it will apply to the active group and all child groups. If you're editing a child group the permissions set in the parent group might affect the permissions in the child group. The calculated final permission is in the "Calculated Setting" column. Here are the possible values for each setting and how they pass on to child groups:
 
@@ -198,12 +197,13 @@ hide: true
 
   The chat is embedded in the `div` element with id `myContent`.
 
-  <img src="/assets/images/joomla_images/3-0/around_chat.png" class="img-responsive"/>
+  <img src="/assets/images/joomla_images/2-0/around_chat.png" class="img-responsive"/>
 
   Add the code to the page and save the file on your server.
 
   <h2 id="facebook-login">Facebook Login</h2>
   By default, Facebook login is enabled, but in order to connect to the Facebook servers, you need to have an application registered under the same domain as your website. Follow the following steps to configure the Facebook login
+
   1. [Setup the Facebook application](standalone#setup-facebook-authentication)
   2. Log in the administrator area of Joomla!.
   3. Go to **Components** > **AVChat 3** > **Options**
@@ -233,7 +233,7 @@ hide: true
 
   <h2 id="whos-chatting">Who's Chatting Module</h2>
 
-  In the **avchat3_joomla_integrationKits_UNZIPFIRST.zip** archive, under **joomla 3.0.x-3.1.x** you will also find a folder named **joomla3.0.x_mod_avchat3online**. It contains an archive named **mod_avchat3online.zip**.
+  In the **avchat3_joomla_integrationKits_UNZIPFIRST.zip** archive, under **joomla 1.6.x-2.5.x** you will also find a folder named **joomla1.6.x_1.7.x_2.5.x_mod_avchat3online**. It contains an archive named **mod_avchat3online.zip**.
 
   It's a module for your Joomla! web site that shows in the side bar a list of the users online in the video chat at that time.
 
@@ -241,25 +241,25 @@ hide: true
 
   1. Log in the administrator area of Joomla!.
   2. Go to **Extensions** > **Extension Manager**.
-  3. Press <kbd>Choose File</kbd> and locate the **mod_avchat3online.zip** archive in the **joomla 3.0.x-3.1.x** folder.
+  3. Press <kbd>Choose File</kbd> and locate the **mod_avchat3online.zip** archive in the **joomla 1.6.x-2.5.x** folder.
   4. Click <kbd>Upload & Install</kbd>.
   5. Now go to **Extensions** > **Module Manager**, you should see the **Who's online in chat** module in the list. Click on it:
-  <img src="/assets/images/joomla_images/3-0/whos_online.png" class="img-responsive"/>
+  <img src="/assets/images/joomla_images/2-0/whos_online.png" class="img-responsive"/>
   6. Enable it by selecting **Published** from the **Status** field
-  7. Now you have to select the position on page. Click on the **Type or Select a Position** and choose from the list where you want the module to be displayed. We recommend position-7 since it represents the right column in the default Joomla! template (protostar).
+  7. Now you have to select the position on page. Press on <kbd>Select Position</kbd> and choose from the list where you want the module to be displayed.
   8. Choose who you want to have access to it
-  9. Now move to the Menu Assignment tab and choose the pages you want to be displayed in.
+  9. Now scroll down to **Menu Assignment** and choose the pages you want the module to be displayed on.
   10. Click <kbd>Save & Close</kbd>
 
   Done, now it will show up on your web site:
-  <img src="/assets/images/joomla_images/3-0/whos_online_site.png" class="img-responsive"/>
+  <img src="/assets/images/joomla_images/2-0/whos_online_site.png" class="img-responsive"/>
 
   <h2 id="update">Updating the plugin</h2>
   We make new versions of the AVChat Component independently from the actual AVChat software, that's why it's necessary to update the component and not the AVChat software itself. Here's how to do it:
 
   1. Log in the administrator area of Joomla!.
   2. Go to **Extensions** > **Extension Manager**.
-  3. Press <kbd>Choose File</kbd> and locate the **com_avchat3.zip** archive in the **joomla 3.0.x-3.1.x** > **joomla 3.0.x-3.1.x_component** folder.
+  3. Press <kbd>Choose File</kbd> and locate the **com_avchat3.zip** archive in the **joomla 1.6.x-2.5.x** > **joomla 1.6.x-2.5.x_component** folder.
   4. Click on <kbd>Upload & Install</kbd>
   5. Go to **Components** > **AVChat** > **Options**
   6. Make sure all your permissions and settings are correct!

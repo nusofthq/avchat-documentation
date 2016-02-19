@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AVChat - WordPress Pay Per Session
-description: Simple documentation template for Github pages
+description: WordPress Pay Per Session documentation
 isHome: false
 hide: true
 ---
