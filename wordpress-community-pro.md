@@ -15,11 +15,11 @@ hide: true
   * Profile url integration
   * Profile image integration
   * Placement of video chat within the web site (user and admin interface)
-  enable/disable/limit more than 47 features for each user role
+  * Enable/disable/limit more than 47 features for each user role
   * MultiSite support
   * BuddyPress support: BuddyPress avatars will be used and BuddyPress users profiles can be accessed directly from AVChat
 
-  All the documentation regarding the Community PRO plugin is on this page so if you're looking for something specific use the menu on the right or search within this page by pressint <kbd>Ctrl+F</kbd> on your keyboard. The main AVChat documentation is [here](/standalone).
+  All the documentation regarding the Community PRO plugin is on this page so if you're looking for something specific use the menu on the right or search within this page by pressing <kbd>Ctrl+F</kbd> on your keyboard. The main AVChat documentation is [here](/standalone).
 </section>
 
 <section class="bs-docs-section" markdown="1">
@@ -198,7 +198,7 @@ hide: true
   6. Press <kbd>Update Options</kbd>
 
   <h2 id="plugin-update">Updating the plugin</h2>
-  First you should download the new archive from your client area on nusofthq.com
+  First you should download the new archive from your client area on [nusofthq.com](http://nusofthq.com)
 
   Then we need to remove the old version. While logged in as and admin in the WP backend go to **Plugins** and click <kbd>Deactivate</kbd> followed by <kbd>Delete</kbd> for the AVChat Community PRO plugin. This will remove the **wp-content/plugins/avchat-3-pro** folder and all its contents.
   <div class="alert alert-danger"><strong>Warning!</strong> This will also delete the chat client so make sure you make a backup before updating</div>
@@ -211,7 +211,7 @@ hide: true
 
   This will remove the **wp-content/plugins/avchat-3-pro** folder and all it's contents.
 
-  The plugin's database holding the permissions for each user role and general settings will still remain tough. To remove it delete the `wp_avchat3_general_settings` and the `wp_avchat3_permissions` tables.
+  The plugin's database holding the permissions for each user role and general settings will still remain tough. To remove it, delete the `wp_avchat3_general_settings` and the `wp_avchat3_permissions` tables.
 
   You might also want to remove the page holding the `[chat]` tag that was replaced by the plugin with the AVChat 3 software
 
@@ -229,7 +229,7 @@ hide: true
 
   If **My Sites** > **Network Admin** > **Dashboard** > **Settings** > **Network Settings** > **Enable administration menus** > **[  ]Plugins** is checked then other network users can independently activate it for their websites too.
 
-  <h4>Network Activation</h4>
+  <h3>Network Activation</h3>
 
   When the plugin is network activated, it can not be individually deactivated.
 
@@ -238,14 +238,15 @@ hide: true
   `Warning: Invalid argument supplied for foreach() in /home/observer/public_html/wp-content/plugins/avchat-3-pro/avchat3.php on line 86`
 
   When using a standard WordPress installation (non multisite) or when individually activating the plugin for each sub site in the network the tables are created at activation.
-  <h4>Network Users</h4>
+  <h3>Network Users</h3>
 
   When used in a multisite setup, the plugin will show a new column (role) in the **Settings** > **Community PRO** area called **Network** users. These are users who belong to the network but they do not belong to any other website on the network other than their own. They have no role in other websites than their own.
 
-  <h4>Permissions and Settings</h4>
+  <h3>Permissions and Settings</h3>
 
   Each site on the network can control the permissions and settings individually. This also means that each site on the network has to have their own connection string. It is possible for 2 or more websites to use the same connection string, in this case they will share the rooms and users list,etc. .
 
+  
   <h2 id="shortcode-opts">Extended short code functionality</h2>
   To display AVChat 3 in your WordPress page or posts, you will use the short code [chat].
 
