@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AVChat - WordPress Community PRO
-description: Simple documentation template for Github pages
+description: AVChat - WordPress Community PRO documentation
 isHome: false
 hide: true
 ---
