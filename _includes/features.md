@@ -12,7 +12,7 @@ For example a user broadcasting its webcam for 30 minutes at 256kbits/s will use
 
 Another user viewing the first one for 30 minutes will use the same amount: 57Mbytes. Total: 114Mbytes for a 30 minute 1 to 1 video chat session.
 
-**Reducing bandwidth usage**
+<h3>Reducing bandwidth usage</h3>
 
 AVChat 3 offers several ways to reduce the monthly bandwidth used on the media server:
 
@@ -65,14 +65,14 @@ In `avc_settings.xml` you will find the following setting:
 </showWhoIsTyping>
 ```
 
-Set it to 0 and the who-is-typing box will not be shown anymore in the chat.
+Set it to `0` and the who-is-typing box will not be shown anymore in the chat.
 
 <h2 id="closing-avchat-pop-on-leave">How to close the pop up containing AVChat when clicking the <kbd>Leave</kbd> button</h2>
 
 When AVChat 3 is opened in a pop up window you can use the <kbd>Leave</kbd> button to close the pop up window:
 
 1. Edit `avc_settings.xml`
-2. Set `disconnectButtonEnabled` `<value>` to 1;
+2. Set `disconnectButtonEnabled` `<value>` to `1`;
 3. Set `disconnectButtonLink` `<value>` to `javascript:window.close();`
 
 By default clicking <kbd>Leave</kbd> takes you to a new web page instead of closing the window.
@@ -83,7 +83,7 @@ By default clicking <kbd>Leave</kbd> takes you to a new web page instead of clos
 
 AVChat 3 uses a media server (like Red5, AMS/FMS and Wowza) to stream audio and video between users. The audio and video data travels from the broadcaster user to the media server and from there to the receiver/viewer. While it passes  through the media server the audio and video data can be captured and stored in `.flv` file,  or, starting with build 2330, in `.mp4` files. The file type that will be created depends on the video codec being used (`Sorenson Spark` or `H.264`).
 
-**Codecs being used**
+<h3>Codecs being used</h3>
 
 The audio data will be encoded with the `NellyMoser` or `Speex` codec (depending on your audio settings) and the video data will be encoded with the `Sorenson Spark`  video codec.  Starting with [build 2330](http://avchat.net/blog/avchat-build-2330-introduces-h-264-support/) the `H.264` codec has also been added for video encoding.
 
@@ -91,7 +91,7 @@ The audio and video encoding is done by Flash Player (before it sends the data t
 
 So when the audio and video data hits the media server it is already encoded, the media server just saves the data into `.flv` or `.mp4` files depending on the video codec.
 
-**Enabling audio/video streams recording**
+<h3>Enabling audio/video streams recording</h3>
 
 The feature is disabled by default because it tends to use large amounts of space over the time.
 
@@ -103,7 +103,7 @@ On Red5:
 
 <div class="alert alert-info" role="alert">Red5 will record the streams only in .flv format regardless of the video codec used.</div>
 
-You will find the new `.flv` files in Red5/webapps/avchat30/streams/\_definst\_
+You will find the new `.flv` files in `Red5/webapps/avchat30/streams/_definst_`
 
 The `.flv` files are named like this: username+ “\_”+ unique user id assigned by Red5 + “\_”+ timestamp (from when the user started publishing ).
 
@@ -115,13 +115,13 @@ On AMS/FMS
 
 FMS 3.5 or higher is required for recording in `.mp4` format and streaming with H.264 encoding.
 
-<div class="alert alert-info" role="alert">FMS will automatically record .mp4 files if the video codec used is H.264 or .flv  files if Sorenson Spark is set.</div>
+<div class="alert alert-info" role="alert">AMS/FMS will automatically record .mp4 files if the video codec used is H.264 or .flv  files if Sorenson Spark is set.</div>
 
-<div class="alert alert-warning" role="alert">For compatibility with the H.264 video codec, FMS requires the NellyMoser ASAO audio codec to be set. Using Speex may cause some files in some cases to not have audio.</div>
+<div class="alert alert-warning" role="alert">For compatibility with the H.264 video codec, AMS/FMS requires the NellyMoser ASAO audio codec to be set. Using Speex may cause some files in some cases to not have audio.</div>
 
-You will find the new .flv/.mp4  files in FMS/applications/avchat30/streams/\_definst\_.
+You will find the new `.flv/.mp4`  files in `FMS/applications/avchat30/streams/_definst_`.
 
-The flv/mp4  files are named like this: username+ “\_”+ unique user id assigned by AMS/FMS + “\_”+ timestamp (from when the user connected to AMS/FMS).
+The `flv/mp4`  files are named like this: username+ “\_”+ unique user id assigned by AMS/FMS + “\_”+ timestamp (from when the user connected to AMS/FMS).
 
 On Wowza
 
@@ -134,12 +134,12 @@ Wowza will automatically record `.mp4`  files if the video codec used is `H.264`
 
 <div class="alert alert-warning" role="alert">Wowza doesn’t support adding the NellyMoser ASAO audio codec in a mp4 container. So if the audio-video profile .xml is set to record with H.264 video and NellyMoser ASAO audio, the resulting .mp4 won’t have any audio. To avoid this always use the Speex audio codec when using H.264 video encoding with Wowza.</div>
 
-You will find the new .flv/.mp4  files in this folder: `Wowza/content/`.
+You will find the new `.flv/.mp4`  files in this folder: `Wowza/content/`.
 
 As oppsed to AMS/FMS and Red5, by default, the flv/mp4 files are not grouped in folders by application and application-instance like this:
 
-+ Wowza/content/avchat30/\_definst\_
-+ Wowza/content/avchat30/\_siteB
++ `Wowza/content/avchat30/_definst_`
++ `Wowza/content/avchat30/_siteB`
 
 To group them like that you need to:
 
@@ -150,9 +150,9 @@ with
 `${com.wowza.wms.AppHome}/content/${com.wowza.wms.context.Application}/${com.wowza.wms.context.ApplicationInstance}`
 3. Save and restart Wowza.
 
-The .flv/.mp4  files are named like this: username+ “\_”+ unique user id assigned by Wowza.
+The `.flv/.mp4`  files are named like this: username+ “\_”+ unique user id assigned by Wowza.
 
-**Audio video quality**
+<h3>Audio video quality</h3>
 
 The media server records whatever gets sent from the client `.swf` file, so to increase the audio/video quality of the recordings you need to increase the audio/video quality used inside the video chat software.
 
@@ -160,19 +160,19 @@ Because you are recording audio/video streams that are destined for live viewing
 
 When you have [auto bandwidth reduction](http://docs.avchat.net/standalone#dynamic-bandwidth-usage-reduction) turned on (it’s on by default) streams are passed through the media server only when there is someone watching the respective stream. So even tough user X is broadcasting, his stream will only be recorded if he has one or more viewers. The stream recording process will also stop when user X has no more viewers. You can turn off [auto bandwidth reduction](http://docs.avchat.net/standalone#dynamic-bandwidth-usage-reduction).
 
-**H.264 vs Sorenson Spark**
+<h3>H.264 vs Sorenson Spark</h3>
 
 Advantages:
 
-1. H.264 requires `less bandwidth` than Sorenson Spark
-2. H.264 causes `less delay` when streaming between the broadcaster and the receiver
-3. H.264 provides `better image quality`, `smoother framerates` and `sharper edges and details`.
+1. `H.264` requires `less bandwidth` than Sorenson Spark
+2. `H.264` causes `less delay` when streaming between the broadcaster and the receiver
+3. `H.264` provides `better image quality`, `smoother framerates` and `sharper edges and details`.
 
 Disadvantages:
 
-H.264 is more `CPU intensive` than Sorenson Spark.  Having a lot of streams running at once may cause the AVChat client to have performance drawbacks for users with slower hardware.
+`H.264` is more CPU intensive than Sorenson Spark.  Having a lot of streams running at once may cause the AVChat client to have performance drawbacks for users with slower hardware.
 
-**Playing back the recorded files**
+<h3>Playing back the recorded files</h3>
 
 FLV
 
@@ -217,17 +217,17 @@ To disable it (now why would you want to do that? :) ) edit `avc_setting.xml` an
 
 Ghost users are a known issue with all media servers.
 
-**What is a ghost user?**
+<h3>What is a ghost user?</h3>
 
 A ghost user is a user who’s disconnection from the media server has not been detected by the media server, thus the media server thinks he is still connected.
 
 In a chat you will know there are ghost users when you see 2-3 persons in the users list having the same user name or persons staying for unusual lenghts of time in the chat without activity.
 
-**What causes ghost users?**
+<h3>What causes ghost users?</h3>
 
 They happen when a user suddenly disconnects from the Internet while connected to a media server (for example by suddenly disconnecting your Ethernet cable or loosing WiFi signal) but in other occasions too like when the user is over a slow connection (mobile connections) or behind some weird combination of network hardware + server software. IE and the way it handles Flash content might also produce ghost users.
 
-**How is AVChat 3 dealing with ghost users?**
+<h3>How is AVChat 3 dealing with ghost users?</h3>
 
 1. Every 3 seconds the client  (swf file) sends a ping to the media server (this value can not be changed)
 2. Every 10 seconds the media server (Red5/Wowza/AMS/FMS) check if all clients have sent a ping within the last 10 seconds (already 3 pings should have been sent by every client) and disconnects everyone who has not.
@@ -238,7 +238,7 @@ Starting with build 741 (April) you can control the above mechanism by changing 
 
 <h2 id="external-users-list">External users list</h2>
 
-**Overview**
+<h3>Overview</h3>
 
 In order to show on your website who is logged in the video chat, AVChat 3 generates 2 external files in the folder where it is installed:
 
@@ -253,7 +253,7 @@ You can use these 2 files to show on your website how many clients are logged in
 
 How to actually code/do that is outside the scope of this documentation but anyone with minimum PHP or .NET experience  should be able to parse the XML/text file and post the contents on the website.
 
-**How it works**
+<h3>How it works</h3>
 
 In detail:
 
@@ -271,7 +271,7 @@ You can also set the path manually (via the `settings.asc`/`avchat3.properties` 
 + You’ve moved `writeuserslist.php` to a separate folder.
 + You have troubles with the external users list not being generated.
 
-**Troubleshooting**
+<h3>Troubleshooting</h3>
 
 If the 2 files refuse to appear do these tasks in this order:
 
@@ -282,7 +282,7 @@ If the 2 files refuse to appear do these tasks in this order:
 5. Hard code the path to `writeuserslist.php`  in `settings.asc` (on AMS/FMS ) or in `avchat3.properties` (on Wowza/Red5) and restart the media server
 6. Contact support: support@nusofthq.com
 
-**Turning the feature off**
+<h3>Turning the feature off</h3>
 
 On AMS/FMS  edit `applications/avchat30/settings.asc`, set `application.writeUsersLists=false` and restart AMS/FMS.
 
@@ -296,19 +296,19 @@ This will turn off the feature and stop the media server from making POST calls 
 
 AVChat saves a history of all the text chat in all the rooms including private chats on the media server!
 
-**On AMS/FMS**
+<h3>On AMS/FMS</h3>
 
 They will be saved in the `FMS/applications/avchat30/logs/` folder and they will have this format: `_definst__r0_2010_12_20.txt`, where \_definst\_ is the application instance name, r0 is the room id, and 2010_12_20 is the date.
 
 To disable it edit `applications/avchat30/settings.asc` and set `application.loggingEnabled=false`.
 
-**On Red5**
+<h3>On Red5</h3>
 
 They will be saved in `Red5/webapps/avchat30/avchat3_transcripts/` folder and they will have this format: `_definst__r0_2010_12_19_log.txt`.
 
 To disable it edit `webapps/avchat30/avchat3.properties` and set `loggingEnabled=false`.
 
-**On Wowza**
+<h3>On Wowza</h3>
 
 They will be saved in `Wowza\applications\avchat30\avchat3_transcripts` folder and they will have this format: `_definst__r0_2010_12_19_log.txt`.
 
@@ -418,7 +418,7 @@ AVChat 3 will now will use the name, profile picture and profile link from Faceb
 This feature is controlled by the `enableOtherAccountOptions` setting located in the `avc_settings.xml` file.
 If set to `0`, the feature will be disabled.
 
-**There a few steps needed in order to set this up:**
+<h3>There a few steps needed in order to set this up:</h3>
 
 1. Go to:  [https://developers.facebook.com/apps/](https://developers.facebook.com/apps/)
 2. Create a new Facebook app for a website and enter a name for it.
@@ -444,7 +444,7 @@ AVChat 3 has 2 configuration files containing usernames and words which are not 
 We're talking about 2 separate files: `badnicks.xml` and `badwords.xml`.
 Both files can be found in the main AVChat 3 installation folder.
 
-**Bad nicks**
+<h3>Bad nicks</h3>
 
 `badnicks.xml` - contains 2 groups of XML elements:
 
@@ -459,7 +459,7 @@ Wildcard example: `<bad>adr</bad>` - meaning any user trying to connect with an 
 
 Only the user interface (`index.swf`) will check the member's username against the usernames in `badnicks.xml`. The admin interface (`admin.swf`) does not apply the check, so if the "admin" or "administrator" usernames are present in `badnicks.xml` they can be used in `admin.swf` but `index.swf` will not let users with these usernames go past the login screen.
 
-**Bad words**
+<h3>Bad words</h3>
 
 `badwords.xml` - contains 2 groups of XML elements as well:
 
@@ -477,7 +477,7 @@ AVChat 3 has a feature which gives the possibility for the owner to add info mes
 
 This feature was added in [Build 1505](http://avchathq.com/blog/rotatting-text-messages-in-avchat-may-build-1505/) of AVChat 3 to give the website owner the ability to add info messages, text ads with links or any other announcements in the text chat.
 
-**In detail**
+<h3>In detail</h3>
 
 The file which stores the messages is `rotate_messages.php` located in the AVChat 3 installation folder. It is called by AVChat 3 every `rotatingMessageTime` seconds (option in `avc_settings.xml`) and it sends to it a GET variable named `count` which stores the number of times it was called by that user.
 
@@ -506,7 +506,7 @@ As you can see, you can customize these messages using some HTML tags for color,
 
 If you are an experienced web developer you can create your own `rotate_messages.php` file with messages being pulled out of a database, more complex logic, ads, etc. and point AVChat 3 to use it through the `rotatingMessageUrl` option located in `avc_settings.xml`.
 
-**Other notes**
+<h3>Other notes</h3>
 
 
 * `rotatingMessageUrl` in `avc_settings.xml` contains the path to `rotating_messages.php`
@@ -544,7 +544,7 @@ The text used in this tab can be found in `translations/en.xml` file located in 
 
 <h2 id="reporting-users">Report user feature</h2>
 
-**Sending a report**
+<h3>Sending a report</h3>
 
 Starting with [build 2760](http://nusofthq.com/blog/avchat-august-build-2760/) a user can be reported by any other user if necessary. This options is easily accessed by pressing the <kbd>Report this user</kbd> button located in a user's side menu.
 
@@ -578,7 +578,7 @@ The default mail that it is sent will look similar to this:
 
 <img src="http://docs.avchat.net/assets/images/reportMail.png" class="img-responsive"/>
 
-**Viewing a report**
+<h3>Viewing a report</h3>
 
 All of the reports can be seen using the AVChat administrator area -> Reports panel. The number between the parentheses is a notification for the total number of reports.
 
@@ -613,7 +613,7 @@ The API offers a series of settings and functionalities, which will be detailed 
 
 The API comes in 2 parts: settings that can be controlled from the `avc_settings.xml` file and the actual API for JavaScript, PHP and .NET.
 
-**The settings in avc_settings.xml detailed**
+<h3>The settings in avc_settings.xml detailed</h3>
 
 The API is intended to be used with an integrated version of AVChat and makes use of the following settings in `avc_settings.xml`:
 
@@ -629,7 +629,7 @@ The API is intended to be used with an integrated version of AVChat and makes us
 The PPV Button mentioned above is a new button added in the status bar that displays dynamically the amount of time/credits left if PPV is enabled. Here's how it looks:
 <img src="http://docs.avchat.net/assets/images/PPVButton.png" class="img-responsive"/>
 
-**The API**
+<h3>The API</h3>
 
 The API comes in 3 flavors:
 * a Javascript API, represented by the function `onPPVUpdate` (found in `index.html` and `admin.html`).
@@ -643,7 +643,7 @@ All of the above are called every second that passes while viewing a stream or b
 * `userSiteId`: the siteId value as sent by avc_settings.xxx
 * `sessionTimeStamp`: the timestamp from the last login.
 
-**Working with the API**
+<h3>Working with the API</h3>
 
 All of this information feed and parameters will have to be stored and updated in the database of the site in which AVChat will be integrated.
 
@@ -654,25 +654,25 @@ A general workflow will look something like this:
 3. Parameters passed to the API will have to be taken and stored/updated in site database.
 4. Based on the information stored a custom made script will have to update the `PPVAmount` setting so that when a user re-enters chat the correct amount of time/credits left will be used.
 
-**Controlling the API**
+<h3>Controlling the API</h3>
 
 The API can be controlled by the setting `PPVEnabled`. Depending on the value set here just parts of the API can be enabled.
 
-**Enabling just the JavaScript API**
+<h3>Enabling just the JavaScript API</h3>
 
 To only enable the JavaScript API set `PPVEnabled` to `1`.
 
-**Enabling just the PHP/.NET API**
+<h3>Enabling just the PHP/.NET API</h3>
 
 To only enable the PHP/.NET API set `PPVEnabled` to `2`.
 
-**Enabling both JavaScript and PHP/.NET API**
+<h3>Enabling both JavaScript and PHP/.NET API</h3>
 
 To enable both JavaScript and PHP/.NET API set `PPVEnabled` to `3`.
 
 <h2 id="avchat-twitter-authentication">How to setup AVChat for Twitter authentication</h2>
 
-**The Twitter authentication explained**
+<h3>The Twitter authentication explained</h3>
 
 Starting with [build 2915](http://avchat.net/support/documentation) AVChat supports Twitter authentication.
 
@@ -688,7 +688,7 @@ Upon given permission AVChat will automatically login using the user's Twitter p
 
 This feature is controlled by the setting `enableOtherAccountOptions` located in the `avc_settings.xml` file. If set to `0`, the feature will be disabled.
 
-**Setting it up**
+<h3>Setting it up</h3>
 
 Here are the steps that will guide you on how to set this up:
 
@@ -1062,7 +1062,7 @@ The `defaultRooms` setting comes with a predefined room, The Lobby, which will e
 
 To create rooms automatically you need to add ROOM OBJECTS to the `defaultRooms` settings. You can add one or multiple rooms.
 
-**On Red5**
+<h3>On Red5</h3>
 
 Example for one room:
 
@@ -1072,7 +1072,7 @@ To create more than 1 default room add another room object to the `defaultRooms`
 
 `defaultRooms`=[The Lobby,Main room for everyone,,0,,This is an automated created room];[Super Room, The description,1234,0,,This is an automated created room]`
 
-**On AMS**
+<h3>On AMS</h3>
 
 Example for one room:
 
