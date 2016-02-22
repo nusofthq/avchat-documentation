@@ -101,6 +101,7 @@ For simple ASP `avc_setting.asp` is still used before and after build 2060.
 The audio video quality files are located in the `audio_video_quality_profiles` folder.
 
 Here you will find the following default profiles with which AVChat ships:
+
 * `96k_high_quality_sound.xml`
 * `128k_high_motion_low_picture_quality.xml`
 * `256k_high_motion_low_picture_quality.xml`
@@ -111,12 +112,6 @@ For more details about using and configuring the profiles see chapter [Audio Vid
 
 **Themes**
 
-Language files are located in the `translations` folder.
-
-Here you will find the default language XML with which AVChat ships, `en.xml`.
-
-For more details one how to edit or add your own translations to AVChat see chapter [Translating AVChat](http://docs.avchat.net/standalone#translating-avchat)
-
 The themes are located in the `themes` folder.
 
 AVChat ships with 2 default themes: `dark` and `light` each with its own `style.xml` configuration file.
@@ -125,6 +120,11 @@ For more details about configuring and customizing your own theme see chapter [T
 
 **Translations**
 
+Language files are located in the `translations` folder.
+
+Here you will find the default language XML with which AVChat ships, `en.xml`.
+
+For more details one how to edit or add your own translations to AVChat see chapter [Translating AVChat](http://docs.avchat.net/standalone#translating-avchat)
 
 
 <h3>On the media server</h3>
