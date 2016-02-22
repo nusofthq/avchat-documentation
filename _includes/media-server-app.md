@@ -39,15 +39,6 @@ Chmod the new <code class="highlighter-rouge">avchat30</code> folder to 777.
 <p>Restart the Wowza server.</p>
 
 <!--Starting with Wowza Streaming Engine 4, a new GUI has been added that allows you to control the server and individual applications. This can be accessed using a browser by going to <b>http://WOWZA_SERVER_ADDRESS:8088/enginemanager</b>-->
-
-<p>Wowza Streaming Engine 4 comes with the default stream prefix <b>mp4</b>. This needs to be changed to <b>flv</b>:</p>
-<ol>
-<li>Go to <b>http://WOWZA_SERVER_ADDRESS:8088/enginemanager/</b></li>
-<li>From the top menu click the <b>Server</b> page</li>
-<li>In <b>Server Setup</b> click <b>Edit</b></li>
-<li>Change <b>Default Stream Prefix</b> from <code class="highlighter-rouge">applications</code>mp4</code> to <code class="highlighter-rouge">applications</code>flv</code></li>
-<li>Save</li>
-</ol>
 </div>
 </div>
 </div>
