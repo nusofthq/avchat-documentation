@@ -115,9 +115,9 @@ The `.flv` files are named like this: username+ “\_”+ unique user id assigne
 
 FMS 3.5 or higher is required for recording in `.mp4` format and streaming with H.264 encoding.
 
-<div class="alert alert-info" role="alert">AMS/FMS will automatically record .mp4 files if the video codec used is H.264 or .flv  files if Sorenson Spark is set.</div>
+<div class="alert alert-info" role="alert"><p markdown="1">AMS/FMS will automatically record `.mp4` files if the video codec used is `H.264` or `.flv`  files if `Sorenson Spark` is set.</p></div>
 
-<div class="alert alert-warning" role="alert">For compatibility with the H.264 video codec, AMS/FMS requires the NellyMoser ASAO audio codec to be set. Using Speex may cause some files in some cases to not have audio.</div>
+<div class="alert alert-warning" role="alert"><p markdown="1">For compatibility with the `H.264` video codec, AMS/FMS requires the `NellyMoser ASAO` audio codec to be set. Using `Speex` may cause some files in some cases to not have audio.</p></div>
 
 You will find the new `.flv/.mp4`  files in `FMS/applications/avchat30/streams/_definst_`.
 
@@ -141,7 +141,7 @@ If you wish to have your recordings in `.flv` format you will need to take the f
 
 Doing this will no longer require to encode the stream with `H.264` and you can leave the audio quality profile unchanged.
 
-<div class="alert alert-warning" role="alert">Wowza doesn’t support adding the NellyMoser ASAO audio codec in a mp4 container. So if the audio-video profile .xml is set to record with H.264 video and NellyMoser ASAO audio, the resulting .mp4 won’t have any audio. To avoid this always use the Speex audio codec when using H.264 video encoding with Wowza.</div>
+<div class="alert alert-warning" role="alert"><p markdown="1">Wowza doesn’t support adding the `NellyMoser ASAO` audio codec in a `mp4` container. So if the audio-video profile XML is set to record with `H.264` video and `NellyMoser ASAO audio`, the resulting `.mp4` won’t have any audio. To avoid this always use the `Speex` audio codec when using `H.264` video encoding with Wowza.</p></div>
 
 You will find the new `.flv/.mp4`  files in this folder: `Wowza/content/`.
 
