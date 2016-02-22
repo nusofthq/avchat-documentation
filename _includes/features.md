@@ -174,19 +174,19 @@ Disadvantages:
 
 <h3>Playing back the recorded files</h3>
 
-FLV
+**FLV**
 
 To play back the .flv or .mp4 files on your desktop you can use [VLC](https://www.videolan.org/vlc/index.html).
 
 To play back the .flv or .mp4  files on your website directly from the media server you can use any flash video player for websites that supports streaming. We recommend [JW Player](https://www.jwplayer.com/) or [Flow Player](https://flowplayer.org/). You can also move the video files from your media server to your web server and deliver them to your users via progressive download.
 
-MP4 files recorded with Adobe Media Server
+**MP4 files recorded with Adobe Media Server**
 
 Flash Media Server version 3.5 and later and Adobe Flash Media Live Encoder 3 and later can record content in MPEG-4 (F4V) format using an industry-standard recording technology known as “fragments” or “moof atoms.” Some MPEG-4 compatible tools and players do not support moof atoms and therefore cannot recognize files recorded by Adobe Media Server (previously known as Flash Media Server). [The F4V Post Processor](http://www.adobe.com/products/adobe-media-server-family/tool-downloads.html) tool aggregates the information from all the moof atoms into a single moov atom and outputs a new file. Use the F4V Post Processor tool to prepare F4V files for editing in Adobe Premiere® Pro software, delivery over HTTP, or in video players that support H.264 and AAC formats. This tool can be used in Windows or Linux.
 
 Playing back the files locally before passing them through the F4V Post Processor tool might not work.
 
-FLV files with no meta data
+**FLV files with no meta data**
 
 Because of the way they are recorded, some .flv files will end up having no duration metadata, thus resulting in funny playback. To fix this run those flv files through [flvmdi](http://www.buraks.com/flvmdi/) or [flvtool2](https://github.com/unnu/flvtool2).
 
@@ -229,7 +229,7 @@ They happen when a user suddenly disconnects from the Internet while connected t
 
 <h3>How is AVChat 3 dealing with ghost users?</h3>
 
-1. Every 3 seconds the client  (swf file) sends a ping to the media server (this value can not be changed)
+1. Every 3 seconds the client  (`swf file`) sends a ping to the media server (this value can not be changed)
 2. Every 10 seconds the media server (Red5/Wowza/AMS/FMS) check if all clients have sent a ping within the last 10 seconds (already 3 pings should have been sent by every client) and disconnects everyone who has not.
 
 This means that no ghost user will ever stay in the chat for more than 20 seconds.
@@ -330,7 +330,8 @@ The second option is to connect to your server by SSH, access the text chat tran
 You will find the text chat transcripts by the filename which is in the format `r0textchat`.
 The path to these files is:
 
-* `avchat30/SharedObjects/_definst_` on Red5
+* `avchat30/SharedObjects/_definst_` on Red5 0.8
+* `avchat30/persistence/persistence/SHARED_OBJECT/avchat30/_definst_` on Red5 1.0.5 and up
 * `avchat30/sharedobjects/_definst_` on FMS/AMS
 * `applications/avchat30/sharedobjects/_definst_` on Wowza
 
@@ -350,7 +351,7 @@ The media server now constantly checks for empty rooms and if:
 * the room is not protected (not included in the `doNotDeleteTheseRoomsWhenTheyBecomeEmpty`array) and
 * is inactive for more than the number of hours set in the option `deleteEmptyInactiveRoomsOlderThan` then the room is deleted.
 
-~~AVChat can be set up to remove empty rooms automatically as soon as the last person leaves the room.~~
+<strike>AVChat can be set up to remove empty rooms automatically as soon as the last person leaves the room.</strike>
 
 By default this feature is turned off. To turn it on you need to edit the config file on the media server (`avchat3.properties on Red5/Wowza` and `settings.asc` on AMS/FMS) and set
 
