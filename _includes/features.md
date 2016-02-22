@@ -1016,7 +1016,7 @@ If you now go to http://RED5_SERVER_ADDRESS:5080/avchat30/streams/ in your web b
 
 This open directory listing can be a security issue (you don't want to expose all the recorded videos to anyone snooping around). To turn off the directory listing do the following:
 
-1. Go to Red5/conf/ on your media server.
+1. Go to `Red5/conf/` on your media server.
 2. Open `web.xml` with a text editor.
 3. Search for this code:
 
@@ -1045,7 +1045,7 @@ You will still be able to access the file and download it or play it if you know
 
 Starting with [AVChat 3.6](http://avchat.net/blog/avchat-3-6-brings-a-new-mobile-version-and-red5-1-0-5-compatibility) a new stream recording API is available. The API is represented by the `getRecordedVideosInfo` file (PHP or .NET variant) located on the webserver side in the AVChat installation folder.
 
-The way this works is if the media server (Red5 in this case) is setup to record the live streams, each time a stream is started or closed, the media server calls the webserver side file g`etRecordedVideosInfo` sending the following information about the stream: `streamname`, the `siteId` of the user that made the recorded `videostream`, the `username` of the user that made the recorded videostream.
+The way this works is if the media server (Red5 in this case) is setup to record the live streams, each time a stream is started or closed, the media server calls the webserver side file `getRecordedVideosInfo` sending the following information about the stream: `streamname`, the `siteId` of the user that made the recorded `videostream`, the `username` of the user that made the recorded videostream.
 
 This API is disabled by default as it is works together with the media-server side setting `recordAudioVideoStreams`
 
@@ -1075,14 +1075,18 @@ Example for one room:
 
 To create more than 1 default room add another room object to the `defaultRooms` array and separate the room objects with a semicolumn:
 
-`defaultRooms`=[The Lobby,Main room for everyone,,0,,This is an automated created room];[Super Room, The description,1234,0,,This is an automated created room]`
+`defaultRooms=[The Lobby,Main room for everyone,,0,,This is an automated created room];[Super Room, The description,1234,0,,This is an automated created room]`
 
 <h3>On AMS</h3>
 
 Example for one room:
 
-`application.defaultRooms=[{name:"The Lobby(auto)",description:"The Main Room",password:"",maxusers:50,ownerName:"",ownerId:"",siteId:"",ip:"127.0.0.1",clientId:"",welcomeMessage:"This is an autocreated room",playListArray:""}];`
+```javascript
+application.defaultRooms=[{name:"The Lobby(auto)",description:"The Main Room",password:"",maxusers:50,ownerName:"",ownerId:"",siteId:"",ip:"127.0.0.1",clientId:"",welcomeMessage:"This is an autocreated room",playListArray:""}];
+```
 
 To create more than 1 default room add another room object to the `defaultRooms` array and separate the room objects with a comma:
 
-`application.defaultRooms=[{name:"The Lobby(auto)",description:"The Main Room",password:"",maxusers:50,ownerName:"",ownerId:"",siteId:"",ip:"127.0.0.1",clientId:"",welcomeMessage:"This is an autocreated room",playListArray:""}, {...another room object...}]`
+```javascript
+application.defaultRooms=[{name:"The Lobby(auto)",description:"The Main Room",password:"",maxusers:50,ownerName:"",ownerId:"",siteId:"",ip:"127.0.0.1",clientId:"",welcomeMessage:"This is an autocreated room",playListArray:""}, {...another room object...}]
+```
