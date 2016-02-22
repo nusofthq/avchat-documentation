@@ -353,17 +353,18 @@ The media server now constantly checks for empty rooms and if:
 
 <strike>AVChat can be set up to remove empty rooms automatically as soon as the last person leaves the room.</strike>
 
+
 By default this feature is turned off. To turn it on you need to edit the config file on the media server (`avchat3.properties on Red5/Wowza` and `settings.asc` on AMS/FMS) and set
 
 `deleteRoomsWhenTheyBecomeEmpty=true`
 
 You can also use the `doNotDeleteTheseRoomsWhenTheyBecomeEmpty` option to protect some rooms (like the main Lobby) from being removed like this:
 
-Red5 & Wowza:
+**Red5 & Wowza**
 
 `doNotDeleteTheseRoomsWhenTheyBecomeEmpty=r1,r2`
 
-FMS:
+**FMS**
 
 `application.doNotDeleteTheseRoomsWhenTheyBecomeEmpty=["r1","r2"]`
 
@@ -469,7 +470,7 @@ Only the user interface (`index.swf`) will check the member's username against t
 
 If some user uses in chat a word from that list you have created, it will be replaced with asterisks (\***).
 
-The badwords check also applies to admins.
+<div class="alert alert-info" role="alert">The badwords check also applies to admins.</div>
 
 
 <h2 id="rotating-messages">Rotating messages feature</h2>
@@ -547,7 +548,7 @@ The text used in this tab can be found in `translations/en.xml` file located in 
 
 <h3>Sending a report</h3>
 
-Starting with [build 2760](http://nusofthq.com/blog/avchat-august-build-2760/) a user can be reported by any other user if necessary. This options is easily accessed by pressing the <kbd>Report this user</kbd> button located in a user's side menu.
+Starting with [build 2760](http://nusofthq.com/blog/avchat-august-build-2760/) a user can be reported by any other user if necessary. This option is easily accessed by pressing the <kbd>Report this user</kbd> button located in a user's side menu.
 
 <img src="http://docs.avchat.net/assets/images/report.png" class="img-responsive"/>
 
@@ -586,7 +587,7 @@ All of the reports can be seen using the AVChat administrator area -> Reports pa
 <img src="http://docs.avchat.net/assets/images/reportsPanel.png" class="img-responsive"/>
 
 The notifications work in the following way:
-Upon entering the chat as admin, the [Reports] button will show the total number of reports like so: Reports (10). When a new reports is received and the reported users window is not opened, the total number of NEW reports will be displayed in the top right corner of the [Reports] button like so:
+Upon entering the chat as admin, the <kbd>Reports</kbd> button will show the total number of reports like so: Reports (10). When a new reports is received and the reported users window is not opened, the total number of NEW reports will be displayed in the top right corner of the <kbd>Reports</kbd> button like so:
 
 <img src="http://docs.avchat.net/assets/images/reportNotif.png" class="img-responsive"/>
 
@@ -712,7 +713,7 @@ This feature allows you to edit the info displayed regarding a room in the rooms
 
 <img src="http://docs.avchat.net/assets/images/rooms_list_th.png" class="img-responsive"/>
 
-In the above image, you can see that small arrow icon annotated with green. Users are able to sort the rooms in the rooms list by that option.
+In the above image, you can see that small arrow icon. Users are able to sort the rooms in the rooms list by that option.
 
 For example, clicking the name once (as in the example), will sort the rooms alphabetically, by name (from A to Z). Clicking it once again will reverse the sort (from Z to A).
 
@@ -855,7 +856,7 @@ How to set it:
 
 <h2 id="audio-video-only">Configure AVChat to function with audio and video only (AVChat 3.5.2 and newer)</h2>
 
-In [AVChat 3.5.2]([blogpost](http://avchat.net/blog/avchat-3-5-2-update-now-released/) we've introduced a new setting `hideTextChat` which controls whether or not the text chat area is shown. The older setting `enableAudioVideoOnlyMode` has been removed completely, but it’s functionality can still be obtained combining some settings together including the newly added `hideTextChat`.
+In [AVChat 3.5.2](http://avchat.net/blog/avchat-3-5-2-update-now-released/) we've introduced a new setting `hideTextChat` which controls whether or not the text chat area is shown. The older setting `enableAudioVideoOnlyMode` has been removed completely, but it’s functionality can still be obtained combining some settings together including the newly added `hideTextChat`.
 
 How to set it:
 
@@ -925,8 +926,11 @@ Starting with AVChat [build 3396](https://nusofthq.com/blog/long-awaited-new-avc
 
 A small translate link will appear on the side of the text message, pressing it will show the translation for that particular message in a smaller grey font beneath the original text, as shown in the images below:
 
+French user's message
 <img src="http://docs.avchat.net/assets/images/french_text.jpg" class="img-responsive"/>
 
+
+English user's message
 <img src="http://docs.avchat.net/assets/images/english_text.jpg" class="img-responsive"/>
 
 But in order to achieve this you must first have a Google API Key. Here are the steps needed to obtain one:
