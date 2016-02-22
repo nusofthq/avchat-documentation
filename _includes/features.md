@@ -95,7 +95,7 @@ So when the audio and video data hits the media server it is already encoded, th
 
 The feature is disabled by default because it tends to use large amounts of space over the time.
 
-On Red5:
+**On Red5:**
 
 1. Edit `avchat30/avchat3.properties`
 2. Set `recordAudioVideoStreams=true`
@@ -107,7 +107,7 @@ You will find the new `.flv` files in `Red5/webapps/avchat30/streams/_definst_`
 
 The `.flv` files are named like this: username+ “\_”+ unique user id assigned by Red5 + “\_”+ timestamp (from when the user started publishing ).
 
-On AMS/FMS
+**On AMS/FMS**
 
 1. Edit `avchat30/settings.asc`
 2. Set `recordAudioVideoStreams=true`
@@ -123,14 +123,23 @@ You will find the new `.flv/.mp4`  files in `FMS/applications/avchat30/streams/_
 
 The `flv/mp4`  files are named like this: username+ “\_”+ unique user id assigned by AMS/FMS + “\_”+ timestamp (from when the user connected to AMS/FMS).
 
-On Wowza
-
+**On Wowza**
 
 1. Edit `Wowza/conf/avchat30/Application.xml`
 2. On line 25 change `live-lowlatency` with `live-record` and save
 3. Restart Wowza
 
-Wowza will automatically record `.mp4`  files if the video codec used is `H.264` or `.flv` files if Sorenson Spark is set.
+Wowza will by default record in `.mp4` format. But in order for the recording to work properly you have to encode the video with `H.264`. See [Editing existing quality profile files](http://docs.avchat.net/standalone#editing-existing-quality-profiles).
+
+If you wish to have your recordings in `.flv` format you will need to take the following steps:
+
+1. Go to <b>http://WOWZA_SERVER_ADDRESS:8088/enginemanager/</b></li>
+2. From the top menu click the **Server** page
+3. In **Server Setup** click <kbd>Edit</kbd>
+4. Change **Default Stream Prefix** from `mp4` to `flv`
+5. Save
+
+Doing this will no longer require to encode the stream with `H.264` and you can leave the audio quality profile unchanged.
 
 <div class="alert alert-warning" role="alert">Wowza doesn’t support adding the NellyMoser ASAO audio codec in a mp4 container. So if the audio-video profile .xml is set to record with H.264 video and NellyMoser ASAO audio, the resulting .mp4 won’t have any audio. To avoid this always use the Speex audio codec when using H.264 video encoding with Wowza.</div>
 
