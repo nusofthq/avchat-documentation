@@ -1,7 +1,7 @@
 ---
 layout: index
 title: AVChat Documentation
-description: Simple documentation template for Github pages
+description: Documentation for AVChat and it's Integration Kits
 isHome: true
 ---
 <div class="col-md-6" role="main">
