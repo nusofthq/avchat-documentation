@@ -19,7 +19,7 @@ headerLinks:
 
 # list if additional links on the footer
 footerLinks:
-  - title: GitHub
+  - title: AVChat Documentation on GitHub
     url: https://github.com/nusofthq/avchat-documentation
   - title: Client Area
     url: https://nusofthq.com/c/
