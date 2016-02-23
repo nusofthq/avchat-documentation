@@ -142,6 +142,8 @@ Where you can place the ads:
 
 <h2 id="socialengine-member-levels">SocialEngine 4's member levels and AVChat</h2>
 
+<h3>Social Engine member levels</h3>
+
 SocialEngine 4 has 5 default member levels:
 
 * Public
@@ -150,11 +152,15 @@ SocialEngine 4 has 5 default member levels:
 * Admins
 * Super Admins
 
+<h3>Who has access to AVChat by default</h3>
+
 By default:
 
 * Moderators, Admins and Super Admins have access to the AVChat admin interface
 * Default Level has access to the AVChat user interface
 * Public does not have access to AVChat
+
+<h3>Permissions you can change from the Social Engine backend</h3>
 
 The default setup can be changed from: **Manage -> Member Level AVChat 3 Permission**
 
