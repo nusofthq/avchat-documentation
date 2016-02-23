@@ -4,9 +4,12 @@ title: AVChat Documentation
 description: Documentation for AVChat and it's Integration Kits
 isHome: true
 ---
+<section class="bs-docs-section" markdown="1">
+<p class="lead">We've put all the AVChat documentation on GitHub to make it easy to change, track and accept changes from our users. If you feel something can be explained better or have anything to add feel free to send us a push request.</p>
+</section>
 <div class="col-md-6" role="main">
 <section class="bs-docs-section" markdown="1">
-  <h1 id="overview" class="page-header">AVChat Standalone</h1>
+  <h1 id="overview" class="page-header"><img width="40" height="40" src="assets/images/logo-avchat-video-chat.png" /> AVChat Standalone</h1>
   * [Overview](standalone#overview)
   * [Requirements](standalone#requirements)
   * [Installation instructions](standalone#installation-instructions)
@@ -22,11 +25,11 @@ isHome: true
 <div class="col-md-6" role="main">
 <section class="bs-docs-section" markdown="1">
   <h1 id="installation" class="page-header">Integration Kits</h1>
-  <h2 id="wordpress">WordPress</h2>
+  <h2 id="wordpress"><img width="25" height="25" src="assets/images/WordPress_blue_logo.svg.png" /> WordPress</h2>
   * [Community Lite](https://wordpress.org/plugins/avchat-3/installation)
   * [Community PRO](/wordpress-community-pro)
   * [Pay Per Session](/wordpress-pps)
-  <h2 id="joomla">Joomla!</h2>
+  <h2 id="joomla"><img width="25" height="25" src="assets/images/Joomla!.png" /> Joomla!</h2>
   * [Joomla! 1.6 > 2.5](/joomla-2)
   * [Joomla! 3.0 > 3.x](/joomla-3)
   <h2 id="socialengine,phpfox,drupal">Other CMS</h2>

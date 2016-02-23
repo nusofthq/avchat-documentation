@@ -10,7 +10,7 @@ hide: true
   <h1 id="overview" class="page-header">Overview</h1>
   <p class="lead">The AVChat Video Chat Add-on for SocialEngine 4 handles the integration between your SocialEngine 4 community and our AVChat software:</p>
 
-* user name integration
+* user name & gender integration
 * profile url integration
 * profile image integration
 * placement of video chat within the web site (user and admin interface)
@@ -51,7 +51,7 @@ Here's how to install the `avchat30` app on each one of them:
 <h2 id="installing-the-application-and-avchat-on-socialengine">SocialEngine 4 add-on &amp; AVChat installation</h2>
 <h3>Install the add-on</h3>
 
-1. Login as admin into your SocialEngine PHP 4 Website and go to Admin >> Manage >> Packages & Plugins
+1. Login as admin into your SocialEngine PHP 4 Website and go to **Admin >> Manage >> Packages & Plugins**
 <img src="{{site.github.url}}/assets/images/se/se_01.gif.png" class="img-responsive" />
 2. Click on <kbd>Install New Packages</kbd> then on <kbd>Add Packages</kbd>
 3. Browse to where you unzipped `avchat3_socialengineall_UNZIPFIRST.zip` and select the `module-avchat3-xxxx.tar` file from the `socialengine_4.x` folder.
@@ -66,18 +66,14 @@ Here's how to install the `avchat30` app on each one of them:
 
 1. Connect with an FTP client (like [WinSCP](http://winscp.net/eng/index.php) or [FileZilla](http://filezilla-project.org/)) to your website and go to the root of your website (usually in public_html).
 2. Copy the `videochat` folder from the `socialengine_4.x` folder from the archive, to the root of your website.
-3. Now in the new `videochat` folder copy the contents of the folder named `Files to upload to your web site` from the `AVChat 3.0.zip` archive.
-4. If the previous two steps are not completed an error message will appear: "The videochat folder or the AVChat files are missing from your SocialEngine installation."
-5. CHMOD the `videochat/uploadedFiles` folder to `777` (otherwise the upload function might not work)
-6. Create a new folder `tokens` (`videochat/tokens`) and CHMOD it to `777` (otherwise we might have token generation issues later on)
-7. Now back in the SE4 admin area go to Admin -> Plugins -> Flash Video Chat to enter the video chat, you will be asked for the license key:
-<img src="{{site.github.url}}/assets/images/se/license_key.jpg" class="img-responsive" />
-8. Enter the key (it's in your client/trial area) and press <kbd>Submit</kbd>
+3. In the new `videochat` folder copy the contents of the folder named `Files to upload to your web site` from the `AVChat 3.0.zip` archive.
+<!--4. If the previous two steps are not completed an error message will appear: "The videochat folder or the AVChat files are missing from your SocialEngine installation."-->
+5. CHMOD the `uploadedFiles` and `tokens` folders to `777`
+<!--6. Create a new folder `tokens` (`videochat/tokens`) and CHMOD it to `777` (otherwise we might have token generation issues later on)-->
 
 <h2 id="completing-the-installation">Complete installation</h2>
 <h3>Connect AVChat to the media server app</h3>
-
-1. Go to Settings >> AVChat 3 Settings
+1. Now back in the SE4 admin area go to **Settings > AVChat 3 Settings**
 <img src="{{site.github.url}}/assets/images/se/se_04.gif.png" class="img-responsive" />
 and enter the RTMP connection string to your `avchat30` application on the media server. It should look like this:
 `rtmp://myFMSserver.com/avchat30/_definst_`
@@ -86,6 +82,12 @@ where `myFMSserver.com` is the domain name or ip of the your media server.
 
 Your AVChat installation is now configured to connect to the media server.
 
+### Enter the chat and insert the license key
+
+1. Go to **Admin -> Plugins -> Flash Video Chat** to enter the video chat, you will be asked for the license key:
+<img src="{{site.github.url}}/assets/images/se/license_key.jpg" class="img-responsive" />
+2. Enter the key (it's in your [client/trial area on nusofthq.com](https://nusofthq.com/c/)) and press <kbd>Submit</kbd>
+
 </section>
 
 <section class="bs-docs-section" markdown="1">
@@ -93,7 +95,13 @@ Your AVChat installation is now configured to connect to the media server.
 <h2 id="accessing-the-avchat-admin-area-socialengine">Access the AVChat admin area</h2>
 
 The AVChat admin interface allows you to kick and ban users, view private discussions, log in as hidden, close, open and delete rooms, change the license key, etc.
-SocialEngine PHP 4 has 5 default member levels: Public, Default Level, Moderators, Admins and Super Admins.
+SocialEngine PHP 4 has 5 default member levels:
+
+* Public
+* Default Level
+* Moderators
+* Admins
+* Super Admins
 
 By default Moderators, Admins and Super Admins have access to the AVChat admin interface.
 
@@ -105,9 +113,9 @@ Access to the AVChat admin interface and what admin features each member level g
 By default AVChat 3 is embedded in your Socialengine page but you might want AVChat to open in a pop up window to make it easier for your users to browse your website while in the chat.
 While logged in the admin area of SE4:
 
-* Go to Settings -> General AVChat 3 Settings
-* Set the Open AVChat 3 in radio option to in popup
-* Scroll to the bottom and click Save Changes
+* Go to **Settings -> General AVChat 3 Settings**
+* Set the **Open AVChat 3** in radio option to in popup
+* Scroll to the bottom and click <kbd>Save Changes</kbd>
 
 
 <h2 id="avchat-socialengine-ads">Placing ads around the video chat</h2>
@@ -134,7 +142,17 @@ Where you can place the ads:
 
 <h2 id="socialengine-member-levels">SocialEngine 4's member levels and AVChat</h2>
 
-<div class="alert alert-info" role="alert">SocialEngine 4 has 5 default member levels: Public, Default Level, Moderators, Admins and Super Admins.</div>
+<h3>Social Engine member levels</h3>
+
+SocialEngine 4 has 5 default member levels:
+
+* Public
+* Default Level
+* Moderators
+* Admins
+* Super Admins
+
+<h3>Who has access to AVChat by default</h3>
 
 By default:
 
@@ -142,14 +160,15 @@ By default:
 * Default Level has access to the AVChat user interface
 * Public does not have access to AVChat
 
-The default setup can be changed from: Manage -> Member Level AVChat 3 Permission
+<h3>Permissions you can change from the Social Engine backend</h3>
+
+The default setup can be changed from: **Manage -> Member Level AVChat 3 Permission**
 
 <img src="{{site.github.url}}/assets/images/se/se_05.gif.png" class="img-responsive" />
 
 But access to AVChat is not the only thing you can control. What makes this integration so great is that you can control in detail to what AVChat features each member level has access to without leaving the SE4 admin area.
 
-Click the image below to see a screenshot with all the permissions that you can control individually for each member level:
-
+See screenshot with all the permissions that you can control individually for each member level:
 <img src="{{site.github.url}}/assets/images/se/full_se4_permissions_list.png" class="img-responsive" />
 
 
@@ -161,10 +180,10 @@ By default the AVChat Module for SE4 does not allow visitors of your web site to
 By default SE4 considers visitors as part of its internal Public member level so to allow visitors in we need to allow access to AVChat for the Public member level:
 
 1. Log in the admin area of SE4:
-2. Go to Manage -> Member Level AVChat 3 Settings
-3. Select Public in the Member Level drop down...
-4. The AVChat permissions for the Public member level will load...
-5. Set the Allow Access AVChat radio option to Yes, allow access to AVChat
+2. Go to **Manage -> Member Level AVChat 3 Settings**
+3. Select **Public** in the **Member Level** drop down
+4. The AVChat permissions for the Public member level will load
+5. Set the **Allow Access AVChat** radio option to **Yes**, allowing access to AVChat
 6. Scroll to the bottom and click <kbd>Save Changes</kbd>
 
 Visitors will have the option to choose their user name and gender before joining the video chat.
@@ -184,18 +203,18 @@ What you have to do now to change the title:
 <h2 id="change-menu-title-socialengine">How to change the Flash Video Chat menu item title</h2>
 
 1. Login as admin into your Social Engine PHP 4 website
-2. Go to Layout ->Menu Editor
+2. Go to **Layout ->Menu Editor**
 3. By default the Video Chat link is placed into the Main Navigation Menu. If you placed it into other menu, select the corresponding menu from the drop down. Find the Video Chat item, and click edit (see the screenshot below).
-<img src="{{site.github.url}}/assets/images/se/se4_avchat3_menu_item.gif" class="img-responsive" />
+<img src="{{site.github.url}}/assets/images/se/se4_avchat3_menu_item.png" class="img-responsive" />
 4. Type the new menu title in the "Label" field and save (see the screenshot below).
-<img src="{{site.github.url}}/assets/images/se/se4_avchat_edit_menu_item.gif" class="img-responsive" />
+<img src="{{site.github.url}}/assets/images/se/se4_avchat_edit_menu_item.png" class="img-responsive" />
 
 
 <h2 id="change-url-socialengine">How to change the default URL</h2>
 
 This is a delicate task which requires editing a sensitive file, `application/index.php`.
 
-<div class="alert alert-warning" role="alert">Before going further make sure that you BACKUP application/index.php</div>
+<div class="alert alert-warning" role="alert"><p markdown="1">Before going further make sure that you BACKUP `application/index.php`</p></div>
 
 Let's say that you want to access AVChat 3 by going to http://yourse4site.com/outstandingchat instead of http://yourse4site.com/avchat3. SE4 automatically creates the URL and it cannot be changed from the admin area. Editing the .htaccess file is a nightmare. So the easiest possible way is this:
 
@@ -235,5 +254,23 @@ SocialEngine Package Manager is responsible for all the packages in the SocialEn
 7. **Update Database**. A message should inform you all necessary changes to the database have been made successfully. Click <kbd>Finalize Installation</kbd> button to complete the upgrade;
 8. **Complete**: A message that informs you the installation was successfully should appear. From here you can return to **Package Manager** or to the **Dashboard**.
 
+<h2 id="allowing-visitors-to-login-with-facebook">Allowing visitors to enter the chat using their Facebook profile</h2>
+
+Only visitors will have the option of connecting with Facebook to AVChat.
+
+Follow the chapter [Setup Facebook authentication](http://docs.avchat.net/standalone.html#setup-facebook-authentication) in order to obtain your `appid` that you will use in SocialEngine backend.
+
+1. Go to SocialEngine backend: **Settings > AVChat 3 Settings**
+2. You will find there the **Facebook App ID** field. Put there your personal Application ID.
+3. Click <kbd>Save changes</kbd>
+
+
+<h2 id="configuring-the-addon">Configuring the Add-on</h2>
+
+The main way you can configure the Add-on is from the specific backend settings page found at `your_social_engine_site/admin/avchat3/settings/general`
+
+<img src="{{site.github.url}}/assets/images/se/avchat-settings.png" class="img-responsive" />
+
+Additionally to this the Add-on can be configured directly from AVChat's main config file (`avc_settings.xml`) and the rest of the configuration files described [here](http://docs.avchat.net/standalone.html#config-files)
 
 </section>
