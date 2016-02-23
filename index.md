@@ -8,12 +8,13 @@ isHome: true
 <section class="bs-docs-section" markdown="1">
   <h1 id="overview" class="page-header">AVChat Standalone</h1>
   * [Overview](standalone#overview)
-  * [Installation Instructions](standalone#installation-instructions)
+  * [Requirements](standalone#requirements)
+  * [Installation instructions](standalone#installation-instructions)
   * [Changing the colors and design](standalone#design)
-  * [Audio and Video Qualiy](standalone#audio-video-quality)
+  * [Audio and video qualiy](standalone#audio-video-quality)
   * [Security](standalone#security)
   * [Features](standalone#features)
-  * [Translation and Localization](standalone#localization)
+  * [Translation and localization](standalone#localization)
   * [Integrating AVChat](standalone#integration)
   * [Troubleshooting](standalone#troubleshooting)
 </section>
