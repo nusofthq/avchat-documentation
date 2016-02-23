@@ -268,6 +268,7 @@ Follow the chapter [Setup Facebook authentication](http://docs.avchat.net/standa
 <h2 id="configuring-the-addon">Configuring the Add-on</h2>
 
 The main way you can configure the Add-on is from the specific backend settings page found at `your_social_engine_site/admin/avchat3/settings/general`
+
 <img src="{{site.github.url}}/assets/images/se/avchat-settings.png" class="img-responsive" />
 
 Additionally to this the Add-on can be configured directly from AVChat's main config file (`avc_settings.xml`) and the rest of the configuration files described [here](http://docs.avchat.net/standalone.html#config-files)
