@@ -618,52 +618,58 @@ Additionally the report feature can be disabled by setting `enableReportSending`
 
 <h2 id="pay-per-view-api">Pay Per View API</h2>
 
-Starting with [build 3078](http://nusofthq.com/blog/avchat-october-build-3078-has-been-released/) the Pay Per View API has been introduced, API that deprecates the old `freeVideoTime` setting and functionality.
+A new **Pay Per View API** has been introduced in [build 3078](http://nusofthq.com/blog/avchat-october-build-3078-has-been-released/). This API replaces the old `freeVideoTime` setting and functionality.
 
-The API offers a series of settings and functionalities, which will be detailed later, that enable you to create and integrate a costum build payment solution based on several criteria for example:how much does a user stay in chat, how many minutes can he watch other streams.
+The API offers new functionalities that enable you to create and integrate a costum built payment pay per view solution based on several criteria like:
 
-The API comes in 2 parts: settings that can be controlled from the `avc_settings.xml` file and the actual API for JavaScript, PHP and .NET.
+* how much does a user stay in chat
+* how many minutes can he watch other streams
+* etc.
 
-<h3>The settings in avc_settings.xml detailed</h3>
+The API has 2 parts:
+
+* settings that can be controlled from the `avc_settings.xml` file
+* the actual JavaScript client side API and PHP + .NET server side API.
+
+<h3>The avc_settings.xml settings</h3>
 
 The API is intended to be used with an integrated version of AVChat and makes use of the following settings in `avc_settings.xml`:
 
 
-1. `PPVEnabled` - This setting controls whether or not the PPV feature is enabled, and also depending on that, the status of the PPV button. When disabled the PPV button is not shown in the status bar.
-2. `PPVAmount` - This setting holds the amount of time or credits, depending on the `PPVType` setting. The `PPVAmount` starts to decrease as soon as the user enters the chat or as soon as he starts viewing a webcam (depending on `PPVTrigger`) with a ratio equal to `PPVRatio`/second. The remaining `PPVAmount` is then sent (every second) to the JS function onPPVUpdate which can be usually be found in index.html and `admin.html` and to `ppvUpdate.php` and `ppvUpdate.aspx`.
-3. `PPVType` - This setting controls what `PPVAmount` represents (time, money, credits). When set to time the `PPVAmount` will be shown in the chat time formated (i.e. 15:32).
-4. `PPVTrigger` - This setting indicates what triggers the `PPVAmount` to decrease. When set to `viewing_webcams` the `PPVAmount` starts to decrease as soon as you start viewing someone, viewing 2 or more cams will NOT decrease the timer faster. When set to `connected` the `PPVAmount` starts to decrease as soon as you enter the chat.
+1. `PPVEnabled` - This setting controls whether or not the PPV feature is enabled. When disabled the PPV button is not shown in the status bar.
+2. `PPVAmount` - This setting holds the amount of time or credits. The `PPVAmount` starts to decrease as soon as the user enters the chat or as soon as he starts viewing a webcam (depending on `PPVTrigger`) with a ratio equal to `PPVRatio`/second. The remaining `PPVAmount` is then sent (every second) to the JS function `onPPVUpdate` - which can be found in `index.html` and `admin.html`  - and to `ppvUpdate.php` ( or `ppvUpdate.aspx` if you're one a ASP.NET server).
+3. `PPVType` - This setting controls what `PPVAmount` represents (time, money, credits). When set to time, the `PPVAmount` number will be shown in the chat formatted as time  (i.e. 15:32).
+4. `PPVTrigger` - This setting indicates what triggers the `PPVAmount` to decrease. When set to `viewing_webcams` the `PPVAmount` starts to decrease as soon as you start viewing someone ( viewing 2 or more cams will NOT decrease the timer faster). When set to `connected` the `PPVAmount` starts to decrease as soon as you enter the chat.
 5. `PPVRatio` - This setting controls the ratio at which the `PPVAmount` is decreased every second. When set to 0.5 for example there will be a 0.5 credits or seconds decreased every second.
 6. `PPVLink` - This setting holds the URL for the page from which more time/credits may be purchased for more video stream access. Pressing the PPV button will open the PPV Link.
-7. `PPVIcon` - This setting provides the URL to the icon loaded in the PPV button located in the status bar. The icon size should be 16x16.
+7. `PPVIcon` - This setting provides the URL to the icon loaded in the PPV button located in AVChat's top status bar. The icon size should be 16x16.
 
-The PPV Button mentioned above is a new button added in the status bar that displays dynamically the amount of time/credits left if PPV is enabled. Here's how it looks:
+The PPV Button mentioned above is a new button added in the status bar that displays dynamically the amount of time/credits left when PPV is enabled. Here's how it looks:
 <img src="http://docs.avchat.net/assets/images/PPVButton.png" class="img-responsive"/>
 
 <h3>The API</h3>
 
-The API comes in 3 flavors:
-* a Javascript API, represented by the function `onPPVUpdate` (found in `index.html` and `admin.html`).
-* a PHP file `ppvUpdate.php`
-* a .NET file `ppvUpdate.aspx`
+The API itself covers both client side and server side:
+* a client side Javascript API, represented by the function `onPPVUpdate` (found in `index.html` and `admin.html`).
+* a PHP file `ppvUpdate.php` and a .NET file `ppvUpdate.aspx`
 
-All of the above are called every second that passes while viewing a stream or being in chat, depending on the trigger set, by the AVChat client, with the following parameters:
-* `ppvAmountLeft`: the amount of time/money/credits left for a particular user.
+The JS function mentioned above and the 2 server side files, **are called every second**, by the AVChat client, while viewing a stream or being in chat (depending on the trigger set), with the following parameters/querystring variables:
+* `ppvAmountLeft`: the amount of time/money/credits left for a particular user after deducting `PPVRatio`.
 * `ppvInitialAmount`: the initial amount of time/money/credits that a user had.
-* `ppvRatio`: the rate at which the ppvAmountLeft is decreased.
-* `userSiteId`: the siteId value as sent by avc_settings.xxx
+* `ppvRatio`: the rate at which the `ppvAmountLeft` is decreased.
+* `userSiteId`: the siteId value as sent by `avc_settings.xxx`
 * `sessionTimeStamp`: the timestamp from the last login.
 
 <h3>Working with the API</h3>
 
-All of this information feed and parameters will have to be stored and updated in the database of the site in which AVChat will be integrated.
+All of this information needs to be sued to update the credits/time/money database of the site with which AVChat is integrated in a pay per view manner.
 
-A general workflow will look something like this:
+This is how a PPV operation would look like:
 
-1. Registered site user enters AVChat.
-2. AVChat starts churning down data to the API based on the settings set in `avc_settings.xml`.
-3. Parameters passed to the API will have to be taken and stored/updated in site database.
-4. Based on the information stored a custom made script will have to update the `PPVAmount` setting so that when a user re-enters chat the correct amount of time/credits left will be used.
+1. Registered site user enters AVChat, the integration makes sure the user sees his correct credits/time/money in the AVChat top status bar.
+2. User enters a room and stars viewing a cam.
+2. AVChat starts sending PPV data to both the JS and server side API every second
+3. Parameters passed to the API will have to used to decrease the ammount of credits/time or money the user has.
 
 <h3>Controlling the API</h3>
 
