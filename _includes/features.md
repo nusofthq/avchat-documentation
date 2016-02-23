@@ -676,15 +676,9 @@ This is how a PPV operation would look like:
 
 The API can be controlled by the setting `PPVEnabled`. Depending on the value set here just parts of the API can be enabled.
 
-<h3>Enabling just the JavaScript API</h3>
-
 To only enable the JavaScript API set `PPVEnabled` to `1`.
 
-<h3>Enabling just the PHP/.NET API</h3>
-
 To only enable the PHP/.NET API set `PPVEnabled` to `2`.
-
-<h3>Enabling both JavaScript and PHP/.NET API</h3>
 
 To enable both JavaScript and PHP/.NET API set `PPVEnabled` to `3`.
 
