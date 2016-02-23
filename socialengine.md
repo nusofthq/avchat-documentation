@@ -66,18 +66,14 @@ Here's how to install the `avchat30` app on each one of them:
 
 1. Connect with an FTP client (like [WinSCP](http://winscp.net/eng/index.php) or [FileZilla](http://filezilla-project.org/)) to your website and go to the root of your website (usually in public_html).
 2. Copy the `videochat` folder from the `socialengine_4.x` folder from the archive, to the root of your website.
-3. Now in the new `videochat` folder copy the contents of the folder named `Files to upload to your web site` from the `AVChat 3.0.zip` archive.
-4. If the previous two steps are not completed an error message will appear: "The videochat folder or the AVChat files are missing from your SocialEngine installation."
-5. CHMOD the `videochat/uploadedFiles` folder to `777` (otherwise the upload function might not work)
-6. Create a new folder `tokens` (`videochat/tokens`) and CHMOD it to `777` (otherwise we might have token generation issues later on)
-7. Now back in the SE4 admin area go to Admin -> Plugins -> Flash Video Chat to enter the video chat, you will be asked for the license key:
-<img src="{{site.github.url}}/assets/images/se/license_key.jpg" class="img-responsive" />
-8. Enter the key (it's in your client/trial area) and press <kbd>Submit</kbd>
+3. In the new `videochat` folder copy the contents of the folder named `Files to upload to your web site` from the `AVChat 3.0.zip` archive.
+<!--4. If the previous two steps are not completed an error message will appear: "The videochat folder or the AVChat files are missing from your SocialEngine installation."-->
+5. CHMOD the `uploadedFiles` and `tokens` folders to `777`
+<!--6. Create a new folder `tokens` (`videochat/tokens`) and CHMOD it to `777` (otherwise we might have token generation issues later on)-->
 
 <h2 id="completing-the-installation">Complete installation</h2>
 <h3>Connect AVChat to the media server app</h3>
-
-1. Go to Settings >> AVChat 3 Settings
+1. Now back in the SE4 admin area go to `Settings > AVChat 3 Settings`
 <img src="{{site.github.url}}/assets/images/se/se_04.gif.png" class="img-responsive" />
 and enter the RTMP connection string to your `avchat30` application on the media server. It should look like this:
 `rtmp://myFMSserver.com/avchat30/_definst_`
@@ -85,6 +81,12 @@ where `myFMSserver.com` is the domain name or ip of the your media server.
 2. Click <kbd>Save Changes</kbd> at the bottom
 
 Your AVChat installation is now configured to connect to the media server.
+
+### Enter the chat and insert the license key
+
+1. Go to `Admin -> Plugins -> Flash Video Chat` to enter the video chat, you will be asked for the license key:
+<img src="{{site.github.url}}/assets/images/se/license_key.jpg" class="img-responsive" />
+2. Enter the key (it's in your [client/trial area on nusofthq.com](https://nusofthq.com/c/)) and press <kbd>Submit</kbd>
 
 </section>
 
