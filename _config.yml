@@ -51,7 +51,7 @@ twitter:
 # facebook buttons
 facebook:
   enabled: true
-  profileUrl: https://www.facebook.com/nusoftcompany/
+  profileUrl: https://www.facebook.com/nusoftcompany
 
 
 exclude: ['README.md', 'LICENSE', 'bower.json', 'Gemfile.lock', 'Gemfile']
