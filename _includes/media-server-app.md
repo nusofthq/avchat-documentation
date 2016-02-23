@@ -25,7 +25,7 @@
 <div class="panel-body">
 Upload the <code class="highlighter-rouge">avchat30</code> folder (you will find it in your AVChat archive in the <b>Files to upload to your media server (FMS) folder)</b> to the <b>applications</b> folder of your AMS installation.
 
-Chmod the new <code class="highlighter-rouge">avchat30</code> folder to 777.
+<p>On Linux, chmod the new <code class="highlighter-rouge">avchat30</code> folder to 777.</p>
 
 </div>
 </div>
