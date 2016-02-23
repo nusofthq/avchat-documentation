@@ -635,7 +635,6 @@ The API has 2 parts:
 
 The API is intended to be used with an integrated version of AVChat and makes use of the following settings in `avc_settings.xml`:
 
-
 1. `PPVEnabled` - This setting controls whether or not the PPV feature is enabled. When disabled the PPV button is not shown in the status bar.
 2. `PPVAmount` - This setting holds the amount of time or credits. The `PPVAmount` starts to decrease as soon as the user enters the chat or as soon as he starts viewing a webcam (depending on `PPVTrigger`) with a ratio equal to `PPVRatio`/second. The remaining `PPVAmount` is then sent (every second) to the JS function `onPPVUpdate` - which can be found in `index.html` and `admin.html`  - and to `ppvUpdate.php` ( or `ppvUpdate.aspx` if you're one a ASP.NET server).
 3. `PPVType` - This setting controls what `PPVAmount` represents (time, money, credits). When set to time, the `PPVAmount` number will be shown in the chat formatted as time  (i.e. 15:32).
@@ -650,10 +649,12 @@ The PPV Button mentioned above is a new button added in the status bar that disp
 <h3>The API</h3>
 
 The API itself covers both client side and server side:
+
 * a client side Javascript API, represented by the function `onPPVUpdate` (found in `index.html` and `admin.html`).
 * a PHP file `ppvUpdate.php` and a .NET file `ppvUpdate.aspx`
 
 The JS function mentioned above and the 2 server side files, **are called every second**, by the AVChat client, while viewing a stream or being in chat (depending on the trigger set), with the following parameters/querystring variables:
+
 * `ppvAmountLeft`: the amount of time/money/credits left for a particular user after deducting `PPVRatio`.
 * `ppvInitialAmount`: the initial amount of time/money/credits that a user had.
 * `ppvRatio`: the rate at which the `ppvAmountLeft` is decreased.
