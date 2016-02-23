@@ -10,7 +10,7 @@ hide: true
   <h1 id="overview" class="page-header">Overview</h1>
   <p class="lead">The AVChat Video Chat Add-on for SocialEngine 4 handles the integration between your SocialEngine 4 community and our AVChat software:</p>
 
-* user name integration
+* user name &amp gender integration
 * profile url integration
 * profile image integration
 * placement of video chat within the web site (user and admin interface)
