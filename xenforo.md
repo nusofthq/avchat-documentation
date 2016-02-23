@@ -45,7 +45,9 @@ Here's how to install the `avchat30` app on each one of them:
 {% include media-server-app.md %}
 
 <h2 id="installing-the-application-and-avchat-on-xenforo">xenForo add-on &amp; AVChat installation</h2>
+
 ### Upload files to your website
+
 Connect using an FTP client to your website and:
 
 1. upload the `library` and `videochat` folders from the xenForo's archive to your forum's root folder
@@ -73,7 +75,9 @@ RewriteRule
 <div class="bs-callout bs-callout-info" id="callout-tables-responsive-overflow"> <h4>Folder permissions</h4> <p markdown="1">If your website's hosted on a Linux server CHMOD the `/videochat/uploadedFiles` and `/videochat/tokens` folders to 777.</p> </div>
 
 <h2 id="completing-the-installation">Complete installation</h2>
+
 ### Install the add-on
+
 In the xenForos's **Admin CP** area:
 
 1. click on **Install Add-on** in the left side menu.
@@ -146,6 +150,7 @@ By default AVChat 3 is embedded in your xenForo page but you might want AVChat t
 3. Scroll to the bottom and click <kbd>Save Changes</kbd>
 
 <h2 id="avchat-xenforo-permissions">Limiting features to certain user groups</h2>
+
 ### xenForo user groups
 
 xenForo ships with 4 user groups:
