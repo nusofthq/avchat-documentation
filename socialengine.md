@@ -188,9 +188,9 @@ What you have to do now to change the title:
 1. Login as admin into your Social Engine PHP 4 website
 2. Go to Layout ->Menu Editor
 3. By default the Video Chat link is placed into the Main Navigation Menu. If you placed it into other menu, select the corresponding menu from the drop down. Find the Video Chat item, and click edit (see the screenshot below).
-<img src="{{site.github.url}}/assets/images/se/se4_avchat3_menu_item.gif" class="img-responsive" />
+<img src="{{site.github.url}}/assets/images/se/se4_avchat3_menu_item.png" class="img-responsive" />
 4. Type the new menu title in the "Label" field and save (see the screenshot below).
-<img src="{{site.github.url}}/assets/images/se/se4_avchat_edit_menu_item.gif" class="img-responsive" />
+<img src="{{site.github.url}}/assets/images/se/se4_avchat_edit_menu_item.png" class="img-responsive" />
 
 
 <h2 id="change-url-socialengine">How to change the default URL</h2>
