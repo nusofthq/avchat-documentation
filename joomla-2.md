@@ -10,7 +10,7 @@ hide: true
   <h1 id="overview" class="page-header">Quick Overview</h1>
   <p class="lead">The AVChat Integration Kit for Joomla! handles the integration between your Joomla! web site and the AVChat 3 video chat software.</p>
 
-  <div class="bs-callout bs-callout-warning" id="callout-tables-responsive-overflow"> <h4>End of life</h4> <p markdown="1">**Joomla 2.5** support ended on December 31, 2014. If you are looking to start a new Joomla! website, you should use a newer Joomla! version instead.</p></div>
+  <div class="bs-callout bs-callout-warning" id="callout-tables-responsive-overflow"> <h4>End of life</h4> <p markdown="1">**Joomla 2.5!** support ended on December 31, 2014. If you are looking to start a new Joomla! website, you should use a newer Joomla! version instead.</p></div>
 
   <p class="lead" markdown="1">Joomla! is the first CMS with which AVChat was ever integrated, and, to this day, it's the one we devote the most time to.
   If you like our AVChat Integration Kits for Joomla! don't forget to rate them and review them in the [Joomla! Extensions Directory](http://extensions.joomla.org/extensions/extension/communication/chat/avchat-video-chat-integration-kit).
@@ -23,10 +23,10 @@ hide: true
 <section class="bs-docs-section" markdown="1">
   <h1 id="installation" class="page-header">Installation instructions</h1>
   <h2 id="download">Download & Extract archives</h2>
-  First, you will need the two archives downloaded from your client area:
+  First, you will need the two archives downloaded from [your client area](http://nusofthq.com/c/):
 
   * **AVChat 3.0 Build xxxx.zip** (contains media server files for Red5/FMIS/Wowza and AVChat Standalone)
-  * **avchat3_joomla_integrationKits_UNZIPFIRST.zip** (contains 4 plugins for Joomla! 1.0-3.x)
+  * **avchat3_joomla_integrationKits_UNZIPFIRST.zip** (contains 4 components for Joomla! 1.6-2.5)
 
   <img src="/assets/images/joomla_images/downloaded_archives.png" class="img-responsive"/>
 
@@ -45,7 +45,7 @@ hide: true
   {% include media-server-app.md %}
 
   <h2 id="plugin">Component installation</h2>
-  To install the plugin, you will need to be logged in as admin on your website. Once logged in:
+  To install the component, you will need to be logged in as admin on your website. Once logged in:
 
   Go to **Extensions** > **Manage**
   <img src="/assets/images/joomla_images/2-0/extensions_menu.png" class="img-responsive"/>
@@ -61,7 +61,7 @@ hide: true
 
   We'll get back to that a little bit later.
 
-  You should now see a message informing you that the AVChat files are missing, because we installed the plugin but not the chat client files.
+  You should now see a message informing you that the AVChat files are missing, because we installed the component but not the chat client files.
 
   You will need to connect to your server using FTP (or SFTP) in order to upload the files.
   Go ahead and open up your favorite FTP Client:
@@ -255,7 +255,7 @@ hide: true
   Done, now it will show up on your web site:
   <img src="/assets/images/joomla_images/2-0/whos_online_site.png" class="img-responsive"/>
 
-  <h2 id="update">Updating the plugin</h2>
+  <h2 id="update">Updating the component</h2>
   We make new versions of the AVChat Component independently from the actual AVChat software, that's why it's necessary to update the component and not the AVChat software itself. Here's how to do it:
 
   1. Log in the administrator area of Joomla!.
