@@ -51,7 +51,7 @@ Here's how to install the `avchat30` app on each one of them:
 <h2 id="installing-the-application-and-avchat-on-socialengine">SocialEngine 4 add-on &amp; AVChat installation</h2>
 <h3>Install the add-on</h3>
 
-1. Login as admin into your SocialEngine PHP 4 Website and go to Admin >> Manage >> Packages & Plugins
+1. Login as admin into your SocialEngine PHP 4 Website and go to **Admin >> Manage >> Packages & Plugins**
 <img src="{{site.github.url}}/assets/images/se/se_01.gif.png" class="img-responsive" />
 2. Click on <kbd>Install New Packages</kbd> then on <kbd>Add Packages</kbd>
 3. Browse to where you unzipped `avchat3_socialengineall_UNZIPFIRST.zip` and select the `module-avchat3-xxxx.tar` file from the `socialengine_4.x` folder.
@@ -73,7 +73,7 @@ Here's how to install the `avchat30` app on each one of them:
 
 <h2 id="completing-the-installation">Complete installation</h2>
 <h3>Connect AVChat to the media server app</h3>
-1. Now back in the SE4 admin area go to `Settings > AVChat 3 Settings`
+1. Now back in the SE4 admin area go to **Settings > AVChat 3 Settings**
 <img src="{{site.github.url}}/assets/images/se/se_04.gif.png" class="img-responsive" />
 and enter the RTMP connection string to your `avchat30` application on the media server. It should look like this:
 `rtmp://myFMSserver.com/avchat30/_definst_`
@@ -84,7 +84,7 @@ Your AVChat installation is now configured to connect to the media server.
 
 ### Enter the chat and insert the license key
 
-1. Go to `Admin -> Plugins -> Flash Video Chat` to enter the video chat, you will be asked for the license key:
+1. Go to **Admin -> Plugins -> Flash Video Chat** to enter the video chat, you will be asked for the license key:
 <img src="{{site.github.url}}/assets/images/se/license_key.jpg" class="img-responsive" />
 2. Enter the key (it's in your [client/trial area on nusofthq.com](https://nusofthq.com/c/)) and press <kbd>Submit</kbd>
 
@@ -95,7 +95,13 @@ Your AVChat installation is now configured to connect to the media server.
 <h2 id="accessing-the-avchat-admin-area-socialengine">Access the AVChat admin area</h2>
 
 The AVChat admin interface allows you to kick and ban users, view private discussions, log in as hidden, close, open and delete rooms, change the license key, etc.
-SocialEngine PHP 4 has 5 default member levels: Public, Default Level, Moderators, Admins and Super Admins.
+SocialEngine PHP 4 has 5 default member levels:
+
+* Public
+* Default Level
+* Moderators
+* Admins
+* Super Admins
 
 By default Moderators, Admins and Super Admins have access to the AVChat admin interface.
 
@@ -107,9 +113,9 @@ Access to the AVChat admin interface and what admin features each member level g
 By default AVChat 3 is embedded in your Socialengine page but you might want AVChat to open in a pop up window to make it easier for your users to browse your website while in the chat.
 While logged in the admin area of SE4:
 
-* Go to Settings -> General AVChat 3 Settings
-* Set the Open AVChat 3 in radio option to in popup
-* Scroll to the bottom and click Save Changes
+* Go to **Settings -> General AVChat 3 Settings**
+* Set the **Open AVChat 3** in radio option to in popup
+* Scroll to the bottom and click <kbd>Save Changes</kbd>
 
 
 <h2 id="avchat-socialengine-ads">Placing ads around the video chat</h2>
@@ -136,7 +142,13 @@ Where you can place the ads:
 
 <h2 id="socialengine-member-levels">SocialEngine 4's member levels and AVChat</h2>
 
-<div class="alert alert-info" role="alert">SocialEngine 4 has 5 default member levels: Public, Default Level, Moderators, Admins and Super Admins.</div>
+SocialEngine 4 has 5 default member levels:
+
+* Public
+* Default Level
+* Moderators
+* Admins
+* Super Admins
 
 By default:
 
@@ -144,14 +156,13 @@ By default:
 * Default Level has access to the AVChat user interface
 * Public does not have access to AVChat
 
-The default setup can be changed from: Manage -> Member Level AVChat 3 Permission
+The default setup can be changed from: **Manage -> Member Level AVChat 3 Permission**
 
 <img src="{{site.github.url}}/assets/images/se/se_05.gif.png" class="img-responsive" />
 
 But access to AVChat is not the only thing you can control. What makes this integration so great is that you can control in detail to what AVChat features each member level has access to without leaving the SE4 admin area.
 
-Click the image below to see a screenshot with all the permissions that you can control individually for each member level:
-
+See screenshot with all the permissions that you can control individually for each member level:
 <img src="{{site.github.url}}/assets/images/se/full_se4_permissions_list.png" class="img-responsive" />
 
 
@@ -163,10 +174,10 @@ By default the AVChat Module for SE4 does not allow visitors of your web site to
 By default SE4 considers visitors as part of its internal Public member level so to allow visitors in we need to allow access to AVChat for the Public member level:
 
 1. Log in the admin area of SE4:
-2. Go to Manage -> Member Level AVChat 3 Settings
-3. Select Public in the Member Level drop down...
-4. The AVChat permissions for the Public member level will load...
-5. Set the Allow Access AVChat radio option to Yes, allow access to AVChat
+2. Go to **Manage -> Member Level AVChat 3 Settings**
+3. Select **Public** in the **Member Level** drop down
+4. The AVChat permissions for the Public member level will load
+5. Set the **Allow Access AVChat** radio option to **Yes**, allowing access to AVChat
 6. Scroll to the bottom and click <kbd>Save Changes</kbd>
 
 Visitors will have the option to choose their user name and gender before joining the video chat.
@@ -186,7 +197,7 @@ What you have to do now to change the title:
 <h2 id="change-menu-title-socialengine">How to change the Flash Video Chat menu item title</h2>
 
 1. Login as admin into your Social Engine PHP 4 website
-2. Go to Layout ->Menu Editor
+2. Go to **Layout ->Menu Editor**
 3. By default the Video Chat link is placed into the Main Navigation Menu. If you placed it into other menu, select the corresponding menu from the drop down. Find the Video Chat item, and click edit (see the screenshot below).
 <img src="{{site.github.url}}/assets/images/se/se4_avchat3_menu_item.png" class="img-responsive" />
 4. Type the new menu title in the "Label" field and save (see the screenshot below).
@@ -197,7 +208,7 @@ What you have to do now to change the title:
 
 This is a delicate task which requires editing a sensitive file, `application/index.php`.
 
-<div class="alert alert-warning" role="alert">Before going further make sure that you BACKUP application/index.php</div>
+<div class="alert alert-warning" role="alert"><p markdown="1">Before going further make sure that you BACKUP `application/index.php`</p></div>
 
 Let's say that you want to access AVChat 3 by going to http://yourse4site.com/outstandingchat instead of http://yourse4site.com/avchat3. SE4 automatically creates the URL and it cannot be changed from the admin area. Editing the .htaccess file is a nightmare. So the easiest possible way is this:
 
