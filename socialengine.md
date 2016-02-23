@@ -254,5 +254,22 @@ SocialEngine Package Manager is responsible for all the packages in the SocialEn
 7. **Update Database**. A message should inform you all necessary changes to the database have been made successfully. Click <kbd>Finalize Installation</kbd> button to complete the upgrade;
 8. **Complete**: A message that informs you the installation was successfully should appear. From here you can return to **Package Manager** or to the **Dashboard**.
 
+<h2 id="allowing-visitors-to-login-with-facebook">Allowing visitors to enter the chat using their Facebook profile</h2>
+
+Only visitors will have the option of connecting with Facebook to AVChat.
+
+Follow the chapter [Setup Facebook authentication](http://docs.avchat.net/standalone.html#setup-facebook-authentication) in order to obtain your `appid` that you will use in SocialEngine backend.
+
+1. Go to SocialEngine backend: **Settings > AVChat 3 Settings**
+2. You will find there the **Facebook App ID** field. Put there your personal Application ID.
+3. Click <kbd>Save changes</kbd>
+
+
+<h2 id="configuring-the-addon">Configuring the Add-on</h2>
+
+The main way you can configure the Add-on is from the specific backend settings page found at `your_social_engine_site/admin/avchat3/settings/general`
+<img src="{{site.github.url}}/assets/images/se/avchat-settings.png" class="img-responsive" />
+
+Additionally to this the Add-on can be configured directly from AVChat's main config file (`avc_settings.xml`) and the rest of the configuration files described [here](http://docs.avchat.net/standalone.html#config-files)
 
 </section>
