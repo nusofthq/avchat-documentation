@@ -1,39 +1,50 @@
 ---
 layout: default
-title: AVChat - Joomla 1.6 - 2.5
-description: Joomla! Integration Plugin
+title: AVChat Component for Joomla! 1.6 - 2.5
+description: Documentation covering the AVChat component for Joomla! 1.6 - 2.5.
 isHome: false
 hide: true
 ---
 
 <section class="bs-docs-section" markdown="1">
   <h1 id="overview" class="page-header">Quick Overview</h1>
-  The AVChat Integration Kit for Joomla! handles the integration between your Joomla! web site and the AVChat 3 video chat software.
+  <p class="lead">The AVChat Integration Kit for Joomla! handles the integration between your Joomla! web site and the AVChat 3 video chat software.</p>
 
-  Joomla! is the first CMS with which AVChat was ever integrated, and, to this day, it's the one we devote the most time to.
+  <div class="bs-callout bs-callout-warning" id="callout-tables-responsive-overflow"> <h4>End of life</h4> <p markdown="1">**Joomla 2.5** support ended on December 31, 2014. If you are looking to start a new Joomla! website, you should use a newer Joomla! version instead.</p></div>
 
+  <p class="lead" markdown="1">Joomla! is the first CMS with which AVChat was ever integrated, and, to this day, it's the one we devote the most time to.
   If you like our AVChat Integration Kits for Joomla! don't forget to rate them and review them in the [Joomla! Extensions Directory](http://extensions.joomla.org/extensions/extension/communication/chat/avchat-video-chat-integration-kit).
 
-  If you cannot find the answer you’re looking for here, we encourage you to try our forums. There's also more documentation regarding AVChat in the documentation area for the main [standalone](standalone) version.
+  If you cannot find the answer you’re looking for here, we encourage you to try [our forums](http://discuss.avchat.net). There's also more documentation regarding AVChat in the documentation area for the main [standalone](standalone) version.</p>
 
   All the specific documentation regarding Joomla! is on this page so if you're looking for something specific just hit <kbd>Ctrl+F</kbd> on your browser.
 </section>
 
 <section class="bs-docs-section" markdown="1">
   <h1 id="installation" class="page-header">Installation instructions</h1>
+  <h2 id="download">Download & Extract archives</h2>
   First, you will need the two archives downloaded from your client area:
 
   * **AVChat 3.0 Build xxxx.zip** (contains media server files for Red5/FMIS/Wowza and AVChat Standalone)
-  * **avchat3_joomla_integrationKits_UNZIPFIRST.zip** (contains 4 plugins for Joomla 1.0-3.x)
+  * **avchat3_joomla_integrationKits_UNZIPFIRST.zip** (contains 4 plugins for Joomla! 1.0-3.x)
 
   <img src="/assets/images/joomla_images/downloaded_archives.png" class="img-responsive"/>
 
   Save and extract the archives somewhere on your computer.
 
   <h2 id="media-server-app">Setting up the media server application</h2>
+  Once we've downloaded &amp; unzipped everything the next thing we need to do is to setup the media server app to which AVChat will connect to.
+
+  AVChat uses a media server to send all the audio video and text data between users. AVChat supports the 3 major media servers:
+
+  * Red5
+  * Adobe Media Server
+  * Wowza
+
+  Here's how to install the `avchat30` app on each one of them:
   {% include media-server-app.md %}
 
-  <h2 id="plugin">Plugin installation</h2>
+  <h2 id="plugin">Component installation</h2>
   To install the plugin, you will need to be logged in as admin on your website. Once logged in:
 
   Go to **Extensions** > **Manage**
@@ -56,15 +67,13 @@ hide: true
   Go ahead and open up your favorite FTP Client:
 
   Upload the files from the **Files to upload to your website** folder to **components** > **com_avchat3** > **chat**
-  <img src="/assets/images/avchat_archive_folder.png" class="img-responsive"/>
-  <img src="/assets/images/joomla_images/3-0/uploaded_files.png" class="img-responsive"/>
+  <img src="/assets/images/joomla_images/uploaded_files.png" class="img-responsive"/>
 
   Make sure you change the permissions on the **tokens** and **uploadedFiles** folders to `777`:
   <img src="/assets/images/chmod.png" class="img-responsive"/>
 
-  <h2 id="configuration">Plugin configuration</h2>
-  AVChat is now installed. There are a few things we need to do before we get started.
-
+  <h2 id="configuration">Complete installation</h2>
+  <h3>Connect AVChat to the media server app</h3>
   Go to **Components** > **Avchat 3** and press the <kbd>Options</kbd> button.
 
   In the **RTMP Connection String** field insert the connection string for your media server. The connection string has the following form:
@@ -72,17 +81,14 @@ hide: true
 
   Press <kbd>Save & Close</kbd>.
 
+  <h3>Enter the chat, connect and insert the license key</h3>
   Press <kbd>Enter Chat</kbd> and AVChat will ask you for the license key. You can get your license key from your client area:
   <img src="/assets/images/joomla_images/2-0/license_key.png" class="img-responsive"/>
 
-  The installation is complete and you should be able to see the chat interface:
+  The installation is complete and you should be able to see the admin chat interface in Joomla!'s backend
   <img src="/assets/images/joomla_images/2-0/complete.png" class="img-responsive"/>
-</section>
 
-<section class="bs-docs-section" markdown="1">
-  <h1 id="plugin_features">Plugin Features</h1>
-
-  <h2 id="embed">Embed the chat</h2>
+  <h3>Embedding the chat in a page</h3>
   In order for your users to access the chat, it must be accessible from a page on your website.
   To add AVChat to the main menu:
 
@@ -96,8 +102,12 @@ hide: true
 
   AVChat can now be accessed from the page you just created:
   <img src="/assets/images/joomla_images/2-0/page_created.png" class="img-responsive"/>
+</section>
 
-  <h2 id="permissions">User roles and Permissions</h2>
+<section class="bs-docs-section" markdown="1">
+  <h1 id="plugin_features">Component Features</h1>
+
+  <h2 id="permissions">User roles and permissions</h2>
 
   Joomla! comes with 8 default user groups and the possibility to add more.
 
@@ -141,12 +151,12 @@ hide: true
 
 
   <h2 id="admin-access">Admin access</h2>
-  The AVChat admin area can be accessed in both the Joomla! backend (**Components** > **AVChat**) and in the front-end (**Main Menu** > **Video Chat**) by users belonging to groups that have permission to access it.
+  The AVChat admin area can be accessed in both the Joomla! backend (**Components** > **AVChat 3**) and in the front-end (**Main Menu** > **Video Chat**) by users belonging to groups that have permission to access it.
 
   To grant access to other groups follow these steps:
 
   1. Login as a Super User
-  2. Go to **Components** > **AVChat** > **Options** > **Permissions**
+  2. Go to **Components** > **AVChat 3** > **Options** > **Permissions**
   3. Click on the user group you want to grant access to
   4. Set to Allow the following permission **Allow access to the Chat's Admin Interface**
   5. Press <kbd>Save</kbd>
@@ -201,15 +211,6 @@ hide: true
 
   Add the code to the page and save the file on your server.
 
-  <h2 id="facebook-login">Facebook Login</h2>
-  By default, Facebook login is enabled, but in order to connect to the Facebook servers, you need to have an application registered under the same domain as your website. Follow the following steps to configure the Facebook login
-
-  1. [Setup the Facebook application](standalone#setup-facebook-authentication)
-  2. Log in the administrator area of Joomla!.
-  3. Go to **Components** > **AVChat 3** > **Options**
-  4. Insert your application ID in the **Facebook Application ID** field.
-  5. Click <kbd>Save & Close</kbd>.
-
   <h2 id="design">Customizing the looks</h2>
   <h3>Changing the size</h3>
   If you're using the Popup opening method, the size of the popup window can be changed from **Components** > **AVChat 3** > **Options** > **AVChat 3 Open Method**.
@@ -261,7 +262,7 @@ hide: true
   2. Go to **Extensions** > **Extension Manager**.
   3. Press <kbd>Choose File</kbd> and locate the **com_avchat3.zip** archive in the **joomla 1.6.x-2.5.x** > **joomla 1.6.x-2.5.x_component** folder.
   4. Click on <kbd>Upload & Install</kbd>
-  5. Go to **Components** > **AVChat** > **Options**
+  5. Go to **Components** > **AVChat 3** > **Options**
   6. Make sure all your permissions and settings are correct!
   7. Click on <kbd>Save & Close</kbd>
 
