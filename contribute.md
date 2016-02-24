@@ -29,6 +29,27 @@ A copy of our main repository will be created in your account
 
 <img src="{{site.github.url}}/assets/images/forked.png" class="img-responsive" />
 
-Here you can edit any file related to AVChat Standalone or the integrations
+Here you can edit any file related to **AVChat Standalone** or the **AVChat Integrations**
+
+
+<h2>Editing the documentation files</h2>
+
+The **AVChat Standalone** files are located inside the `_includes` folder and are named after every major chapter i.e. `design.md`, `features.md`, etc.
+
+The **AVChat integration** files are located in the `root` of the repo and are named after the integration i.e. `drupal.md`, `joomla-3.md`, etc.
+
+To edit it follow these steps:
+
+1. Click on the file you wish to edit.
+2. The file will open inside the browser. For this tutorial I've opened up `design.md`.
+<img src="{{site.github.url}}/assets/images/edit-doc.png" class="img-responsive" />
+3. Click on the <kbd>Edit</kbd> button showed in the image above.
+4. Now you can edit any part of the file writing in Markdown (it is very simple, you can learn it by example with what is already written).
+5. Select **Create a new branch for this commit and start a pull request.**
+6. Make your changes and click <kbd>Propose file change</kbd>
+
+<img src="{{site.github.url}}/assets/images/pull-request.png" class="img-responsive" />
+
+We will be notified that a new pull request exists and after reviewing it we will accept the change and will be viewable in the main documentation.
 
 </div>
