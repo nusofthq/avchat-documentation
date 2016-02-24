@@ -13,6 +13,7 @@ hide: true
 
 <section class="bs-docs-section" markdown="1">
   <h1 id="installation" class="page-header">Installation instructions</h1>
+  <h2 id="download">Download & Extract archives</h2>
   First, you will need the two archives downloaded from your client area:
 
   * **AVChat 3.0 Build xxxx.zip** (contains media server files for Red5/FMIS/Wowza and AVChat Standalone)
@@ -22,7 +23,7 @@ hide: true
 
   <h2 id="media-server-app">Setting up the media server application</h2>
   {% include media-server-app.md %}
-  <h2 id="plugin">Plugin installation</h2>
+  <h2 id="plugin">Plugin Installation</h2>
   To install the plugin, you will need to be logged in as admin on your website. Once logged in:
 
 
@@ -63,7 +64,7 @@ hide: true
   Make sure you change the permissions on the **tokens** and **uploadedFiles** folders to `777`:
   <img src="/assets/images/chmod.png" class="img-responsive"/>
 
-  <h2 id="plugin-configure">Plugin Configuration</h2>
+  <h2 id="plugin-configure">Configure Plugin</h2>
   You can now activate the plugin. Once activated, a new page is added in your WordPress Dashboard: **Pay Per Session**.
   <img src="/assets/images/wordpress-pps_images/activate.png" class="img-responsive"/>
 
