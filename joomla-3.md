@@ -282,6 +282,14 @@ hide: true
   6. Make sure all your permissions and settings are correct!
   7. Click on <kbd>Save & Close</kbd>
 
+  <h2 id="community_scripts">Community Scripts</h2>
+  The AVChat Integration Kit for Joomla! integrates with the 3 big Joomla! community scripts.
+  It will detect if you're using **EasySocial**, **JomSocial** or **Community Builder** and will seamlessly integrate the features offered by them such as:
+  * Same Profile Photo - By default, Joomla! does not offer the possiblity of adding profile pictures.
+  * Linked Profile Pages
+  * Same gender
+
+
   <h2 id="gpl">AVChat Components for Joomla! and GPL</h2>
   The AVChat Video Chat Components are licensed under the [GPL v2](http://www.gnu.org/licenses/gpl.txt) in accordance with the [JED requirements](http://community.joomla.org/blogs/leadership/636-jed-to-be-gpl-only-by-july-2009.html). Once you buy the integration kits you can modify them and distribute them as long as you keep it under the GPL.
 </section>
