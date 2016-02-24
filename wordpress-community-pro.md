@@ -7,7 +7,7 @@ hide: true
 ---
 <section class="bs-docs-section" markdown="1">
   <h1 id="overview" class="page-header">Quick Overview</h1>
-  The Community PRO Video Chat Plugin for WordPress handles the integration between your WordPress web site and the AVChat video chat platform.
+  <p class="lead">The Community PRO Video Chat Plugin for WordPress handles the integration between your WordPress web site and the AVChat video chat platform.</p>
 
   The plugin will handle the following:
 
@@ -24,19 +24,27 @@ hide: true
 
 <section class="bs-docs-section" markdown="1">
   <h1 id="installation" class="page-header">Installation instructions</h1>
-
+  <h2 id="download">Download & Extract archives</h2>
   First, you will need the two archives downloaded from your client area:
 
   * **AVChat 3.0 Build xxxx.zip** (contains media server files for Red5/FMIS/Wowza and AVChat Standalone)
   * **avchat3_wordpress_plugins_pro.zip** (contains 1 plugin for WordPress 4.x)
 
   <img src="/assets/images/wordpress_images/downloaded_archives.png" class="img-responsive"/>
-
   Save and extract the archives somewhere on your computer.
 
   <h2 id="media-server-app">Setting up the media server application</h2>
+  Once we've downloaded &amp; unzipped everything the next thing we need to do is to setup the media server app to which AVChat will connect to.
+
+  AVChat uses a media server to send all the audio video and text data between users. AVChat supports the 3 major media servers:
+
+  * Red5
+  * Adobe Media Server
+  * Wowza
+
+  Here's how to install the `avchat30` app on each one of them:
   {% include media-server-app.md %}
-  <h2 id="plugin">Plugin installation</h2>
+  <h2 id="plugin">Plugin Installation</h2>
   To install the plugin, you will need to be logged in as admin on your website. Once logged in:
 
 
@@ -77,8 +85,10 @@ hide: true
   Make sure you change the permissions on the **tokens** and **uploadedFiles** folders to `777`:
   <img src="/assets/images/chmod.png" class="img-responsive"/>
 
-  <h2 id="plugin-configure">Plugin Configuration</h2>
+  <h2 id="plugin-configure">Complete Installation</h2>
   You can now activate the plugin. Once activated, a new page is added in your WordPress Dashboard: **Video Chat PRO**.
+  <h3>Connect AVChat to the media server app</h3>
+
   <img src="/assets/images/wordpress_images/activate.png" class="img-responsive"/>
 
   You need to insert the connection string. The connection string has the following form:
@@ -90,6 +100,7 @@ hide: true
 
   Scroll down and press <kbd>Update Options</kbd>
 
+  <h3>Enter the chat, connect and insert the license key</h3>
   Now go to **Enter Chat** to access the chat interface:
   <img src="/assets/images/wordpress_images/chat_interface.png" class="img-responsive"/>
 
@@ -98,12 +109,8 @@ hide: true
 
   The installation is complete and you should be able to see the chat interface:
   <img src="/assets/images/wordpress_images/install_complete.png" class="img-responsive"/>
-</section>
 
-<section class="bs-docs-section" markdown="1">
-  <h1 id="accessing-admin">Plugin Features</h1>
-
-  <h2 id="access-admin">Embed the chat</h2>
+  <h3>Embed the chat</h3>
   In order for your users to access the chat, it must be accessible from a page on your website.
   The Community PRO plugin will allow you to embed the chat easily, using a shortcode in a post or page.
 
@@ -118,6 +125,11 @@ hide: true
 
   Going to this page will allow you and your users to access AVChat:
   <img src="/assets/images/wordpress_images/embedded.png" class="img-responsive"/>
+
+</section>
+
+<section class="bs-docs-section" markdown="1">
+  <h1 id="accessing-admin">Plugin Features</h1>
 
   <h2 id="permissions">User roles and permissions</h2>
   The Community PRO plugin for WordPress allows you to control permissions for each user role.
