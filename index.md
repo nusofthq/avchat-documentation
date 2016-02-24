@@ -5,7 +5,7 @@ description: Documentation for AVChat and it's Integration Kits
 isHome: true
 ---
 <section class="bs-docs-section" markdown="1">
-<p class="lead">We've put all the AVChat documentation on GitHub to make it easy to change, track and accept changes from our users. If you feel something can be explained better or have anything to add feel free to send us a push request.</p>
+<p class="lead">We've put all the AVChat documentation on GitHub to make it easy to change, track and accept changes from our users. If you feel something can be explained better or have anything to add feel free to send us a pull request.</p>
 </section>
 <div class="col-md-6" role="main">
 <section class="bs-docs-section" markdown="1">
