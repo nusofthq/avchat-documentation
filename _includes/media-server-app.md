@@ -1,14 +1,14 @@
 <ul class="nav nav-tabs" id="serversTab">
-  <li class="active"><a data-target="#red5" data-toggle="tab">Red5</a></li>
-  <li><a data-target="#ams" data-toggle="tab">Adobe Media Server</a></li>
-  <li><a data-target="#wowza" data-toggle="tab">Wowza</a></li>
+  <li class="active"><a data-target="#red5" data-toggle="tab"><img src="assets/images/red5-small-logo.png" width="20px" height="20px" /> Red5</a></li>
+  <li><a data-target="#ams" data-toggle="tab"><img src="assets/images/ams-small-logo.png" width="20px" height="20px" /> Adobe Media Server</a></li>
+  <li><a data-target="#wowza" data-toggle="tab"><img src="assets/images/wowza-logo-small.png" width="20px" height="20px" /> Wowza</a></li>
 </ul>
 
 <div class="tab-content">
 
 <div class="tab-pane active" id="red5">
 <div class="panel panel-default">
-<div class="panel-body">
+<div class="panel-body" >
 
 <p>Upload the <code class="highlighter-rouge">avchat30</code> folder from the <b>Files to upload to your media server (Red5)</b> folder to your Red5's <b>webapps</b> folder (<code class="highlighter-rouge">C:\Program Files\Red5\webapps</code> on Win, <code class="highlighter-rouge">/opt/red5/webapps/</code> on Linux).</p>
 
