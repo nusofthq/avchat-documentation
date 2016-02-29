@@ -1,5 +1,7 @@
-AVChat Documentation
+# AVChat Documentation
+
 http://avchat.net
+
 ====================
 
 The AVChat in Documentation in Markdown, Jekyll and  HTML hosted on GitHub Pages.
