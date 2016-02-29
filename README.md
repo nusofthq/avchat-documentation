@@ -1,4 +1,8 @@
-Jekyll Bootstrap Doc
+AVChat Documentation
+http://avchat.net
 ====================
 
-http://mistic100.github.io/jekyll-bootstrap-doc
+The AVChat in Documentation in Markdown, Jekyll and  HTML hosted on GitHub Pages.
+
+Here's how to contribute:
+http://docs.avchat.net/contribute
