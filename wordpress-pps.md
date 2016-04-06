@@ -70,9 +70,6 @@ hide: true
 
   You need to insert the IP Address of your media server, license key and PayPal e-mail.
 
-  The connection string has the following form:
-  <pre>rtmp://your_media_server_ip/avchat30/_definst_</pre>
-
   Go to **Pay Per Session** > **Settings** > **AVChat settings**.
 
   Paste the license key in the **AVChat license key** field.
