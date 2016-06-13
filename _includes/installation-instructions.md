@@ -111,7 +111,7 @@ You should now have 2 folders application folders:
 * `avchat30`
 * `avchat30_siteX`
 
-To connect the second installation of AVChat to the new AMS app use this connection string in `avc_settings.xml`: `rtmp://my-media-server.com/avchat30_siteX/_definst_`.
+To connect the second installation of AVChat to the new Red5 webapp use this connection string in `avc_settings.xml`: `rtmp://my-media-server.com/avchat30_siteX/_definst_`.
 
 <div class="alert alert-info" role="alert">With this kind of setup 2 different versions of AVChat (3.5 and 3.6 for example) can be run at the same time by AMS. Just be careful to connect the correct AVChat copy to the correct media server application.</div>
 
