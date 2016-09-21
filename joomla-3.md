@@ -107,7 +107,7 @@ hide: true
 <section class="bs-docs-section" markdown="1">
   <h1 id="plugin_features">Component Features</h1>
 
-  <h2 id="permissions">User roles and permissions</h2>
+  <h2 id="permissions">User groups and permissions</h2>
 
   Joomla! comes with 9 default user groups and the possibility to add more.
 
