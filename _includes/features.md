@@ -412,40 +412,33 @@ To add the sign URL set `loginPageURL` in `avc_settings.xml`
 To add the register URL set `registerPageURL` in `avc_settings.xml`.
 
 
-<h2 id="setup-facebook-authentication">How to setup AVChat for Facebook authentication</h2>
+<h2 id="setup-facebook-authentication">Joining the chat using Facebook user profiles</h2>
 
-Starting with [build 1880](http://avchat.net/blog/new-avchat-november-build-1880-has-arrived/) AVChat 3 supports Facebook authentication.
+Starting with [build 1880](http://avchat.net/blog/new-avchat-november-build-1880-has-arrived/) users can enter AVChat using their Facebook profiles.
 
-This feature allows your users to connect to your AVChat area using their Facebook account.
-
-Clicking the Facebook button in the login screen will open a popup asking for user's Facebook credentials. If he is already signed in on that browser, the connection will be done automatically.
+Clicking the Facebook button in the login screen will open a popup asking for user's Facebook email and password. If the user is already logged in in Facebook, AVChat will connect as soon as you press the Facebook button.
 
 <img src="http://docs.avchat.net/assets/images/fblogin.png" class="img-responsive"/>
 
-AVChat 3 will now will use the name, profile picture and profile link from Facebook.
+AVChat 3 will use the name, gender, profile picture and profile link from Facebook.
 
 <img src="http://docs.avchat.net/assets/images/fbProfile.png" class="img-responsive"/>
 
 This feature is controlled by the `enableOtherAccountOptions` setting located in the `avc_settings.xml` file.
 If set to `0`, the feature will be disabled.
 
-<h3>There a few steps needed in order to set this up:</h3>
+<h3>Steps you need to take to allow users to enter using their Facebook profile:</h3>
 
-1. Go to:  [https://developers.facebook.com/apps/](https://developers.facebook.com/apps/)
-2. Create a new Facebook app for a website and enter a name for it.
-3. In the new screen that shows up enter click <kbd>Create New Facebook APP ID</kbd>
-4. Choose a category in the new screen and click <kbd>Create App ID</kbd>
-5. You will be taken into a more advance setup screen but AVChat already has all the code needed so you can press <kbd>Skip Quick Start</kbd>
-<img src="http://docs.avchat.net/assets/images/skip-start.png" class="img-responsive"/>
-6. You wil be taken to your app Dashboard page. Click the <kbd>Settings</kbd> button
-<img src="http://docs.avchat.net/assets/images/app-dashboard.png" class="img-responsive"/>
+1. Go to:  [https://developers.facebook.com](https://developers.facebook.com) and sign in
+2. Create a new Facebook App (choose any Display Name and Category)
+3. Go to the app's Settings > Basic
+4. Click on <kbd>+ Add Platform</kbd> and select Website
+5. In the Site URL field type your website URL (make sure it's correct) and click <kbd>Save Changes</kbd>
+6. Open up the `index.html` from the folder where you have AVChat installed
+7. Find the line where the `appId` is specified and replace the existing App ID with your App's ID (it's in Settings > Basic)
+8. Save the file.
 
-7. Make sure a your site URL is typed in in the input, if not add it and click <kbd>Save Changes </kbd>
-8. Open up the `index.html`
-9. Find the line where the `appId` is specified and replace the existing app ID with the Facebook generated one for your personal app.
-10. Save the file.
-
-<div class="alert alert-info" role="alert">Also note that in order for the Facebook based login to work for the admin interface (admin.swf and admin.html) the same modifications need to be made to admin.html</div>
+<div class="alert alert-info" role="alert">Do steps 6-8 to admin.html if you want the Facebook login to work from admin.html as well.</div>
 
 <h2 id="badnicks-badwords">Badnicks & Badwords</h2>
 
