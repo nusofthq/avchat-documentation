@@ -440,6 +440,8 @@ If set to `0`, the feature will be disabled.
 
 <div class="alert alert-info" role="alert">Do steps 6-8 to admin.html if you want the Facebook login to work from admin.html as well.</div>
 
+The above setup is also needed for enabling the Share on Facebbook & Invite Facebook friends features from AVChat's Share window.
+
 <h2 id="badnicks-badwords">Badnicks & Badwords</h2>
 
 
