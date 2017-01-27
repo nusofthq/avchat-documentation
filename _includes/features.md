@@ -307,21 +307,21 @@ AVChat saves a history of all the text chat in all the rooms including private c
 
 <h3>On AMS/FMS</h3>
 
-They will be saved in the `FMS/applications/avchat30/logs/` folder and they will have this format: `_definst__r0_2010_12_20.txt`, where \_definst\_ is the application instance name, r0 is the room id, and 2010_12_20 is the date.
+They will be saved in the `FMS/applications/avchat30/logs/` folder and the files have such names: `_definst__r0_2010_12_20.txt`, where \_definst\_ is the application instance name, r0 is the room id, and 2010_12_20 is the date.
 
-To disable it edit `applications/avchat30/settings.asc` and set `application.loggingEnabled=false`.
+To disable it edit `applications/avchat30/settings.asc`, set `application.loggingEnabled=false` and restart AMS or reload the app.
 
 <h3>On Red5</h3>
 
-They will be saved in `Red5/webapps/avchat30/avchat3_transcripts/` folder and they will have this format: `_definst__r0_2010_12_19_log.txt`.
+They will be saved in `Red5/webapps/avchat30/avchat3_transcripts/` folder and the files have such names: `_definst__r0_2010_12_19_log.txt`.
 
-To disable it edit `webapps/avchat30/avchat3.properties` and set `loggingEnabled=false`.
+To disable it edit `webapps/avchat30/avchat3.properties`, set `loggingEnabled=false` and restart Red5.
 
 <h3>On Wowza</h3>
 
-They will be saved in `Wowza\applications\avchat30\avchat3_transcripts` folder and they will have this format: `_definst__r0_2010_12_19_log.txt`.
+They will be saved in `Wowza\applications\avchat30\avchat3_transcripts` folder and the files have such names: `_definst__r0_2010_12_19_log.txt`.
 
-To disable it edit `conf/avchat30/avchat3.properties` and set `loggingEnabled=false`.
+To disable it edit `conf/avchat30/avchat3.properties`, set `loggingEnabled=false` and restart Wowza.
 
 
 <h2 id="deleting-textchat-logs">How to delete the text chat logs</h2>
