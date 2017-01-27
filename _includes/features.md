@@ -256,7 +256,7 @@ In order to show on your website who is logged in the video chat, AVChat 3 gener
 
 You will see these files ONLY AFTER THE FIRST USER (NOT ADMIN) LOGS IN THE VIDEO CHAT!
 
-Starting with [build 2768](http://nusofthq.com/blog/avchat-august-update-build-2768/) the external users list is generated even if someone joins the chat through the admin interface.
+Starting with [build 2768](http://avchat.net/blog/avchat-august-update-build-2768/) the external users list is generated even if someone joins the chat through the admin interface.
 
 You can use these 2 files to show on your website how many clients are logged in, the room structure or which clients are logged in.
 
@@ -353,7 +353,7 @@ The files extensions are:
 
 <h2 id="deleting-empty-rooms-automatically">How to delete empty rooms automatically</h2>
 
-Starting with [build 2160](http://nusofthq.com/blog/avchat-build-2160-has-arrived/) the delete empty rooms mechanism has been redone:
+Starting with [build 2160](http://avchat.net/blog/avchat-build-2160-has-arrived/) the delete empty rooms mechanism has been redone:
 
 The media server now constantly checks for empty rooms and if:
 * `deleteRoomsWhenTheyBecomeEmpty = true`
@@ -383,7 +383,7 @@ More details about each of the above config options and the exact syntax are in 
 <h2 id="edit-add-genders">How to edit/add genders</h2>
 
 
-Starting with [build 1880](http://nusofthq.com/blog/new-avchat-november-build-1880-has-arrived) AVChat loads the genders from a `genders.xml` file. AVChat comes with a couple of predefined genders, but these can be edited or removed, and others can be added. As explained in the XML file, the only thing that should not be changed are the `IDs` of the male, admin, unknown and hidden genders, but other attributes of these genders can be changed such as the `iconUrl` or the `sortPriority`.
+Starting with [build 1880](http://avchat.net/blog/new-avchat-november-build-1880-has-arrived) AVChat loads the genders from a `genders.xml` file. AVChat comes with a couple of predefined genders, but these can be edited or removed, and others can be added. As explained in the XML file, the only thing that should not be changed are the `IDs` of the male, admin, unknown and hidden genders, but other attributes of these genders can be changed such as the `iconUrl` or the `sortPriority`.
 
 To add a new gender, simply add a new line in the XML file specifying all the attributes like so:
 
@@ -397,7 +397,7 @@ To add a new gender, simply add a new line in the XML file specifying all the at
 <h2 id="login-area">Login area</h2>
 
 
-Starting with [build 1880](http://nusofthq.com/blog/new-avchat-november-build-1880-has-arrived) AVChat 3 has a new and more customizable login area, with 2 main screens, which can be activated using the tab at the top : Enter as guest and Sign in & Register.
+Starting with [build 1880](http://avchat.net/blog/new-avchat-november-build-1880-has-arrived) AVChat 3 has a new and more customizable login area, with 2 main screens, which can be activated using the tab at the top : Enter as guest and Sign in & Register.
 
 The default selected tab can be set using the setting in `avc_settings.xml` `selectedTabInLoginScreen`.
 
@@ -414,7 +414,7 @@ To add the register URL set `registerPageURL` in `avc_settings.xml`.
 
 <h2 id="setup-facebook-authentication">How to setup AVChat for Facebook authentication</h2>
 
-Starting with [build 1880](http://nusofthq.com/blog/new-avchat-november-build-1880-has-arrived) AVChat 3 supports Facebook authentication.
+Starting with [build 1880](http://avchat.net/blog/new-avchat-november-build-1880-has-arrived/) AVChat 3 supports Facebook authentication.
 
 This feature allows your users to connect to your AVChat area using their Facebook account.
 
@@ -557,7 +557,7 @@ The text used in this tab can be found in `translations/en.xml` file located in 
 
 <h3>Sending a report</h3>
 
-Starting with [build 2760](http://nusofthq.com/blog/avchat-august-build-2760/) a user can be reported by any other user if necessary. This option is easily accessed by pressing the <kbd>Report this user</kbd> button located in a user's side menu.
+Starting with [build 2760](http://avchat.net/blog/avchat-august-build-2760/) a user can be reported by any other user if necessary. This option is easily accessed by pressing the <kbd>Report this user</kbd> button located in a user's side menu.
 
 <img src="http://docs.avchat.net/assets/images/report.png" class="img-responsive"/>
 
@@ -618,7 +618,7 @@ Additionally the report feature can be disabled by setting `enableReportSending`
 
 <h2 id="pay-per-view-api">Pay Per View API</h2>
 
-A new **Pay Per View API** has been introduced in [build 3078](http://nusofthq.com/blog/avchat-october-build-3078-has-been-released/). This API replaces the old `freeVideoTime` setting and functionality.
+A new **Pay Per View API** has been introduced in [build 3078](http://avchat.net/blog/avchat-october-build-3078-has-been-released/). This API replaces the old `freeVideoTime` setting and functionality.
 
 The API offers new functionalities that enable you to create and integrate a costum built payment pay per view solution based on several criteria like:
 
@@ -932,7 +932,7 @@ This feature comes disabled by default, here's how to enable it:
 
 <h2 id="setup-realtime-translation">How to setup Real-Time Translation with Google's Translate API</h2>
 
-Starting with AVChat [build 3396](https://nusofthq.com/blog/long-awaited-new-avchat-build-3396-is-here/) we have implemented a mechanism that permits AVChat to detect the language the browser is setup for. Based on this and using Google’s Translate API you can now translate on the fly messages from another language, from a user that has the browser setup in french for example, to your preferred language, assuming as well that your browser is setup in your particular language.
+Starting with AVChat [build 3396](https://avchat.net/blog/long-awaited-new-avchat-build-3396-is-here/) we have implemented a mechanism that permits AVChat to detect the language the browser is setup for. Based on this and using Google’s Translate API you can now translate on the fly messages from another language, from a user that has the browser setup in french for example, to your preferred language, assuming as well that your browser is setup in your particular language.
 
 A small translate link will appear on the side of the text message, pressing it will show the translation for that particular message in a smaller grey font beneath the original text, as shown in the images below:
 
