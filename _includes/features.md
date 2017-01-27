@@ -422,8 +422,6 @@ Clicking the Facebook button in the login screen will open a popup asking for us
 
 AVChat 3 will use the name, gender, profile picture and profile link from Facebook.
 
-<img src="http://docs.avchat.net/assets/images/fbProfile.png" class="img-responsive"/>
-
 This feature is controlled by the `enableOtherAccountOptions` setting located in the `avc_settings.xml` file.
 If set to `0`, the feature will be disabled.
 
