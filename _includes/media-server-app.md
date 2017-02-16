@@ -14,6 +14,13 @@
 
 <p>On Linux, chmod the new <code class="highlighter-rouge">avchat30</code> folder to 777.</p>
 
+<p>For versions of <b>Red5 1.0.7</b> or higher one additional change needs to be made:</p>
+<ol>
+  <li>Go to <code class="highlighter-rouge">/Your_Red5_Install_Directory/webapps/avchat30/WEB-INF</code></li>
+  <li>Open <code class="highlighter-rouge">red-web.xml</code> with any text editor</li>
+  <li>Uncomment <b>line 37</b></li>
+</ol>
+
 <p>Restart the Red5 server.</p>
 
 </div>
