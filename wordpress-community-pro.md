@@ -1,7 +1,7 @@
 ---
 layout: default
-title: AVChat - WordPress Community PRO
-description: WordPress Community PRO plugin
+title: AVChat - Community PRO Plugin
+description: Community PRO plugin for WordPress
 isHome: false
 hide: true
 ---
@@ -86,7 +86,7 @@ hide: true
   <img src="/assets/images/chmod.png" class="img-responsive"/>
 
   <h2 id="plugin-configure">Complete Installation</h2>
-  You can now activate the plugin. Once activated, a new page is added in your WordPress Dashboard: **Video Chat PRO**.
+  You can now activate the plugin. Once activated, a new page is added in your WordPress Dashboard: **Community PRO**.
   <h3>Connect AVChat to the media server app</h3>
 
   <img src="/assets/images/wordpress_images/activate.png" class="img-responsive"/>
@@ -143,7 +143,7 @@ hide: true
 
   You can also handle permissions for non-registered users (visitors).
 
-  * In your WordPress Dashboard, go to **Video Chat PRO** > **Settings**.
+  * In your WordPress Dashboard, go to **Community PRO** > **Settings**.
   * Select the **User roles & Permissions** tab.
    <img src="/assets/images/wordpress_images/roles_permissions.png" class="img-responsive"/>
   * Here you can enable or disable any permission for each user role
@@ -157,7 +157,7 @@ hide: true
 
   If you access the chat from a page in which AVChat is embedded, the integration plugin will automatically detect if the user has access to the admin interface, and will show it accordingly.
 
-  If you access the chat from your WordPress Dashboard (**Video Chat PRO** > **Enter Chat**), you will get access to the admin interface.
+  If you access the chat from your WordPress Dashboard (**Community PRO** > **Enter Chat**), you will get access to the admin interface.
 
   <h2 id="files">AVChat files location</h2>
   All the files are in the `/wp-content/plugins/avchat-3-pro/` folder.
@@ -165,7 +165,7 @@ hide: true
   <h2 id="opening-method">Opening method</h2>
   By default, AVChat will be embedded where you place the `[chat]` shortcode. However, you have the possibility of opening AVChat in a popup window.
 
-  To do so, go to **Video Chat PRO** > **Settings** and find **How AVChat opens**.
+  To do so, go to **Community PRO** > **Settings** and find **How AVChat opens**.
 
   Change the opening method to **Popup** and press <kbd>Update Options</kbd>.
 
@@ -183,7 +183,7 @@ hide: true
   <img src="/assets/images/wordpress_images/fb_app_id_2.png" class="img-responsive"/>
   <img src="/assets/images/wordpress_images/fb_app_id_3.png" class="img-responsive"/>
 
-  5. Now that you have your Facebook App ID, in your website, go to your **WordPress Admin** > **Video Chat PRO** > **Facebook & Twitter Login** tab
+  5. Now that you have your Facebook App ID, in your website, go to your **WordPress Admin** > **Community PRO** > **Facebook & Twitter Login** tab
   <img src="/assets/images/wordpress_images/fb_conf.png" class="img-responsive"/>
   6. Insert your Facebook App ID
   <img src="/assets/images/wordpress_images/fb_insert_app_id.png" class="img-responsive"/>
@@ -203,7 +203,7 @@ hide: true
   <img src="/assets/images/wordpress_images/twitter_new_app_form.png" class="img-responsive"/>
   3. After you completed the form you will be redirected to the application page, where you will find your `Consumer key` and `Consumer secret`.
   <img src="/assets/images/wordpress_images/twitter_app_page.png" class="img-responsive"/>
-  4. Now that you have your Consumer key and Consumer Secret, in your website, go to your **WordPress Admin** > **Video Chat PRO** > **Facebook & Twitter Login** tab
+  4. Now that you have your Consumer key and Consumer Secret, in your website, go to your **WordPress Admin** > **Community PRO** > **Facebook & Twitter Login** tab
   <img src="/assets/images/wordpress_images/fb_conf.png" class="img-responsive"/>
   5. Insert your Consumer key in Twitter Consumer Key option and Consumer secret in Twitter Consumer Secret
   <img src="/assets/images/wordpress_images/wp_twitter_settingup.png" class="img-responsive"/>
@@ -212,14 +212,14 @@ hide: true
   <h2 id="plugin-update">Updating the plugin</h2>
   First you should download the new archive from your client area on [nusofthq.com](http://nusofthq.com)
 
-  Then we need to remove the old version. While logged in as and admin in the WP backend go to **Plugins** and click <kbd>Deactivate</kbd> followed by <kbd>Delete</kbd> for the AVChat Community PRO plugin. This will remove the **wp-content/plugins/avchat-3-pro** folder and all its contents.
+  Then we need to remove the old version. While logged in as and admin in the WP backend go to **Plugins** and click <kbd>Deactivate</kbd> followed by <kbd>Delete</kbd> for the Community PRO plugin. This will remove the **wp-content/plugins/avchat-3-pro** folder and all its contents.
   <div class="alert alert-danger"><strong>Warning!</strong> This will also delete the chat client so make sure you make a backup before updating</div>
   You will now have to re-[install](/wordpress-community-pro#installation) the plugin and upload the AVChat 3 client side files again to the **wp-content/plugins/avchat-3-pro** folder.
 
-  Any existing settings or permissions will be kept. Any new settings or permissions added by the new version will most probably be empty, make sure you configure them as you wish for each user role from **Video Chat PRO** > **User Roles & Permissions** tab.
+  Any existing settings or permissions will be kept. Any new settings or permissions added by the new version will most probably be empty, make sure you configure them as you wish for each user role from **Community PRO** > **User Roles & Permissions** tab.
 
   <h2 id="plugin-remove">Removing the plugin</h2>
-  While logged in as and admin in the WordPress backend go to **Plugins** and click <kbd>Deactivate</kbd> followed by <kbd>Delete</kbd> for the AVChat Community PRO plugin.
+  While logged in as and admin in the WordPress backend go to **Plugins** and click <kbd>Deactivate</kbd> followed by <kbd>Delete</kbd> for the Community PRO plugin.
 
   This will remove the **wp-content/plugins/avchat-3-pro** folder and all it's contents.
 
@@ -245,7 +245,7 @@ hide: true
 
   When the plugin is network activated, it can not be individually deactivated.
 
-  When the plugin is network activated you must visit the **Settings** > **Video Chat PRO** page for each of the websites in the network for the permissions tables for AVChat3 to be created. Otherwise in the front end you will find the following error:
+  When the plugin is network activated you must visit the **Settings** > **Community PRO** page for each of the websites in the network for the permissions tables for AVChat3 to be created. Otherwise in the front end you will find the following error:
 
   `Warning: Invalid argument supplied for foreach() in /home/observer/public_html/wp-content/plugins/avchat-3-pro/avchat3.php on line 86`
 
