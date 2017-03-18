@@ -86,19 +86,17 @@ hide: true
   <img src="/assets/images/chmod.png" class="img-responsive"/>
 
   <h2 id="plugin-configure">Complete Installation</h2>
-  You can now activate the plugin. Once activated, a new page is added in your WordPress Dashboard: **Community PRO**.
+  You can now activate the plugin. Once activated, a new menu item is added to your WordPress Dashboard: **Community PRO** .
   <h3>Connect AVChat to the media server app</h3>
-
-  <img src="/assets/images/wordpress_images/activate.png" class="img-responsive"/>
-
-  You need to insert the connection string. The connection string has the following form:
+  
+  You now need to insert the connection string. The connection string looks like this:
 
   <pre>rtmp://your_media_server_ip/avchat30/_definst_</pre>
 
   Add your connection string in the **Connection string** field:
   <img src="/assets/images/wordpress_images/connection_string.png" class="img-responsive"/>
 
-  Scroll down and press <kbd>Update Options</kbd>
+  Scroll down and press <kbd>Save</kbd>
 
   <h3>Enter the chat, connect and insert the license key</h3>
   Now go to **Enter Chat** to access the chat interface:
@@ -147,7 +145,7 @@ hide: true
   * Select the **User roles & Permissions** tab.
    <img src="/assets/images/wordpress_images/roles_permissions.png" class="img-responsive"/>
   * Here you can enable or disable any permission for each user role
-  * Once you are done setting up the permissions, don't forget to press the <kbd>Update Options</kbd> button.
+  * Once you are done setting up the permissions, don't forget to press the <kbd>Save</kbd> button.
 
   For example, if you want to disable access for visitors, you will have to uncheck the **Can access chat** box under **Visitors**:
   <img src="/assets/images/wordpress_images/visitors.png" class="img-responsive"/>
@@ -167,7 +165,7 @@ hide: true
 
   To do so, go to **Community PRO** > **Settings** and find **How AVChat opens**.
 
-  Change the opening method to **Popup** and press <kbd>Update Options</kbd>.
+  Change the opening method to **Popup** and press <kbd>Save</kbd>.
 
   <h2 id="facebook-login">Facebook Login</h2>
   To enable Facebook Login you will need to create a Facebook Application from where you will receive an App ID. You can follow the next steps to accomplish this.
@@ -187,7 +185,7 @@ hide: true
   <img src="/assets/images/wordpress_images/fb_conf.png" class="img-responsive"/>
   6. Insert your Facebook App ID
   <img src="/assets/images/wordpress_images/fb_insert_app_id.png" class="img-responsive"/>
-  7. Press <kbd>Update Options</kbd>
+  7. Press <kbd>Save</kbd>
 
   <h2 id="twitter-login">Twitter Login</h2>
   To enable Twitter Login for your video chat you will need to create a Twitter Application that will provide you with a Consumer Key and an Consumer Secret. You can follow the next steps to accomplish this.
@@ -207,7 +205,7 @@ hide: true
   <img src="/assets/images/wordpress_images/fb_conf.png" class="img-responsive"/>
   5. Insert your Consumer key in Twitter Consumer Key option and Consumer secret in Twitter Consumer Secret
   <img src="/assets/images/wordpress_images/wp_twitter_settingup.png" class="img-responsive"/>
-  6. Press <kbd>Update Options</kbd>
+  6. Press <kbd>Save</kbd>
 
   <h2 id="plugin-update">Updating the plugin</h2>
   First you should download the new archive from your client area on [nusofthq.com](http://nusofthq.com)
