@@ -223,7 +223,7 @@ hide: true
 
   This will remove the **wp-content/plugins/avchat-3-pro** folder and all it's contents.
 
-  The plugin's database holding the permissions for each user role and general settings will still remain tough. To remove it, delete the `wp_avchat3_general_settings` and the `wp_avchat3_permissions` tables.
+  The plugin's database holding the permissions for each user role and general settings will still remain tough. To remove it, delete the `community_pro_permissions` and the `community_pro_general_settings` tables (`wp_avchat3_general_settings` and `wp_avchat3_permissions` in 3.0 version of the plugin or older).
 
   You might also want to remove the page holding the `[chat]` tag that was replaced by the plugin with the AVChat 3 software
 
