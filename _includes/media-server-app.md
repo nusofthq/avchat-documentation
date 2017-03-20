@@ -12,7 +12,7 @@
 
 <p>Upload the <code class="highlighter-rouge">avchat30</code> folder from the <b>Files to upload to your media server (Red5)</b> folder to your Red5's <b>webapps</b> folder (<code class="highlighter-rouge">C:\Program Files\Red5\webapps</code> on Win, <code class="highlighter-rouge">/opt/red5/webapps/</code> on Linux).</p>
 
-<p>On Linux, chmod the new <code class="highlighter-rouge">avchat30</code> folder to 777.</p>
+<p>On Linux, chmod the new <code class="highlighter-rouge">avchat30</code> folder to 666.</p>
 
 <p>For versions of <b>Red5 1.0.7</b> or higher one additional change needs to be made:</p>
 <ol>
@@ -32,7 +32,7 @@
 <div class="panel-body">
 <p>Upload the <code class="highlighter-rouge">avchat30</code> folder (you will find it in your AVChat archive in the <b>Files to upload to your media server (FMS) folder)</b> to the <b>applications</b> folder of your AMS installation.</p>
 
-<p>On Linux, chmod the new <code class="highlighter-rouge">avchat30</code> folder to 777.</p>
+<p>On Linux, chmod the new <code class="highlighter-rouge">avchat30</code> folder to 666.</p>
 
 </div>
 </div>
