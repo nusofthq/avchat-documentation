@@ -68,8 +68,8 @@ hide: true
   Upload the files from the **Files to upload to your website** folder to **components** > **com_avchat3** > **chat**
   <img src="/assets/images/joomla_images/3-0/uploaded_files.png" class="img-responsive"/>
 
-  Make sure you change the permissions on the **tokens** and **uploadedFiles** folders to `755`:
-  <img src="/assets/images/chmod755.png" class="img-responsive"/>
+  Make sure you change the permissions on the **tokens** and **uploadedFiles** folders to `666` to make sure the Linux users under  which PHP/Apache run can write to these folders created through FTP :
+  <img src="/assets/images/chmod666.png" class="img-responsive"/>
 
   <h2 id="configuration">Complete installation</h2>
   <h3>Connect AVChat to the media server app</h3>
