@@ -36,7 +36,7 @@ hide: true
   <img src="/assets/images/wordpress_images/upload_plugin.png" class="img-responsive"/>
 
 
-  3. Press <kbd>Choose File</kbd> and select the `avchat3_wordpress_plugins_pro.zip` file:
+  3. Press <kbd>Choose File</kbd> and select the `avchat-3-pps.zip` file:
   <img src="/assets/images/wordpress-pps_images/select_archive.png" class="img-responsive"/>
 
 
