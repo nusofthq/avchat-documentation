@@ -45,7 +45,7 @@ AVChat supports the 3 major media servers:
 
 AVChat (desktop) is compatible with:
 
-* Red5 1.0.5+
+* Red5 1.0.5 - Red5 1.0.8
 * Wowza 1.7.x -> Wowza Streaming Engine 4
 * Adobe Media Server 5 Starter, Professional and Extended and Flash Media Server 2, 3, 3.5, 4 and 4.5
 
